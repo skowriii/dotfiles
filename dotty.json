@@ -1,0 +1,34 @@
+{
+    "_comment": "Check if a directory exists. If not, create it.",
+    "directories": [],
+
+    "_comment": "Link files/directories symbolically.",
+    "link": {
+        ".config/bleachbit": "~/.config/bleachbit",
+        ".config/fish": "~/.config/fish",
+        ".config/nvim": "~/.config/nvim",
+        ".config/openrazer": "~/.config/openrazer",
+        ".config/parcellite": "~/.config/parcellite",
+        ".config/picom": "~/.config/picom",
+        ".config/polychromatic": "~/.config/polychromatic",
+        ".config/thorium": "~/.config/thorium"
+    },
+
+    "_comment": "Copy files/directories.",
+    "copy": {
+        
+    },
+
+    "_comment": "The command that will be used while installing packages from 'install'.",
+    "install_cmd": "",
+
+    "_comment": "Packages that will be installed with 'install_cmd'.",
+    "install": [
+        
+    ],
+
+    "_comment": "Shell commands that will be executed.",
+    "commands": [
+        
+    ]
+}
