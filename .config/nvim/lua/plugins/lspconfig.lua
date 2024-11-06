@@ -21,6 +21,13 @@ local lsps = {
 }
 for _, lsp in ipairs(lsps) do
     lspconfig[lsp].setup {
+        cmd = (lsp == "clangd") and {
+            "clangd",
+            "--background-index",
+            "--clang-tidy",
+            "--suggest-missing-includes",
+            "--function-arg-placeholders"
+        } or nil,
         capabilities = capabilities,
         on_attach = (lsp ~= "typos_lsp") and function (client, bufnr)
             navbuddy.attach(client, bufnr)
