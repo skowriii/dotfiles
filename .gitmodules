@@ -1,3 +1,6 @@
 [submodule "dotty"]
 	path = dotty
 	url = https://github.com/vibhavp/dotty.git
+[submodule "nitch"]
+	path = nitch
+	url = https://github.com/unxsh/nitch.git
