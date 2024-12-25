@@ -1,0 +1,6 @@
+#xrdb .Xresources
+
+#[ -f ~/.config/fish/config.fish ] && . ~/.config/fish/config.fish
+
+xbindkeys
+setxkbmap pl

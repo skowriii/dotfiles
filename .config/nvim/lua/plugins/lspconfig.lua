@@ -17,7 +17,8 @@ local lsps = {
     "typos_lsp",
     "emmet_language_server",
     "csharp_ls",
-    "eslint"
+    "eslint",
+    "pylsp"
 }
 for _, lsp in ipairs(lsps) do
     lspconfig[lsp].setup {
@@ -34,7 +35,17 @@ for _, lsp in ipairs(lsps) do
         end or nil,
         init_options = (lsp == "clangd") and {
             fallbackFlags = { "--std=c++23" }
-        } or nil
+        } or nil,
+        settings = {
+            pylsp = {
+                plugins = {
+                    pyflakes = { enabled = false },
+                    pylint = { enabled = false },
+                    flake8 = { enabled = false },
+                    pycodestyle = { enabled = false }
+                }
+            }
+        }
     }
 end
 
