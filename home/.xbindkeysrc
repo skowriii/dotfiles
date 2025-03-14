@@ -1,0 +1,17 @@
+"playerctl play-pause"
+    XF86AudioPlay
+
+"playerctl next"
+    XF86AudioNext
+
+"playerctl previous"
+    XF86AudioPrev
+
+"pamixer -i 5"
+    XF86AudioRaiseVolume
+
+"pamixer -d 5"
+    XF86AudioLowerVolume
+
+"pamixer -t"
+    XF86AudioMute

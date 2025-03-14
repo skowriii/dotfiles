@@ -25,14 +25,6 @@ yay -Scc
 is_success
 
 echo
-echo Updating flatpak
-echo
-
-flatpak update
-
-is_success
-
-echo
 echo Updating NeoVim plugins \(WARNING: run Lazy and press Shift+S to update plugins in Lazy\)
 echo
 

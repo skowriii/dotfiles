@@ -13,6 +13,11 @@ local M = {
         for server, config in pairs(opts.servers) do
             config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
             lspconfig[server].setup(config)
+            if server == opts.servers.clangd then
+                cmd = {
+                    "-xc++"
+                }
+            end
         end
     end
 }

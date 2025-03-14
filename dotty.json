@@ -19,7 +19,7 @@
     },
 
     "_comment": "Copy files/directories.",
-    "copy": {
+    "_copy": {
         "systemd/zram-generator.conf": "/etc/systemd/zram-generator.conf",
         "default/": "/etc/default",
         "mkinitcpio.conf": "/etc/mkinitcpio.conf",
@@ -29,6 +29,8 @@
         "20-amdgpu.conf": "/etc/X11/xorg.conf.d/20-amdgpu.conf",
         "50-mouse-acceleration.conf": "/etc/X11/xorg.conf.d/50-mouse-acceleration.conf"
     },
+
+    "copy": {},
 
     "_comment": "The command that will be used while installing packages from 'install'.",
     "install_cmd": "yay -Sy --needed",

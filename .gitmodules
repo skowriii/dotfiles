@@ -4,3 +4,9 @@
 [submodule "nitch"]
 	path = nitch
 	url = https://github.com/unxsh/nitch.git
+[submodule "home/.zsh/zsh-autosuggestions"]
+	path = home/.zsh/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "home/.zsh/zsh-syntax-highlighting"]
+	path = home/.zsh/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
