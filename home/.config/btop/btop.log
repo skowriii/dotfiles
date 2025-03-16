@@ -561,3 +561,6 @@
 2024/12/11 (22:32:18) | WARNING: ROCm SMI: Failed to get VRAM utilization
 2024/12/11 (22:32:18) | WARNING: ROCm SMI: Failed to get GPU power usage
 2024/12/11 (22:32:18) | WARNING: ROCm SMI: Failed to get PCIe throughput
+
+2025/03/15 (22:37:47) | ===> btop++ v.1.4.0
+2025/03/15 (22:37:47) | WARNING: Failed to join _runner thread on exit!
