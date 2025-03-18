@@ -1,11 +1,9 @@
 [user]
-	signingkey = /home/smoolldev/.ssh/main_ssh.pub
+	signingkey = 48F0DEDEB5354ADD
 	email = jakubskowron676@gmail.com
 	name = Jakub Skowron
 [commit]
 	gpgsign = true
-[gpg]
-	format = ssh
 [tag]
 	gpgSign = true
 [init]

@@ -44,7 +44,7 @@ alias grep="ugrep -EinDskip --color=always"
 alias fix-keys="sudo killall gpg-agent && sudo rm -rf /etc/pacman.d/gnupg && sudo pacman-key --init && sudo pacman-key --populate archlinux"
 
 # Prompt
-__zc_username=$'%F{yellow}%n%f'
+__zc_username=$'%F{red}%n%f'
 __zc_hostname=$'%F{cyan}%m%f'
 __zc_directory=$'%F{blue}%~%f'
 __zc_newline=$'\n'
@@ -52,11 +52,16 @@ __zc_exitstatus=$'%(?.%F{green}.%F{red})'
 __zc_privileges=$'%(!.#.$)'
 
 precmd()
-{ PROMPT="[${__zc_username}@${__zc_hostname}:${__zc_directory}] $(__zc_git_info)${__zc_newline}${__zc_exitstatus}${__zc_privileges}%f " }
+{ PROMPT="%F{yellow}[%f${__zc_username}%F{magenta}@%f${__zc_hostname}%F{magenta}:%f${__zc_directory}%F{yellow}]%f $(__zc_git_info)${__zc_newline}${__zc_exitstatus}${__zc_privileges}%f " }
 
 # Evals
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
+eval "$(register-python-argcomplete pipx)"
+eval "$(ssh-agent)"
 
 # Keybindings
 bindkey "^[[Z" autosuggest-accept
+
+# Created by `pipx` on 2025-03-16 20:33:56
+export PATH="$PATH:/home/smoolldev/.local/bin"
