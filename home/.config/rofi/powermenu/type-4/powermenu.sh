@@ -63,6 +63,8 @@ run_cmd() {
 		elif [[ $1 == '--suspend' ]]; then
 			# mpc -q pause
 			# amixer set Master mute
+            betterlockscreen -l blur 0.5 &
+            sleep 1
 			systemctl suspend
 		elif [[ $1 == '--logout' ]]; then
 			# if [[ "$DESKTOP_SESSION" == 'openbox' ]]; then
@@ -92,7 +94,7 @@ case ${chosen} in
         ;;
     $lock)
 		if [[ -x '/usr/bin/betterlockscreen' ]]; then
-			betterlockscreen -l
+			betterlockscreen -l blur 0.5
 		elif [[ -x '/usr/bin/i3lock' ]]; then
 			i3lock
 		fi

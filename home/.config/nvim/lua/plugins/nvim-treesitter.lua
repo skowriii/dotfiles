@@ -14,4 +14,11 @@ local M = {
     end
 }
 
+vim.filetype.add {
+    extension = {
+        razor = "razor",
+        cshtml = "razor"
+    }
+}
+
 return { M }

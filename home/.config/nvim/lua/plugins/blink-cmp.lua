@@ -16,7 +16,9 @@ local M = {
                 "path",
                 "snippets",
                 "buffer",
-                "lazydev"
+                "lazydev",
+                "cmdline",
+                "omni"
             },
             providers = {
                 lazydev = {
@@ -54,7 +56,7 @@ local M = {
                     border = border
                 }
             },
-            ghost_text = { enabled = true },
+            -- ghost_text = { enabled = true },
         },
         signature = {
             enabled = true,
