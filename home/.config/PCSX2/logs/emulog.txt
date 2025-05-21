@@ -1,0 +1,146 @@
+[    0,0517] Loaded translation file for language en-US
+[    0,0539] PCSX2 v2.3.355
+[    0,0539] Savestate version: 0x9a530000
+[    0,0539] 
+[    0,0539] 
+[    0,0539] Host Machine Init:
+[    0,0543]   Operating System = Arch Linux rolling
+[    0,0543]   Available RAM    = 5349 MB (5.22 GB)
+[    0,0543]   Physical RAM     = 7362 MB (7.19 GB)
+[    0,0543] 
+[    0,0543]   Processor        = AMD PRO A10-8730B R5, 10 COMPUTE CORES 4C+6G
+[    0,0543]   Core Count       = 4 cores
+[    0,0543]   Thread Count     = 4 threads
+[    0,0543]   Cluster Count    = 2 clusters
+[    0,0543] CPU Extensions Detected:
+[    0,0543]   AVX AVX2
+[    0,0543] 
+[    0,0635] SDLInputSource: Using Controller DB from resources.
+[    0,2989] SDLInputSource: 694 gamepad mappings are loaded.
+[    0,2994] Settings: Advanced Settings are enabled; only proceed if you know what you're doing! No support will be provided if you have the option enabled.
+[    0,4442] Scanning /home/smoolldev/ROMs (recursively)
+[   28,0521] SDLInputSource: Gamepad 1 inserted
+[   28,1033] SDLInputSource: Opened gamepad 1 (instance id 1, player id 0): Mobapad Chitu HD
+[   28,1033] SDLInputSource: Gamepad 0 has 6 axes and 15 buttons
+[   28,1034] SDLInputSource: Rumble is supported on 'Mobapad Chitu HD' via gamepad
+[   30,6932] Loading BIOS...
+[   30,6932] Searching for a BIOS image in '/home/smoolldev/.config/PCSX2/bios'...
+[   30,6945] BIOS Found: Europe  v02.20(10/02/2006)  Console 20060210-142424
+[   30,6946] Using BIOS '/home/smoolldev/.config/PCSX2/bios/SCPH-77004_BIOS_V15_EUR_220.ROM0' (Europe  v02.20(10/02/2006)  Console 20060210-142424 Europe)
+[   30,6948] BIOS Found: Europe  v02.20(10/02/2006)  Console 20060210-142424
+[   30,7098] BIOS rom1 module not found, skipping...
+[   30,7098] BIOS rom2 module not found, skipping...
+[   30,7102] Opening CDVD...
+[   30,7113] isoFile open ok: /home/smoolldev/ROMs/PS2/God Hand (Europe) (En,Fr,De,Es,It).iso
+[   30,7114]   Image type  = DVD
+[   30,7114]  * CDVD Disk Open: DVD, Single layer or unknown:
+[   30,7114]  * * Track 1: Data (Mode 1) (1005648 sectors)
+[   30,7285] GameDB: Has not been initialized yet, initializing...
+[   30,8337] GameDB: 12822 games on record (loaded in 105,12ms)
+[   30,8337] Disc changed to God Hand (Europe) (En,Fr,De,Es,It).iso.
+[   30,8337]   Name: God Hand
+[   30,8337]   Serial: SLES-54490
+[   30,8337]   Version: 1.00
+[   30,8337]   CRC: DE9722A5
+[   30,8339] Loading game settings from '/home/smoolldev/.config/PCSX2/gamesettings/SLES-54490_DE9722A5.ini'...
+[   30,8345] Applying settings...
+[   30,8353] [Unsafe Settings] Cycle rate/skip is not at default, this may crash or make games run too slow.
+[   30,8353] [Unsafe Settings]er is not set to Automatic. This may cause performance problems and graphical issues.
+[   30,8353] OSD [unsafe_settings_warning]:  Cycle rate/skip is not at default, this may crash or make games run too slow.
+[   30,8353]  Trilinear filtering is not set to automatic. This may break rendering in some games.
+[   30,8353]  Renderer is not set to Automatic. This may cause performance problems and graphical issues.
+[   30,8427] Achievements: Hardcore disabled
+[   30,8427] Achievements: Encore mode disabled
+[   30,8427] Achievements: Unofficial disabled
+[   30,8427] Achievements: Spectator mode disabled
+[   30,8427] Achievements: Attempting login with user 'smooll'...
+[   30,8427] Achievements: Attempting to log in smooll (with token)
+[   30,8696] Hash for 'SLES_544.90' (3626976 bytes, 3626976 bytes hashed): 1a276b053691ad677ee3d26c527a9048
+[   30,8698] Reopening memory cards...
+[   30,8705] McdSlot 0 [File]: Mcd001.ps2 [8 MB, Formatted]
+[   30,8707] McdSlot 1 [File]: Mcd002.ps2 [8 MB, Formatted]
+[   30,8713] HLE Host: Set 'host:' root path to: /home/smoolldev/ROMs/PS2
+[   30,8713] 
+[   30,8715] EE/iR5900 Recompiler Reset
+[   31,5015] Opening GS...
+[   31,5286] Surface refresh rate: 60.05244 hz
+[   31,6216] VK_EXT_provoking_vertex is supported
+[   31,6217] VK_EXT_memory_budget is supported
+[   31,6217] VK_EXT_calibrated_timestamps is supported
+[   31,6217] VK_EXT_rasterization_order_attachment_access is NOT supported
+[   31,6217] VK_EXT_swapchain_maintenance1 is supported
+[   31,6217] VK_EXT_full_screen_exclusive is NOT supported
+[   31,6217] VK_KHR_driver_properties is supported
+[   31,6217] VK_EXT_attachment_feedback_loop_layout is supported
+[   31,6266] Read 385 entries from '/home/smoolldev/.config/PCSX2/cache/vulkan_shaders.idx'
+[   31,6463] Exclusive fullscreen control requested, but is not supported on this platform.
+[   31,7321] Vulkan Graphics Driver Info:
+[   31,7322] Driver 25.0.4
+[   31,7322] Vulkan 1.4.305
+[   31,7322] Conformance Version 1.4.0.0
+[   31,7322] Mesa 25.0.4-arch1.1
+[   31,7322] radv
+[   31,7322] AMD Radeon R5 Graphics (RADV CARRIZO)
+[   31,7456] Opening SPU2...
+[   31,7463] Creating SDL audio stream, sample rate = 48000, expansion = Disabled, buffer = 150, latency = 150, stretching enabled, driver = pulse, device = 
+[   31,8057] Initializing Pad...
+[   31,8058] Initializing SIO2...
+[   31,8058] Initializing SIO0...
+[   31,8058] Opening DEV9...
+[   31,8130] Opening USB...
+[   31,8131] Opening FW...
+[   31,8293] VM subsystems initialized in 1136,24 ms
+[   31,8301] Failed to inhibit screen saver.
+[   31,8304] Failed to inhibit screen saver.
+[   32,5822] ELF Loading: cdrom0:\SLES_544.90;1, Game CRC = DE9722A5, EntryPoint = 0x00100008
+[   32,6749] Surface refresh rate: 60.05244 hz
+[   32,6966] Exclusive fullscreen control requested, but is not supported on this platform.
+[   32,7044] Achievements: smooll logged in successfully
+[   32,8061] Achievements: Load failed (-31): (null)
+[   32,9171] Achievements: Identified game: 0 (1a276b053691ad677ee3d26c527a9048)
+[   32,9171] Achievements: Load failed (-29): Unknown game
+[   32,9171] Achievements: Unknown game '1a276b053691ad677ee3d26c527a9048', disabling achievements.
+[   34,4981] ELF cdrom0:\SLES_544.90;1 with entry point at 0x00100008 is executing.
+[   34,4984] ELF changed, active CRC DE9722A5 (cdrom0:\SLES_544.90;1)
+[   34,5048] Found 1 game patches in SLES-54490_DE9722A5.pnach.
+[   34,5049] Applying core settings...
+[   34,5054] [Unsafe Settings] Cycle rate/skip is not at default, this may crash or make games run too slow.
+[   34,5054] [Unsafe Settings]
+[   34,5054] OSD [unsafe_settings_warning]:  Cycle rate/skip is not at default, this may crash or make games run too slow.
+[   34,5054]  Trilinear filtering is not set to automatic. This may break rendering in some games.
+[   34,5054] GameDB: Enabled GS Hardware Fix: halfPixelOffset to [mode=2]
+[   34,5054] GameDB: Enabled GS Hardware Fix: nativeScaling to [mode=2]
+[   34,5054] Updating CPU configuration...
+[   34,5733] EE/iR5900 Recompiler Reset
+[   34,9409] Surface refresh rate: 60.05244 hz
+[   34,9553] Exclusive fullscreen control requested, but is not supported on this platform.
+[   35,5408] UpdateVSyncRate: Mode Changed to PAL.
+[   35,5413] UpdateVSyncRate: Mode Changed to PAL.
+[   35,7601] UpdateVSyncRate: Mode Changed to PAL.
+[   35,7612] UpdateVSyncRate: Mode Changed to PAL.
+[   35,9906] Pad: DS2 Config Finished - P1/S1 - AL: Off - AB: Usable - VS: Disabled - VL: Disabled - RB: D (0x00000000)
+[   36,5703] Pad: DS2 Config Finished - P1/S1 - AL: On - AB: Locked - VS: Disabled - VL: Disabled - RB: D (0x00000000)
+[   36,8103] Pad: DS2 Config Finished - P1/S1 - AL: On - AB: Locked - VS: Normal - VL: Normal - RB: D (0x00000000)
+[   36,9703] Pad: DS2 Config Finished - P1/S1 - AL: On - AB: Locked - VS: Normal - VL: Normal - RB: D (0x00000000)
+[   37,0883] Surface refresh rate: 60.05244 hz
+[   37,0955] Exclusive fullscreen control requested, but is not supported on this platform.
+[   37,4703] Pad: DS2 Config Finished - P1/S1 - AL: On - AB: Locked - VS: Normal - VL: Normal - RB: D+A+P (0x0003FFFF)
+[   37,7103] Pad: DS2 Config Finished - P1/S1 - AL: On - AB: Locked - VS: Normal - VL: Normal - RB: D+A+P (0x0003FFFF)
+[   38,9442] Exclusive fullscreen control requested, but is not supported on this platform.
+[   39,3309] Exclusive fullscreen control requested, but is not supported on this platform.
+[   45,9903] (BeginPresent) vkAcquireNextImageKHR() failed:  (1000001003: VK_SUBOPTIMAL_KHR)
+[   45,9907] Exclusive fullscreen control requested, but is not supported on this platform.
+[  646,5703] (BeginPresent) vkAcquireNextImageKHR() failed:  (1000001003: VK_SUBOPTIMAL_KHR)
+[  646,5706] Exclusive fullscreen control requested, but is not supported on this platform.
+[ 1247,8992] (BeginPresent) vkAcquireNextImageKHR() failed:  (1000001003: VK_SUBOPTIMAL_KHR)
+[ 1247,8998] Exclusive fullscreen control requested, but is not supported on this platform.
+[ 1737,0966] OSD [MemoryCardSave0]: Memory Card 'Mcd001.ps2' was saved to storage.
+[ 1747,4718] Exclusive fullscreen control requested, but is not supported on this platform.
+[ 1749,0482] Surface refresh rate: 60.05244 hz
+[ 1749,0544] Exclusive fullscreen control requested, but is not supported on this platform.
+[ 1749,1730] Exclusive fullscreen control requested, but is not supported on this platform.
+[ 1752,0302] (VMManager) Pausing...
+[ 1756,6616] Add 1720 seconds play time to SLES-54490 -> now 8091
+[ 1756,6616] Achievements: Unloading game 0
+[ 1757,1091] Writing 1163592 bytes to '/home/smoolldev/.config/PCSX2/cache/vulkan_pipelines.bin'
+[ 1762,6317] Releasing host memory for virtual systems...

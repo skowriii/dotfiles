@@ -1,0 +1,117 @@
+{
+    "format": "PCSX2 Debugger User Interface Layout",
+    "versionMajor": 2,
+    "versionMinor": 0,
+    "defaultLayoutHash": 3125664160,
+    "name": "R3000",
+    "target": "IOP",
+    "index": 1,
+    "isDefault": true,
+    "nextId": 12,
+    "baseLayout": "R3000",
+    "dockWidgets": [
+        {
+            "uniqueName": "BreakpointView-2",
+            "id": 2,
+            "type": "BreakpointView",
+            "customDisplayName": "",
+            "isPrimary": true
+        },
+        {
+            "uniqueName": "DisassemblyView-0",
+            "id": 0,
+            "type": "DisassemblyView",
+            "customDisplayName": "",
+            "isPrimary": true,
+            "startAddress": 1048576,
+            "goToPCOnPause": true,
+            "showInstructionBytes": true
+        },
+        {
+            "uniqueName": "FunctionTreeView-10",
+            "id": 10,
+            "type": "FunctionTreeView",
+            "customDisplayName": "",
+            "isPrimary": true,
+            "showSizeColumn": false,
+            "groupByModule": true,
+            "groupBySection": false,
+            "groupBySourceFile": false
+        },
+        {
+            "uniqueName": "GlobalVariableTreeView-6",
+            "id": 6,
+            "type": "GlobalVariableTreeView",
+            "customDisplayName": "",
+            "isPrimary": true,
+            "showSizeColumn": false,
+            "groupByModule": true,
+            "groupBySection": false,
+            "groupBySourceFile": false,
+            "sortByIfTypeIsKnown": false
+        },
+        {
+            "uniqueName": "LocalVariableTreeView-7",
+            "id": 7,
+            "type": "LocalVariableTreeView",
+            "customDisplayName": "",
+            "isPrimary": true,
+            "showSizeColumn": false
+        },
+        {
+            "uniqueName": "MemorySearchView-11",
+            "id": 11,
+            "type": "MemorySearchView",
+            "customDisplayName": "",
+            "isPrimary": true
+        },
+        {
+            "uniqueName": "MemoryView-1",
+            "id": 1,
+            "type": "MemoryView",
+            "customDisplayName": "",
+            "isPrimary": true,
+            "startAddress": 1048576,
+            "viewType": 1,
+            "littleEndian": true
+        },
+        {
+            "uniqueName": "ParameterVariableTreeView-8",
+            "id": 8,
+            "type": "ParameterVariableTreeView",
+            "customDisplayName": "",
+            "isPrimary": true,
+            "showSizeColumn": false
+        },
+        {
+            "uniqueName": "RegisterView-9",
+            "id": 9,
+            "type": "RegisterView",
+            "customDisplayName": "",
+            "isPrimary": true,
+            "showVU0FFloat": false,
+            "showFPRFloat": false
+        },
+        {
+            "uniqueName": "SavedAddressesView-5",
+            "id": 5,
+            "type": "SavedAddressesView",
+            "customDisplayName": "",
+            "isPrimary": true
+        },
+        {
+            "uniqueName": "StackView-4",
+            "id": 4,
+            "type": "StackView",
+            "customDisplayName": "",
+            "isPrimary": true
+        },
+        {
+            "uniqueName": "ThreadView-3",
+            "id": 3,
+            "type": "ThreadView",
+            "customDisplayName": "",
+            "isPrimary": true
+        }
+    ]
+}
