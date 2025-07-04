@@ -2,4 +2,4 @@ require("config")
 
 vim.notify = require("notify")
 
-vim.cmd.colorscheme("catppuccin")
+-- vim.cmd.colorscheme("catppuccin")

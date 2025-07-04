@@ -16,7 +16,7 @@ option.list = true                                    -- Show Tab and EOL
 option.listchars:append "eol:↴"                       -- Change EOL to '↴'
 option.listchars:append "space:⋅"                     -- Change space to '⋅'
 option.loadplugins = true 			                  -- Load plugin scripts when starting up
-option.mouse = "a"                                    -- Enable mouse
+option.mouse = "nv"                                    -- Enable mouse
 option.swapfile = false 	 		                  -- Disable creation of backup files
 option.synmaxcol = 100                                -- Maximum column to find syntax items
 option.timeoutlen = 1000                              -- Time to wait for mapped sequence to complete (in ms)
@@ -59,3 +59,5 @@ vim.filetype.add({
         tpp = "cpp"
     }
 })
+
+option.iskeyword:remove('_')

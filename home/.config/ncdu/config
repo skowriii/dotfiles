@@ -1,0 +1,17 @@
+# Enable extended information
+-e
+
+# Use base 10 (SI) prefixes instead of base 2
+--si
+
+# Show item count column by default
+--show-itemcount
+
+# Show percent column by default
+--show-percent
+
+# Graph style
+--graph-style eighth-block
+
+# Sort directories before files
+--group-directories-first

@@ -31,3 +31,7 @@ vim.keymap.set("n", "<LEADER>fb", "<CMD>Oil --float %:p:h<CR>", { desc = "Open f
 --NOTE: Buffers
 vim.keymap.set("n", "<TAB>", "<CMD>bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<S-TAB>", "<CMD>bprev<CR>", { desc = "Previous buffer" })
+
+vim.keymap.set({ "n", "o", "x" }, "w", "<CMD>lua require('spider').motion('w')<CR>")
+vim.keymap.set({ "n", "o", "x" }, "e", "<CMD>lua require('spider').motion('e')<CR>")
+vim.keymap.set({ "n", "o", "x" }, "b", "<CMD>lua require('spider').motion('b')<CR>")
