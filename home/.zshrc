@@ -82,7 +82,6 @@ fi
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/wikiman/widgets/widget.zsh
-source <(COMPLETE=zsh jj)
 
 # Completion
 # https://superuser.com/a/815317
