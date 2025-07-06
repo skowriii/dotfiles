@@ -57,7 +57,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git-prompt ssh-agent zsh-autosuggestions zsh-syntax-highlighting)
-plugins=(ssh-agent zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(ssh-agent)
 
 # ssh-agent setup
 zstyle :omz:plugins:ssh-agent identities ~/.ssh/main_ssh
@@ -79,8 +79,8 @@ else
 fi
 
 # Scripts
-# source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-# source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/wikiman/widgets/widget.zsh
 source <(COMPLETE=zsh jj)
 
