@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-fill '/home/smooll/dotfiles/home/wallpapers/rad_samurai.jpg' 
+feh --no-fehbg --bg-fill '/personal/dotfiles/home/wallpapers/rad_samurai.jpg' 
