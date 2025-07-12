@@ -123,8 +123,6 @@ alias ls="exa -lah --icons --group-directories-first"
 alias cat="bat"
 alias grep="ugrep -EinDskip --color=always"
 alias fix-keys="sudo killall gpg-agent && sudo rm -rf /etc/pacman.d/gnupg && sudo pacman-key --init && sudo pacman-key --populate archlinux"
-alias cp="/usr/local/bin/advcp -g"
-alias mv="/usr/local/bin/advmv -g"
 alias ncdu="ncdu -t$(nproc)"
 
 # Prompt
