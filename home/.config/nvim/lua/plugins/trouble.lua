@@ -1,7 +1,5 @@
-local M = {
-    "folke/trouble.nvim",
-    opts = {},
-    cmd = "Trouble"
-}
+MiniDeps.add({
+	source = "folke/trouble.nvim"
+})
 
-return { M }
+require("trouble").setup()

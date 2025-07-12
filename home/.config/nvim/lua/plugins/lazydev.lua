@@ -1,15 +1,13 @@
-local M = {
-    "folke/lazydev.nvim",
-    ft = "lua",
-    opts = {
-        library = {
-            "lazy.nvim",
-            {
-                path = "${3rd}/luv/library",
-                words = { "vim%.uv" }
-            }
-        }
-    }
-}
+MiniDeps.add({
+	source = "folke/lazydev.nvim"
+})
 
-return { M }
+require("lazydev").setup({
+	ft = "lua",
+	library = {
+		{
+			path = "${3rd}/luv/library",
+			words = { "vim%.uv" }
+		}
+	}
+})

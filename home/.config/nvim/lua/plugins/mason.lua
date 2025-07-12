@@ -1,6 +1,5 @@
-local M = {
-    "williamboman/mason.nvim",
-    opts = {}
-}
+MiniDeps.add({
+	source = "mason-org/mason.nvim"
+})
 
-return { M }
+require("mason").setup()

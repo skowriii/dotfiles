@@ -1,11 +1,13 @@
-local M = {
-    "m4xshen/hardtime.nvim",
-    lazy = false,
-    dependencies = { "MunifTanjim/nui.nvim" },
-    opts = {
-        disable_mouse = false,
-        timeout = 1000,
-    }
-}
+MiniDeps.now(
+	function()
+		MiniDeps.add({
+			source = "m4xshen/hardtime.nvim",
+			depends = { "MunifTanjim/nui.nvim" }
+		})
 
-return { M }
+		require("hardtime").setup({
+			disable_mouse = false,
+			timeout = 1000
+		})
+	end
+)

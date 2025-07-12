@@ -1,24 +1,39 @@
-local M = {
-    "nvim-treesitter/nvim-treesitter",
-    build = function ()
-        require("nvim-treesitter.install").update({ with_sync = true })()
-    end,
-    config = function ()
-        local configs = require("nvim-treesitter.configs")
-        configs.setup({
-            ensure_installed = { "c", "cpp", "lua", "cmake" },
-            sync_install = false,
-            highlight = { enable = true },
-            indent = { enable = false }
-        })
-    end
-}
+MiniDeps.now(
+	function()
+		MiniDeps.add({
+			source = "nvim-treesitter/nvim-treesitter",
+			checkout = "master",
+			monitor = "main",
+			hooks = {
+				post_checkout = function()
+					vim.cmd("TSUpdate")
+				end
+			}
+		})
 
-vim.filetype.add {
-    extension = {
-        razor = "razor",
-        cshtml = "razor"
-    }
-}
-
-return { M }
+		require("nvim-treesitter.configs").setup({
+			ensure_installed = {
+				"cpp",
+				"c",
+				"lua",
+				"bash",
+				"cmake",
+				"markdown",
+				"markdown_inline",
+				"diff",
+				"dockerfile",
+				"doxygen",
+				"python",
+				"regex"
+			},
+			sync_install = true,
+			auto_install = true,
+			highlight = {
+				enable = true
+			},
+			indent = {
+				enable = false
+			}
+		})
+	end
+)

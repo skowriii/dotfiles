@@ -1,5 +1,3 @@
-require("config")
-
-vim.notify = require("notify")
-
--- vim.cmd.colorscheme("catppuccin")
+require("user")
+require("plugins")
+require("lsp")

@@ -1,7 +1,6 @@
-local M = {
-    "folke/todo-comments.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    opts = {}
-}
+MiniDeps.add({
+	source = "folke/todo-comments.nvim",
+	depends = { "nvim-lua/plenary.nvim" }
+})
 
-return { M }
+require("todo-comments").setup()

@@ -1,7 +1,3 @@
-local todos = require("todo-comments")
-
---TODO: add lspconfig keybindings
-
 ---------------------
 --FIXME: NORMAL MODE |
 ---------------------
@@ -17,21 +13,11 @@ vim.keymap.set("n", "<LEADER>tq", "<CMD>Trouble qflist toggle<CR>", { desc = "Qu
 
 --NOTE: todo-comments.nvim
 vim.keymap.set("n", "<LEADER>tt", "<CMD>TodoTrouble toggle<CR>", { desc = "Open TODOs" })
-vim.keymap.set("n", "tt]", function()
-    todos.jump_next()
-end, { desc = "Next TODO" })
-vim.keymap.set("n", "tt[", function()
-    todos.jump_prev()
-end, { desc = "Previous TODO" })
 
 --NOTE: Oil.nvim
-vim.keymap.set("n", "<LEADER>fb", "<CMD>Oil --float %:p:h<CR>", { desc = "Open file browser" })
---TODO: add ../ keybinding if current buffer is Oil
+vim.keymap.set("n", "<LEADER>fb", "<CMD>Oil --float --preview %:p:h<CR>", { desc = "Open file browser" })
 
 --NOTE: Buffers
+vim.keymap.set("n", "<LEADER>bf", "<CMD>lua MiniPick.builtin.buffers()<CR>", { desc = "Open buffer explorer" })
 vim.keymap.set("n", "<TAB>", "<CMD>bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<S-TAB>", "<CMD>bprev<CR>", { desc = "Previous buffer" })
-
-vim.keymap.set({ "n", "o", "x" }, "w", "<CMD>lua require('spider').motion('w')<CR>")
-vim.keymap.set({ "n", "o", "x" }, "e", "<CMD>lua require('spider').motion('e')<CR>")
-vim.keymap.set({ "n", "o", "x" }, "b", "<CMD>lua require('spider').motion('b')<CR>")
