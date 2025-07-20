@@ -4,3 +4,9 @@
 [submodule "home/.zsh/git-prompt.zsh"]
 	path = home/.zsh/git-prompt.zsh
 	url = https://github.com/woefe/git-prompt.zsh
+[submodule "home/.zsh/zsh-autosuggestions"]
+	path = home/.zsh/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "home/.zsh/zsh-syntax-highlighting"]
+	path = home/.zsh/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
