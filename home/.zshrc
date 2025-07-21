@@ -81,6 +81,7 @@ fi
 # Scripts
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/git-prompt.zsh/git-prompt.zsh
 source /usr/share/wikiman/widgets/widget.zsh
 
 # Completion
@@ -102,6 +103,7 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
 setopt HIST_FIND_NO_DUPS
 setopt HIST_SAVE_NO_DUPS
+setopt globdots
 
 # History
 HISTFILE=~/.zsh_history
@@ -136,14 +138,8 @@ __zc_privileges=$'%(!.#.$)'
 precmd()
 {
     RPROMPT=
-    PROMPT="%F{yellow}[%f${__zc_username}%F{magenta}@%f${__zc_hostname}%F{magenta}:%f${__zc_directory}%F{yellow}]%f ${__zc_newline}${__zc_exitstatus}${__zc_privileges}%f "
+	PROMPT='%F{yellow}[%f${__zc_username}%F{magenta}@%f${__zc_hostname}%F{magenta}:%f${__zc_directory}%F{yellow}]%f $(gitprompt)${__zc_newline}${__zc_exitstatus}${__zc_privileges}%f '
 }
-
-# precmd()
-# {
-#     RPROMPT=
-#     PROMPT="%F{yellow}[%f${__zc_username}%F{magenta}@%f${__zc_hostname}%F{magenta}:%f${__zc_directory}%F{yellow}]%f $(git_super_status)${__zc_newline}${__zc_exitstatus}${__zc_privileges}%f "
-# }
 
 # Evals
 eval "$(zoxide init zsh)"
