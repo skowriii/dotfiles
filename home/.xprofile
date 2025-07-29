@@ -1,8 +1,12 @@
-xbindkeys
-setxkbmap pl
+xbindkeys &
+setxkbmap pl &
 
-xset -dpms
-xset s off
-xset s noblank
+xrandr --output eDP --set "scaling mode" "Full" &
+
+xset -dpms &
+xset s off &
+xset s noblank &
+
+dpmswatchdog &
 
 xidlehook --not-when-fullscreen --not-when-audio --timer 600 "xset dpms force off" "" &
