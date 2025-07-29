@@ -126,6 +126,10 @@ alias cat="bat"
 alias grep="ugrep -EinDskip --color=always"
 alias fix-keys="sudo killall gpg-agent && sudo rm -rf /etc/pacman.d/gnupg && sudo pacman-key --init && sudo pacman-key --populate archlinux"
 alias ncdu="ncdu -t$(nproc)"
+alias startftp="sudo systemctl start vsftpd"
+alias stopftp="sudo systemctl stop vsftpd"
+alias restartftp="sudo systemctl restart vsftpd"
+alias statusftp="systemctl status vsftpd"
 
 # Prompt
 __zc_username=$'%F{red}%n%f'
