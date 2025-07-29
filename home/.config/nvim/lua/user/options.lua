@@ -36,7 +36,7 @@ option.wrap = true			 -- Long lines wrap and continue on the next line
 local tabs = 4
 
 option.autoindent = true  -- Automatically indent new lines
-option.expandtab = false  -- Use spaces when tab is inserted
+option.expandtab = true  -- Use spaces when tab is inserted
 option.shiftwidth = tabs  -- Number of spaces to use for (auto)indent step
 option.softtabstop = tabs -- Number of spaces, a tab counts for while editing
 option.tabstop = tabs 	  -- Number of spaces, a tab counts for
