@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-fill '/home/smooll/wallpapers/otherworldly_sci-fi_landscape.png' 
+feh --no-fehbg --bg-max '/home/smooll/wallpapers/melancholic_astronaut.png' 
