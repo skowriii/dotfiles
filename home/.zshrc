@@ -78,11 +78,14 @@ else
     bashcompinit -C
 fi
 
+# if command -v tmux >/dev/null && [ -z "$TMUX" ]; then
+#     exec tmux new-session -s "$$"
+# fi
+
 # Scripts
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/git-prompt.zsh/git-prompt.zsh
-source /usr/share/wikiman/widgets/widget.zsh
 
 # Completion
 # https://superuser.com/a/815317
@@ -130,6 +133,8 @@ alias startftp="sudo systemctl start vsftpd"
 alias stopftp="sudo systemctl stop vsftpd"
 alias restartftp="sudo systemctl restart vsftpd"
 alias statusftp="systemctl status vsftpd"
+alias upsys="yay --removemake && yay -Rnsu $(yay -Qqdt); nvim && yay -Scc; bleachbit && sudo bleachbit && betterlockscreen -u ~/wallpapers/"
+alias t="tmux new-session -A -s main"
 
 # Prompt
 __zc_username=$'%F{red}%n%f'
