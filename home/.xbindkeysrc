@@ -7,11 +7,11 @@
 "playerctl previous"
     XF86AudioPrev
 
-"pamixer -i 5"
+"pamixer -i 5 && kill -35 $(pidof dwmblocks)"
     XF86AudioRaiseVolume
 
-"pamixer -d 5"
+"pamixer -d 5 && kill -35 $(pidof dwmblocks)"
     XF86AudioLowerVolume
 
-"pamixer -t"
+"pamixer -t && kill -35 $(pidof dwmblocks)"
     XF86AudioMute
