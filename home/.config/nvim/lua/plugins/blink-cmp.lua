@@ -2,8 +2,7 @@ local border = "rounded"
 
 MiniDeps.add({
 	source = "Saghen/blink.cmp",
-	depends = { "rafamadriz/friendly-snippets" },
-	checkout = "v1.4.1",
+	checkout = "v1.8.0",
 	monitor = "main"
 })
 
@@ -13,6 +12,7 @@ require("blink-cmp").setup({
 		use_nvim_cmp_as_default = false,
 		nerd_font_variant = "mono"
 	},
+    fuzzy = { implementation = "prefer_rust_with_warning" },
 	sources = {
 		default = {
 			"lsp",
@@ -24,6 +24,13 @@ require("blink-cmp").setup({
 			"omni"
 		},
 		providers = {
+            snippets = {
+                opts = {
+                    extended_filetypes = {
+                        html = { "ejs" }
+                    }
+                }
+            },
 			lazydev = {
 				name = "LazyDev",
 				module = "lazydev.integrations.blink",
@@ -64,6 +71,6 @@ require("blink-cmp").setup({
 	signature = {
 		enabled = true,
 		window = { border = border }
-	}
+	},
 	-- opts_extend = { "sources.default" }
 })

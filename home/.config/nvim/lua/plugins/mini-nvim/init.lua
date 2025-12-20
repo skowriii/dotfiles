@@ -10,9 +10,8 @@ local modules = {
 	"icons",
 	"indentscope",
 	"notify",
-	"pairs",
 	"pick",
-	"statusline"
+	"statusline",
 }
 
 require("user.utils").bulk_require("plugins.mini-nvim", modules)

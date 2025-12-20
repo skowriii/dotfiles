@@ -14,4 +14,12 @@ function M.bulk_require(base, modules)
 	end
 end
 
+function M.setup_capabilities(server)
+    local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+    vim.lsp.config(server, {
+        capabilities = capabilities
+    })
+end
+
 return M
