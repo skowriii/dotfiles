@@ -1,0 +1,6 @@
+[Unit]
+Description=Check kernel version every hour
+
+[Service]
+Type=oneshot
+ExecStart=check-kernel-version notify

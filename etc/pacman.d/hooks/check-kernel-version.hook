@@ -1,0 +1,13 @@
+[Trigger]
+Operation = Install
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Description = Checking kernel version...
+When = PostTransaction
+Exec = /usr/local/bin/check-kernel-version
+Depends = python
+Depends = python-requests
+Depends = python-py-notifier

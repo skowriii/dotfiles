@@ -1,0 +1,9 @@
+[Unit]
+Description=Check kernel version every hour
+
+[Timer]
+OnCalendar=hourly
+Unit=%i.service
+
+[Install]
+WantedBy=timers.target
