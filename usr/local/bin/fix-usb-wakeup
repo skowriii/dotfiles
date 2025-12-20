@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+if [[ $(cat /proc/acpi/wakeup | awk '{ if ($1 == "XHC0") print $3 }' | sed 's/*//g') = "enabled" ]]; then
+    echo XHC0 > /proc/acpi/wakeup
+fi

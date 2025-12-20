@@ -1,0 +1,6 @@
+[Unit]
+Description=Restart dwmblocks date block every day at midnight
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c "kill -36 $(pidof dwmblocks)"

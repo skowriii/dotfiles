@@ -1,0 +1,11 @@
+[Unit]
+Description=Whitelist keyboard for ACPI wakeup
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/fix-usb-wakeup
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
