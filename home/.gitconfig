@@ -10,3 +10,7 @@
 	defaultBranch = master
 [core]
 	autocrlf = input
+[webui]
+	autoupdate = true
+[alias]
+	webui = !/home/smooll/.git-webui/release/libexec/git-core/git-webui
