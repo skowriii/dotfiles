@@ -133,8 +133,10 @@ alias startftp="sudo systemctl start vsftpd"
 alias stopftp="sudo systemctl stop vsftpd"
 alias restartftp="sudo systemctl restart vsftpd"
 alias statusftp="systemctl status vsftpd"
-alias upsys="yay --removemake && yay -Rnsu $(yay -Qqdt); nvim && yay -Scc; bleachbit && sudo bleachbit && betterlockscreen -u ~/wallpapers/"
+# alias upsys="yay --removemake && yay -Rnsu $(yay -Qqdt); nvim && yay -Scc; bleachbit && sudo bleachbit && betterlockscreen -u ~/wallpapers/"
+alias upsys="yay --removemake && yay -Rnsu $(yay -Qqdt); flatpak update && nvim && hyprpm update && yay -Scc; bleachbit"
 alias t="tmux new-session -A -s main"
+alias change-resolution="nvim ${HOME}/.config/hypr/land/monitors.conf && exit"
 
 # Prompt
 __zc_username=$'%F{red}%n%f'
