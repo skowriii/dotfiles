@@ -2,6 +2,10 @@
 --FIXME: NORMAL MODE |
 ---------------------
 
+--WARNING: Core
+
+vim.keymap.set("n", "<ESC>", "<CMD>noh<CR>", { desc = "Clear search highlights" })
+
 --WARNING: Extensions
 
 --NOTE: trouble.nvim
