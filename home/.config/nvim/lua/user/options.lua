@@ -31,6 +31,7 @@ option.relativenumber = true -- Show relative line number in front of each line
 option.showmatch = true		 -- Highlight matching parenthesis
 option.termguicolors = true	 -- Enable 24-bit RGB color
 option.wrap = true			 -- Long lines wrap and continue on the next line
+option.scrolloff = 16        -- Minimal number of lines to keep above and below the cursor
 
 -- Tabs
 local tabs = 4
