@@ -55,10 +55,4 @@ option.showmatch = true  -- Show matching words
 option.ruler = true -- Show cursor line and column
 
 -- Other
-vim.filetype.add({
-    extension = {
-        tpp = "cpp"
-    }
-})
-
 option.iskeyword:remove('_')
