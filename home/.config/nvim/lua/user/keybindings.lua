@@ -25,3 +25,9 @@ vim.keymap.set("n", "<LEADER>fb", "<CMD>Oil --float --preview %:p:h<CR>", { desc
 vim.keymap.set("n", "<LEADER>bf", "<CMD>lua MiniPick.builtin.buffers()<CR>", { desc = "Open buffer explorer" })
 vim.keymap.set("n", "<TAB>", "<CMD>bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<S-TAB>", "<CMD>bprev<CR>", { desc = "Previous buffer" })
+
+----------------------------
+--FIXME: NORMAL/VISUAL MODE |
+----------------------------
+
+vim.keymap.set({ "x", "n" }, "<LEADER>p", "\"_dP", { desc = "Paste without overwriting the paste register" })
