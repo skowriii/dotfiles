@@ -1,0 +1,6 @@
+[Unit]
+Description=Change brightness at 8 AM and 10 PM every day
+
+[Service]
+Type=oneshot
+ExecStart=change-brightness

@@ -1,0 +1,13 @@
+[Unit]
+Description=Change brightness at 8 AM and 10 PM every day
+After=multi-user.target
+
+[Timer]
+OnCalendar=*-*-* 8:00
+OnCalendar=*-*-* 22:00
+AccuracySec=1us
+Persistent=True
+Unit=%i.service
+
+[Install]
+WantedBy=timers.target
