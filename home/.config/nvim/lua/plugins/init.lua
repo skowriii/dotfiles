@@ -1,6 +1,6 @@
 local modules = {
 	"mini-nvim",
-	"moonfly",
+	-- "moonfly",
 	"oil",
 	"nvim-treesitter",
 	"render-markdown",
@@ -18,7 +18,8 @@ local modules = {
     "lspkind",
     "nvim-cmp",
     "luasnip",
-    "friendly-snippets"
+    "friendly-snippets",
+    "gruvbox"
 }
 
 require("user.utils").bulk_require("plugins", modules)
