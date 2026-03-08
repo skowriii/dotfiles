@@ -9,7 +9,7 @@ local modules = {
     "pylsp",
     "html",
     "cssls",
-    "css_variables"
+    "css_variables",
 }
 
 require("user.utils").bulk_require("lsp", modules)
