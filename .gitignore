@@ -1,6 +1,1 @@
-# Do NOT ingore these
-!home/.local/share/fonts/
-!home/.local/share/fonts/**
-
-home/.local/share/**
-home/.local/share/fonts/.uuid
+home/wallpapers/**
