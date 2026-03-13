@@ -1,4 +1,4 @@
-from decman import Module, Symlink
+from decman import Module, Symlink, prg, sh
 from decman.plugins import pacman, aur
 
 from common.globals import Globals
@@ -38,3 +38,18 @@ class Audio(Module):
                 Symlink(target=f"{Globals.dotfiles_directory}/home/.config/spotdl/config.json",
                         owner=Globals.username)
         }
+
+    def on_enable(self, store):
+        # Spicetify installation
+        prg(["chmod", "a+wr", "/opt/spotify"],
+            user="root",
+            check=False)
+
+        prg(["chmod", "a+wr", "/opt/spotify/Apps", "-R"],
+            user="root",
+            check=False)
+
+        sh("curl -fsSL https://raw.githubusercontent.com/spicetify/cli/master/install.sh | sh",
+           user=Globals.username,
+           mimic_login=True,
+           check=False)
