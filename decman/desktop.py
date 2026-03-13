@@ -5,8 +5,6 @@ from decman.plugins import pacman, aur
 
 from common.globals import Globals
 
-# TODO: Include all the GUI stuff, like archiver, file manager, theme, etc.
-
 class Desktop(Module):
     def __init__(self):
         super().__init__("desktop")
@@ -24,6 +22,9 @@ class Desktop(Module):
             "hyprsunset",
             "xdg-desktop-portal-gtk",
             "xdg-desktop-portal-hyprland",
+
+            # QT6 theming engine
+            "qt6ct",
 
             # File manager & Co.
             "ark",
@@ -73,8 +74,8 @@ class Desktop(Module):
     @aur.packages
     def aur_packages(self) -> set[str]:
         return {
-            # DE/WM
-            "hyprqt6engine",
+            # QT6 theming engine
+            # "hyprqt6engine",
 
             # Wallpaper
             "awww-bin",
