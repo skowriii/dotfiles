@@ -139,8 +139,23 @@ class Base(Module):
            user="root",
            check=True)
 
-        # Regenerate boot images
+        # Generate UKI
+        prg(["mkdir", "-p", "/boot/EFI/Linux"],
+            user="root",
+            check=True)
+
         prg(["mkinitcpio", "-p", "linux"],
+            user="root",
+            check=True)
+
+        prg(["efibootmgr",
+             "--create",
+             # "--disk", "/dev/nvme0n1",
+             "--disk", "/dev/vda",
+             "--part", "1",
+             "--label", """'Arch Linux'""",
+             "--loader", """'\\EFI\\Linux\\arch-linux.efi'""",
+             "--unicode"],
             user="root",
             check=True)
 
