@@ -70,6 +70,18 @@ class Base(Module):
             "/etc/pacman.conf":
                 File(source_file=f"{Globals.dotfiles_directory}/etc/pacman.conf",
                      owner="root"),
+            "/etc/kernel/cmdline":
+                File(source_file=f"{Globals.dotfiles_directory}/etc/kernel/cmdline",
+                     owner="root"),
+            "/etc/NetworkManager/system-connections/freeethernet.nmconnection":
+                File(source_file=f"{Globals.root_directory}/freeethernet.nmconnection",
+                     owner="root",
+                     group="root",
+                     permissions=0o600),
+            "/usr/local/bin/change-brightness":
+                File(source_file=f"{Globals.dotfiles_directory}/usr/local/bin/change-brightness",
+                     owner="root",
+                     permissions=0o755),
             "/usr/local/bin/check-kernel-version":
                 File(source_file=f"{Globals.dotfiles_directory}/usr/local/bin/check-kernel-version",
                      owner="root",
