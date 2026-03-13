@@ -144,6 +144,12 @@ class Base(Module):
             user="root",
             check=True)
 
+        # Setup git-webui
+        sh("wget -O - https://raw.githubusercontent.com/alberthier/git-webui/master/install/installer.sh | bash",
+           user=Globals.username,
+           mimic_login=True,
+           check=True)
+
         # Update nbfc configurations
         prg(["nbfc", "update"],
             user="root",
