@@ -1,6 +1,6 @@
 import os
 
-from decman import Module, Symlink, prg
+from decman import Module, File, Symlink, prg
 from decman.plugins import pacman, aur
 
 from common.globals import Globals
@@ -87,6 +87,14 @@ class Desktop(Module):
 
             # Browser
             "zen-browser-bin"
+        }
+
+    def files(self) -> dict[str, File]:
+        return {
+            "/usr/local/bin/pwall":
+                File(source_file=f"{Globals.root_directory}/Projects/Tools/Bash/PauseWallpaper/pwall",
+                     owner="root",
+                     permissions=0o755)
         }
 
     def symlinks(self) -> dict[str, Symlink]:
