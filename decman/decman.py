@@ -42,7 +42,7 @@ from extras.bleachbit import Bleachbit
 User()
 BuildUser()
 
-# decman.aur.build_dir = "/var/tmp/decman"
+decman.aur.build_dir = "/var/tmp/decman"
 decman.aur.makepkg_user = "builduser"
 
 decman.execution_order = [
