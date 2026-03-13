@@ -144,7 +144,25 @@ class Base(Module):
             user="root",
             check=True)
 
+        # Update nbfc configurations
+        prg(["nbfc", "update"],
+            user="root",
+            check=True)
+
+        # If the service is not running, nbfc will produce an error whether or not it applies the config
+        # That's why check is set to False here, we don't want decman to crash for no reason.
+        prg(["nbfc", "config", "-a", f"'{Globals.nbfc_model}'"],
+            user="root",
+            check=False)
+
+        prg(["nbfc", "set", "-a"],
+            user="root",
+            check=False)
+
     def after_update(self, store):
+        # This will produce an error if there are directories in /var/cache/pacman/pkg, therefore we do not check
+        # the success of this command
+        # TODO: detect error, remove directories and rerun
         prg(["yay", "-Scc"],
             user=Globals.username,
             pass_environment=True,
