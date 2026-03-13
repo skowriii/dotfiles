@@ -29,6 +29,7 @@ from extras.virtualization import Virtualization
 from extras.password_manager import PasswordManager
 from extras.python import Python
 from extras.vsftpd import VSFTPD
+from extras.opentabletdriver import OpenTabletDriver
 from extras.quickshell import Quickshell
 
 from pacman_hooks import PacmanHooks
@@ -80,6 +81,7 @@ decman.modules += [
     PasswordManager(),
     Python(),
     VSFTPD(),
+    OpenTabletDriver(),
     Quickshell(),
 
     PacmanHooks(),

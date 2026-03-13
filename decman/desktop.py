@@ -91,15 +91,15 @@ class Desktop(Module):
     def symlinks(self) -> dict[str, Symlink]:
         return {
             f"/home/{Globals.username}/.config/hypr":
-                Symlink(target="/personal/dotfiles/home/.config/hypr",
+                Symlink(target=f"{Globals.dotfiles_directory}/home/.config/hypr",
                         owner=Globals.username),
             f"/home/{Globals.username}/.config/waypaper":
-                Symlink(target="/personal/dotfiles/home/.config/waypaper",
+                Symlink(target=f"{Globals.dotfiles_directory}/home/.config/waypaper",
                         owner=Globals.username),
             f"/home/{Globals.username}/wallpapers":
-                Symlink(target="/personal/dotfiles/home/wallpapers",
+                Symlink(target=f"{Globals.dotfiles_directory}/home/wallpapers",
                         owner=Globals.username),
             f"/home/{Globals.username}/.zen":
-                Symlink(target="/personal/.zen",
+                Symlink(target=f"{Globals.root_directory}/.zen",
                         owner=Globals.username)
         }

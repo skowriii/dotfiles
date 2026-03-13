@@ -18,7 +18,7 @@ class Neovim(Module):
     def symlinks(self) -> dict[str, Symlink]:
         return {
             f"/home/{Globals.username}/.config/nvim":
-                Symlink(target="/personal/dotfiles/home/.config/nvim",
+                Symlink(target=f"{Globals.dotfiles_directory}/home/.config/nvim",
                         owner=Globals.username)
         }
 

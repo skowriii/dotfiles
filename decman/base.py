@@ -53,33 +53,33 @@ class Base(Module):
     def files(self) -> dict[str, File]:
         return {
             "/etc/default/cpupower-service.conf":
-                File(source_file="/personal/dotfiles/etc/default/cpupower-service.conf",
+                File(source_file=f"{Globals.dotfiles_directory}/etc/default/cpupower-service.conf",
                      owner="root"),
             "/etc/default/grub":
-                File(source_file="/personal/dotfiles/etc/default/grub",
+                File(source_file=f"{Globals.dotfiles_directory}/etc/default/grub",
                      owner="root"),
             "/etc/systemd/zram-generator.conf":
-                File(source_file="/personal/dotfiles/etc/systemd/zram-generator.conf",
+                File(source_file=f"{Globals.dotfiles_directory}/etc/systemd/zram-generator.conf",
                      owner="root"),
             "/etc/mkinitcpio.conf":
-                File(source_file="/personal/dotfiles/etc/mkinitcpio.conf",
+                File(source_file=f"{Globals.dotfiles_directory}/etc/mkinitcpio.conf",
                      owner="root"),
             "/etc/mkinitcpio.d/linux.preset":
-                File(source_file="/personal/dotfiles/etc/mkinitcpio.d/linux.preset",
+                File(source_file=f"{Globals.dotfiles_directory}/etc/mkinitcpio.d/linux.preset",
                      owner="root"),
             "/etc/pacman.conf":
-                File(source_file="/personal/dotfiles/etc/pacman.conf",
+                File(source_file=f"{Globals.dotfiles_directory}/etc/pacman.conf",
                      owner="root"),
             "/usr/local/bin/check-kernel-version":
-                File(source_file="/personal/dotfiles/usr/local/bin/check-kernel-version",
+                File(source_file=f"{Globals.dotfiles_directory}/usr/local/bin/check-kernel-version",
                      owner="root",
                      permissions=0o755),
             "/usr/local/bin/fix-desktop-portals":
-                File(source_file="/personal/dotfiles/usr/local/bin/fix-desktop-portals",
+                File(source_file=f"{Globals.dotfiles_directory}/usr/local/bin/fix-desktop-portals",
                      owner="root",
                      permissions=0o755),
             "/usr/local/bin/fix-usb-wakeup":
-                File(source_file="/personal/dotfiles/usr/local/bin/fix-usb-wakeup",
+                File(source_file=f"{Globals.dotfiles_directory}/usr/local/bin/fix-usb-wakeup",
                      owner="root",
                      permissions=0o755)
         }
@@ -87,10 +87,10 @@ class Base(Module):
     def symlinks(self) -> dict[str, Symlink]:
         return {
             f"/home/{Globals.username}/.config/yay":
-                Symlink(target="/personal/dotfiles/home/.config/yay",
+                Symlink(target=f"{Globals.dotfiles_directory}/home/.config/yay",
                         owner=Globals.username),
             f"/home/{Globals.username}/.gitconfig":
-                Symlink(target="/personal/dotfiles/home/.gitconfig",
+                Symlink(target=f"{Globals.dotfiles_directory}/home/.gitconfig",
                         owner=Globals.username)
         }
 

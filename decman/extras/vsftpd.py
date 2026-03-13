@@ -1,6 +1,8 @@
 from decman import Module, File
 from decman.plugins import pacman
 
+from common.globals import Globals
+
 class VSFTPD(Module):
     def __init__(self):
         super().__init__("VSFTPD")
@@ -12,9 +14,9 @@ class VSFTPD(Module):
     def files(self) -> dict[str, File]:
         return {
             "/etc/vsftpd.conf":
-                File(source_file="/personal/vsftpd.conf",
+                File(source_file=f"{Globals.root_directory}/vsftpd.conf",
                      owner="root"),
             "/etc/vsftpd.userlist":
-                File(source_file="/personal/vsftpd.userlist",
+                File(source_file=f"{Globals.root_directory}/vsftpd.userlist",
                      owner="root")
         }

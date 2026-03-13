@@ -14,6 +14,6 @@ class Bleachbit(Module):
     def symlinks(self) -> dict[str, Symlink]:
         return {
             f"/home/{Globals.username}/.config/bleachbit":
-                Symlink(target="/personal/dotfiles/home/.config/bleachbit",
+                Symlink(target=f"{Globals.dotfiles_directory}/home/.config/bleachbit",
                         owner=Globals.username)
         }

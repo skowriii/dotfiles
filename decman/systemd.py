@@ -10,23 +10,23 @@ class Systemd(Module):
     def files(self) -> dict[str, File]:
         return {
             "/etc/systemd/system/fix-usb-wakeup.service":
-                File(source_file="/personal/dotfiles/etc/systemd/system/fix-usb-wakeup.service",
+                File(source_file=f"{Globals.dotfiles_directory}/etc/systemd/system/fix-usb-wakeup.service",
                      owner="root")
         }
 
     def symlinks(self) -> dict[str, Symlink]:
         return {
             f"/home/{Globals.username}/.config/systemd/user/change-brightness.service":
-                Symlink(target="/personal/dotfiles/home/.config/systemd/user/change-brightness.service",
+                Symlink(target=f"{Globals.dotfiles_directory}/home/.config/systemd/user/change-brightness.service",
                         owner=Globals.username),
             f"/home/{Globals.username}/.config/systemd/user/change-brightness.timer":
-                Symlink(target="/personal/dotfiles/home/.config/systemd/user/change-brightness.timer",
+                Symlink(target=f"{Globals.dotfiles_directory}/home/.config/systemd/user/change-brightness.timer",
                         owner=Globals.username),
             f"/home/{Globals.username}/.config/systemd/user/check-kernel-version.service":
-                Symlink(target="/personal/dotfiles/home/.config/systemd/user/check-kernel-version.service",
+                Symlink(target=f"{Globals.dotfiles_directory}/home/.config/systemd/user/check-kernel-version.service",
                         owner=Globals.username),
             f"/home/{Globals.username}/.config/systemd/user/check-kernel-version.timer":
-                Symlink(target="/personal/dotfiles/home/.config/systemd/user/check-kernel-version.timer",
+                Symlink(target=f"{Globals.dotfiles_directory}/home/.config/systemd/user/check-kernel-version.timer",
                         owner=Globals.username)
         }
 

@@ -14,12 +14,12 @@ class OpenTabletDriver(Module):
     def symlinks(self) -> dict[str, Symlink]:
         return {
             f"/home/{Globals.username}/.config/OpenTabletDriver/Plugins":
-                Symlink(target="/personal/dotfiles/home/.config/OpenTabletDriver/Plugins",
+                Symlink(target=f"{Globals.dotfiles_directory}/home/.config/OpenTabletDriver/Plugins",
                         owner=Globals.username),
             f"/home/{Globals.username}/.config/OpenTabletDriver/Presets":
-                Symlink(target="/personal/dotfiles/home/.config/OpenTabletDriver/Presets",
+                Symlink(target=f"{Globals.dotfiles_directory}/home/.config/OpenTabletDriver/Presets",
                         owner=Globals.username),
             f"/home/{Globals.username}/.config/OpenTabletDriver/settings.json":
-                Symlink(target="/personal/dotfiles/home/.config/OpenTabletDriver/settings.json",
+                Symlink(target=f"{Globals.dotfiles_directory}/home/.config/OpenTabletDriver/settings.json",
                         owner=Globals.username),
         }

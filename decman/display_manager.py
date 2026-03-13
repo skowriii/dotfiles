@@ -16,7 +16,7 @@ class DisplayManager(Module):
     def files(self) -> dict[str, File]:
         return {
             "/etc/ly/config.ini":
-                File(source_file="/personal/dotfiles/etc/ly/config.ini",
+                File(source_file=f"{Globals.dotfiles_directory}/etc/ly/config.ini",
                      owner="root")
         }
 

@@ -43,13 +43,13 @@ class Shell(Module):
     def symlinks(self) -> dict[str, Symlink]:
         return {
             f"/home/{Globals.username}/.zsh":
-                Symlink(target="/personal/dotfiles/home/.zsh",
+                Symlink(target=f"{Globals.dotfiles_directory}/home/.zsh",
                         owner=Globals.username),
             f"/home/{Globals.username}/.zshrc":
-                Symlink(target="/personal/dotfiles/home/.zshrc",
+                Symlink(target=f"{Globals.dotfiles_directory}/home/.zshrc",
                         owner=Globals.username),
             f"/home/{Globals.username}/.tmux.conf":
-                Symlink(target="/personal/dotfiles/home/.tmux.conf",
+                Symlink(target=f"{Globals.dotfiles_directory}/home/.tmux.conf",
                         owner=Globals.username)
         }
 

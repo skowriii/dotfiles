@@ -35,6 +35,6 @@ class Audio(Module):
     def symlinks(self) -> dict[str, Symlink]:
         return {
             f"/home/{Globals.username}/.config/spotdl/config.json":
-                Symlink(target="/personal/dotfiles/home/.config/spotdl/config.json",
+                Symlink(target=f"{Globals.dotfiles_directory}/home/.config/spotdl/config.json",
                         owner=Globals.username)
         }

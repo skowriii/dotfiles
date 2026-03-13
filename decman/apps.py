@@ -29,21 +29,21 @@ class Apps(Module):
     def symlinks(self) -> dict[str, Symlink]:
         return {
             f"/home/{Globals.username}/.config/btop":
-                Symlink(target="/personal/dotfiles/home/.config/btop",
+                Symlink(target=f"{Globals.dotfiles_directory}/home/.config/btop",
                         owner=Globals.username),
             f"/home/{Globals.username}/.config/fuzzel":
-                Symlink(target="/personal/dotfiles/home/.config/fuzzel",
+                Symlink(target=f"{Globals.dotfiles_directory}/home/.config/fuzzel",
                         owner=Globals.username),
             f"/home/{Globals.username}/.config/mpv":
-                Symlink(target="/personal/dotfiles/home/.config/mpv",
+                Symlink(target=f"{Globals.dotfiles_directory}/home/.config/mpv",
                         owner=Globals.username),
             f"/home/{Globals.username}/.config/ncdu":
-                Symlink(target="/personal/dotfiles/home/.config/ncdu",
+                Symlink(target=f"{Globals.dotfiles_directory}/home/.config/ncdu",
                         owner=Globals.username),
             # f"/home/{Globals.username}/.config/PCSX2":
-            #     Symlink(target="/personal/dotfiles/home/.config/PCSX2",
+            #     Symlink(target=f"{Globals.dotfiles_directory}/home/.config/PCSX2",
             #             owner=Globals.username),
             f"/home/{Globals.username}/.config/thorium-flags.conf":
-                Symlink(target="/personal/dotfiles/home/.config/thorium-flags.conf",
+                Symlink(target=f"{Globals.dotfiles_directory}/home/.config/thorium-flags.conf",
                         owner=Globals.username)
         }

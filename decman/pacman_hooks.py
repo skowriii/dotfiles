@@ -1,6 +1,8 @@
 from decman import Module, Directory
 from decman.plugins import pacman, aur
 
+from common.globals import Globals
+
 class PacmanHooks(Module):
     def __init__(self):
         super().__init__("pacman_hooks")
@@ -18,6 +20,6 @@ class PacmanHooks(Module):
     def directories(self) -> dict[str, Directory]:
         return {
             "/etc/pacman.d/hooks":
-                Directory(source_directory="/personal/dotfiles/etc/pacman.d/hooks",
+                Directory(source_directory=f"{Globals.dotfiles_directory}/etc/pacman.d/hooks",
                           owner="root")
         }

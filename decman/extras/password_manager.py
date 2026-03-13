@@ -14,6 +14,6 @@ class PasswordManager(Module):
     def symlinks(self) -> dict[str, Symlink]:
         return {
             f"/home/{Globals.username}/.password-store":
-                Symlink(target="/personal/.password-store",
+                Symlink(target=f"{Globals.root_directory}/.password-store",
                         owner=Globals.username)
         }

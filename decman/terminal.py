@@ -26,7 +26,7 @@ class Terminal(Module):
     def symlinks(self) -> dict[str, Symlink]:
         return {
             f"/home/{Globals.username}/.config/{terminal}":
-                Symlink(target=f"/personal/dotfiles/home/.config/{terminal}",
+                Symlink(target=f"{Globals.dotfiles_directory}/home/.config/{terminal}",
                         owner=Globals.username)
                 for terminal in self.terminals if terminal == Globals.terminal
         }
