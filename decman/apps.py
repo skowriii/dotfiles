@@ -16,8 +16,7 @@ class Apps(Module):
             "inkscape",
             "kdenlive",
             "mpv",
-            "ncdu",
-            "quickshell",
+            "ncdu"
         }
 
     @aur.packages
@@ -44,9 +43,6 @@ class Apps(Module):
             # f"/home/{Globals.username}/.config/PCSX2":
             #     Symlink(target="/personal/dotfiles/home/.config/PCSX2",
             #             owner=Globals.username),
-            f"/home/{Globals.username}/.config/quickshell":
-                Symlink(target="/personal/dotfiles/home/.config/quickshell",
-                        owner=Globals.username),
             f"/home/{Globals.username}/.config/thorium-flags.conf":
                 Symlink(target="/personal/dotfiles/home/.config/thorium-flags.conf",
                         owner=Globals.username)

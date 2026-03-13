@@ -29,6 +29,7 @@ from extras.virtualization import Virtualization
 from extras.password_manager import PasswordManager
 from extras.python import Python
 from extras.vsftpd import VSFTPD
+from extras.quickshell import Quickshell
 
 from pacman_hooks import PacmanHooks
 from systemd import Systemd
@@ -79,6 +80,7 @@ decman.modules += [
     PasswordManager(),
     Python(),
     VSFTPD(),
+    Quickshell(),
 
     PacmanHooks(),
     Systemd(),
