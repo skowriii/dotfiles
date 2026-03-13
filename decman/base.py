@@ -118,7 +118,7 @@ class Base(Module):
             check=True)
 
         # Setup tmpfs on /tmp directory
-        sh("echo 'tmpfs /tmp tmpfs defaults,size=6G,noatime,mode=1777 0 0' | tee -a /etc/fstab",
+        sh("echo 'tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0' | tee -a /etc/fstab",
            user="root",
            check=True)
 
