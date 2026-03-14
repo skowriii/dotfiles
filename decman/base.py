@@ -86,10 +86,6 @@ class Base(Module):
                 File(source_file=f"{Globals.dotfiles_directory}/usr/local/bin/check-kernel-version",
                      owner="root",
                      permissions=0o755),
-            "/usr/local/bin/fix-desktop-portals":
-                File(source_file=f"{Globals.dotfiles_directory}/usr/local/bin/fix-desktop-portals",
-                     owner="root",
-                     permissions=0o755),
             "/usr/local/bin/fix-usb-wakeup":
                 File(source_file=f"{Globals.dotfiles_directory}/usr/local/bin/fix-usb-wakeup",
                      owner="root",
@@ -150,8 +146,7 @@ class Base(Module):
 
         prg(["efibootmgr",
              "--create",
-             # "--disk", "/dev/nvme0n1",
-             "--disk", "/dev/vda",
+             "--disk", "/dev/nvme0n1",
              "--part", "1",
              "--label", """'Arch Linux'""",
              "--loader", """'\\EFI\\Linux\\arch-linux.efi'""",
