@@ -1,3 +1,5 @@
+import os
+
 from decman import Module, File, Symlink, sh, prg
 from decman.plugins import pacman, aur, systemd
 
@@ -176,11 +178,13 @@ class Base(Module):
             check=False)
 
     def after_update(self, store):
-        # This will produce an error if there are directories in /var/cache/pacman/pkg, therefore we do not check
-        # the success of this command
-        # TODO: detect error, remove directories and rerun
+        directories = [entry.path for entry in os.scandir("/var/cache/pacman/pkg") if entry.is_dir()]
+        if directories:
+            print("Removing directories in pacman cache...")
+            [ os.rmdir(directory) for directory in directories ]
+
         prg(["yay", "-Scc"],
             user=Globals.username,
             pass_environment=True,
             mimic_login=True,
-            check=False)
+            check=True)
