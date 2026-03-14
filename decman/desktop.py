@@ -24,7 +24,7 @@ class Desktop(Module):
             "xdg-desktop-portal-hyprland",
 
             # QT6 theming engine
-            "qt6ct",
+            # "qt6ct",
 
             # File manager & Co.
             "ark",
@@ -76,7 +76,7 @@ class Desktop(Module):
     def aur_packages(self) -> set[str]:
         return {
             # QT6 theming engine
-            # "hyprqt6engine",
+            "hyprqt6engine",
 
             # Wallpaper
             "awww-bin",
