@@ -1,0 +1,49 @@
+# wallust v3.5
+
+# How the image is parse, in order to get the colors:
+# full - resized - wal - thumb -  fastresize - kmeans
+backend = "thumb"
+
+# What color space to use to produce and select the most prominent colors:
+# lab - labmixed - lch - lchmixed - salience
+color_space = "lch"
+
+# Use the most prominent colors in a way that makes sense, a scheme color palette:
+# dark - dark16 - darkcomp - darkcomp16
+# light - light16 - lightcomp - lightcomp16
+# harddark - harddark16 - harddarkcomp - harddarkcomp16
+# softdark - softdark16 - softdarkcomp - softdarkcomp16
+# softlight - softlight16 - softlightcomp - softlightcomp16
+# saliencedark - saliencedarkbalanced - saliencedarkdistributed - saliencedarklow (each has the 16 variations)
+# salienceligh - saliencelightbalanced - saliencelightdistributed - saliencelightlow (each has the 16 variations)
+palette = "dark16"
+
+# Ensures a "readable contrast" (OPTIONAL, disabled by default)
+# Should only be enabled when you notice an unreadable contrast frequently happening
+# with your images. The reference color for the contrast is the background color.
+check_contrast = true
+
+# Color saturation, between [1% and 100%] (OPTIONAL, disabled by default)
+# usually something higher than 50 increases the saturation and below
+# decreases it (on a scheme with strong and vivid colors)
+saturation = 50
+
+threshold = 5
+
+[templates]
+dunst = { template = 'dunstrc', target = '~/.config/dunst/dunstrc' }
+foot = { template = 'foot.ini', target = '~/.config/foot/colors.ini' }
+fuzzel = { template = 'fuzzel.ini', target = '~/.config/fuzzel/colors.ini' }
+gtk-30 = { template = 'gtk-3.0.css', target = '~/.local/share/themes/wallust/gtk-3.0/gtk.css' }
+gtk-320 = { template = 'gtk-3.20.css', target = '~/.local/share/themes/wallust/gtk-3.20/gtk.css' }
+gtk-40 = { template = 'gtk-4.0.css', target = '~/.local/share/themes/wallust/gtk-4.0/gtk.css' }
+hyprland = { template = 'hyprland.conf', target = '~/.config/hypr/land/colors.conf' }
+hyprlock = { template = 'hyprlock.conf', target = '~/.config/hypr/hyprlock/color.conf' }
+neopywal = { template = 'colors_neopywal.vim', target = '~/.cache/wallust/colors_neopywal.vim' }
+qt = { template = 'wallust.colors', target = '~/.local/share/color-schemes/wallust.colors' }
+quickshell = { template = 'Colors.qml', target = '~/.config/quickshell/sS/Colors.qml' }
+spicetify = { template = 'color-spicetify.ini', target = '~/.config/spicetify/Themes/text/color.ini' }
+
+[hooks]
+spicetify = 'spicetify apply'
+wallpaper = 'waypaper'

@@ -19,7 +19,8 @@ local modules = {
     "nvim-cmp",
     "luasnip",
     "friendly-snippets",
-    "gruvbox"
+    -- "gruvbox"
+    "neopywal"
 }
 
 require("user.utils").bulk_require("plugins", modules)
