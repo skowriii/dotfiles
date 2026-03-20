@@ -1,91 +1,38 @@
-export ZSH="$HOME/.oh-my-zsh"
+# Install znap
+[[ -r ~/.zsh/znap/znap.zsh ]] ||
+    git clone --depth 1 -- \
+        https://github.com/marlonrichert/zsh-snap.git ~/.zsh/znap
 
-# Uncomment the following line to use case-sensitive completion.
-CASE_SENSITIVE="false"
+source ~/.zsh/znap/znap.zsh
 
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-HYPHEN_INSENSITIVE="true"
-
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-# Uncomment the following line to change how often to auto-update (in days).
-zstyle ':omz:update' frequency 7
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable colors in ls.
-DISABLE_LS_COLORS="false"
-
-# Uncomment the following line to disable auto-setting terminal title.
-DISABLE_AUTO_TITLE="false"
-
-DISABLE_COMPFIX="true"
-
-# Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-HIST_STAMPS="dd.mm.yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-# plugins=(git-prompt ssh-agent zsh-autosuggestions zsh-syntax-highlighting)
-plugins=(ssh-agent sudo copyfile extract)
-
-# ssh-agent setup
-zstyle :omz:plugins:ssh-agent identities ~/.ssh/main_ssh
-zstyle :omz:plugins:ssh-agent lazy yes
-zstyle :omz:plugins:ssh-agent quiet yes
-zstyle :omz:plugins:ssh-agent agent-forwarding yes
-
-source $ZSH/oh-my-zsh.sh
-
-autoload -Uz compinit && compinit
-autoload -Uz bashcompinit && bashcompinit
-
-if [ "$(date +'%j')" != "$(stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)" ]; then
-    compinit
-    bashcompinit
-else
-    compinit -C
-    bashcompinit -C
+# Compinit
+if [ "$(date +'%j')" = "$(stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)" ]; then
+    zstyle '*:compinit' arguments -C
+    zstyle '*:bashcompinit' arguments -C
 fi
 
-# if command -v tmux >/dev/null && [ -z "$TMUX" ]; then
-#     exec tmux new-session -s "$$"
-# fi
-
 # Scripts
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.zsh/git-prompt.zsh/git-prompt.zsh
+
+# git-prompt
+znap source woefe/git-prompt.zsh
+
+# zsh-autosuggestions
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+
+znap source zsh-users/zsh-autosuggestions
+
+# zsh-ssh-agent
+znap source twfksh/zsh-ssh-agent
+
+# ohmyzsh sudo plugin
+znap source ohmyzsh/ohmyzsh plugins/sudo
+
+# zsh-completions
+znap source zsh-users/zsh-completions
+
+# zsh-syntax-highlighting
+znap source zdharma-continuum/fast-syntax-highlighting
 
 # Completion
 # https://superuser.com/a/815317
@@ -114,12 +61,9 @@ HISTSIZE=10000
 SAVEHIST=1000
 HISTCONTROL=ignoredups:erasedups
 
-# zsh-autosuggestions
-ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
-ZSH_AUTOSUGGEST_USE_ASYNC=1
-
 # Exports
 export EDITOR=nvim
+export PATH="$PATH:/home/smoolldev/.local/bin:/home/smooll/.spicetify"
 
 # Aliases
 alias cd="z"
@@ -134,7 +78,6 @@ alias startftp="sudo systemctl start vsftpd"
 alias stopftp="sudo systemctl stop vsftpd"
 alias restartftp="sudo systemctl restart vsftpd"
 alias statusftp="systemctl status vsftpd"
-alias t="tmux new-session -A -s main"
 alias change-resolution="nvim ${HOME}/.config/hypr/land/monitors.conf && exit"
 alias resmem="tail /dev/zero"
 
@@ -146,22 +89,20 @@ __zc_newline=$'\n'
 __zc_exitstatus=$'%(?.%F{green}.%F{red})'
 __zc_privileges=$'%(!.#.$)'
 
-precmd()
-{
-    RPROMPT=
-	PROMPT='%F{yellow}[%f${__zc_username}%F{magenta}@%f${__zc_hostname}%F{magenta}:%f${__zc_directory}%F{yellow}]%f $(gitprompt)${__zc_newline}${__zc_exitstatus}${__zc_privileges}%f '
-}
+PS1='%F{yellow}[%f${__zc_username}%F{magenta}@%f${__zc_hostname}%F{magenta}:%f${__zc_directory}%F{yellow}]%f $(gitprompt)${__zc_newline}${__zc_exitstatus}${__zc_privileges}%f '
+znap prompt
 
 # Evals
-eval "$(zoxide init zsh)"
-eval "$(fzf --zsh)"
-eval "$(register-python-argcomplete pipx)"
+znap eval zoxide 'zoxide init zsh'
 
 # Keybindings
 bindkey "^[[Z" autosuggest-accept
 bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
 bindkey "^[[H" beginning-of-line
-bindkey "^[[4~" end-of-line
+bindkey "^[[F" end-of-line
 
-export PATH="$PATH:/home/smoolldev/.local/bin:/home/smooll/.spicetify"
+# Functions
+znap function _python_argcomplete pipx 'eval "$(register-python-argcomplete pipx)"'
+complete -o nospace -o default -o bashdefault \
+    -F _python_argcomplete pipx

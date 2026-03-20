@@ -1,2 +1,8 @@
-home/wallpapers/**
+# decman
 decman/install.log
+
+# home
+home/.zsh/**
+home/wallpapers/**
+
+!home/.zsh/znap/
