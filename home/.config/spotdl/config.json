@@ -9,8 +9,7 @@
     "max_retries": 3,
     "use_cache_file": false,
     "audio_providers": [
-        "youtube-music",
-        "youtube"
+        "youtube-music"
     ],
     "lyrics_providers": [
         "synced"
