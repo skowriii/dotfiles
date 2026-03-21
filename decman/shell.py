@@ -18,6 +18,7 @@ class Shell(Module):
             "eza", # ls
             "ugrep", # grep
             "zoxide", # cd
+            "nawk", # awk
 
             # Multiplexer
             "tmux",
