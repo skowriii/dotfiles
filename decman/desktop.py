@@ -85,6 +85,7 @@ class Desktop(Module):
             # Themes
             "bibata-cursor-theme-bin",
             "kora-icon-theme",
+            "wallust-git",
 
             # Browser
             "zen-browser-bin"
@@ -108,6 +109,9 @@ class Desktop(Module):
                         owner=Globals.username),
             f"/home/{Globals.username}/wallpapers":
                 Symlink(target=f"{Globals.dotfiles_directory}/home/wallpapers",
+                        owner=Globals.username),
+            f"/home/{Globals.username}/.config/wallust":
+                Symlink(target=f"{Globals.dotfiles_directory}/home/.config/wallust",
                         owner=Globals.username),
             f"/home/{Globals.username}/.zen":
                 Symlink(target=f"{Globals.root_directory}/.zen",

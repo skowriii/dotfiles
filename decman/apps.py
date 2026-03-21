@@ -23,7 +23,6 @@ class Apps(Module):
     def aur_packages(self) -> set[str]:
         return {
             # "pcsx2",
-            "wallust-git",
             "thorium-browser-bin"
         }
 
