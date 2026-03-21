@@ -178,7 +178,11 @@ class Base(Module):
             check=False)
 
     def before_update(self, store):
-        prg(["reflector", "--sort", "rate", "--latest", "10", "--save", "/etc/pacman.d/mirrorlist"],
+        prg(["reflector",
+             "--sort", "rate",
+             "--latest", "10",
+             "--country", "pl,de",
+             "--save", "/etc/pacman.d/mirrorlist"],
             user="root",
             check=True)
 
