@@ -97,8 +97,8 @@ znap eval zoxide 'zoxide init zsh'
 
 # Keybindings
 bindkey "^[[Z" autosuggest-accept
-bindkey "^[[1;5D" backward-word
-bindkey "^[[1;5C" forward-word
+bindkey "^[[1;3D" backward-word
+bindkey "^[[1;3C" forward-word
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 
