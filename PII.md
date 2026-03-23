@@ -16,7 +16,7 @@ This document outlines manual intervention required after running decman for the
 
 ## Wallust
 ```bash
-wallust run </path/to/wallpaper>
+wallust run </path/to/wallpaper> --no-hooks
 ```
 
 ## Spicetify
