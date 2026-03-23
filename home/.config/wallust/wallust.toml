@@ -31,19 +31,19 @@ saturation = 50
 threshold = 5
 
 [templates]
-dunst = { template = 'dunstrc', target = '~/.config/dunst/dunstrc' }
+dunst = { template = 'dunst', target = '~/.config/dunst/dunstrc' }
 foot = { template = 'foot.ini', target = '~/.config/foot/colors.ini' }
 fuzzel = { template = 'fuzzel.ini', target = '~/.config/fuzzel/colors.ini' }
 gtk-30 = { template = 'gtk-3.0.css', target = '~/.local/share/themes/wallust/gtk-3.0/gtk.css' }
 gtk-320 = { template = 'gtk-3.20.css', target = '~/.local/share/themes/wallust/gtk-3.20/gtk.css' }
 gtk-40 = { template = 'gtk-4.0.css', target = '~/.local/share/themes/wallust/gtk-4.0/gtk.css' }
 hyprland = { template = 'hyprland.conf', target = '~/.config/hypr/land/colors.conf' }
-hyprlock = { template = 'hyprlock.conf', target = '~/.config/hypr/hyprlock/color.conf' }
-neopywal = { template = 'colors_neopywal.vim', target = '~/.cache/wallust/colors_neopywal.vim' }
-qt = { template = 'wallust.colors', target = '~/.local/share/color-schemes/wallust.colors' }
-quickshell = { template = 'Colors.qml', target = '~/.config/quickshell/sS/Colors.qml' }
-spicetify = { template = 'color-spicetify.ini', target = '~/.config/spicetify/Themes/text/color.ini' }
+hyprlock = { template = 'hyprlock.conf', target = '~/.config/hypr/hyprlock/colors.conf' }
+neopywal = { template = 'neovim.vim', target = '~/.cache/wallust/colors_neopywal.vim' }
+qt = { template = 'hyprqt6engine.colors', target = '~/.local/share/color-schemes/wallust.colors' }
+quickshell = { template = 'quickshell.qml', target = '~/.config/quickshell/sS/Colors.qml' }
+spicetify = { template = 'spicetify.ini', target = '~/.config/spicetify/Themes/text/color.ini' }
 
 [hooks]
-spicetify = 'spicetify apply'
+spicetify = 'spicetify apply --no-restart'
 wallpaper = 'waypaper'
