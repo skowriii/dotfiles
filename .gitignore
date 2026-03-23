@@ -3,6 +3,14 @@ decman/install.log
 
 # home
 home/.zsh/**
+
 home/wallpapers/**
+
+home/.config/dunst/dunstrc
+home/.config/foot/colors.ini
+home/.config/fuzzel/colors.ini
+home/.config/hypr/land/colors.conf
+home/.config/hypr/hyprlock/**
+home/.config/quickshell/sS/Colors.qml
 
 !home/.zsh/znap/
