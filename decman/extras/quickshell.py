@@ -14,14 +14,14 @@ class Quickshell(Module):
     def files(self) -> dict[str, File]:
         return {
             "/usr/local/bin/sscli":
-                File(source_file=f"{Globals.dotfiles_directory}/home/.config/quickshell/sS/sscli",
+                File(source_file=f"{Globals.dotfiles_directory}/home/.config/quickshell/ss/sscli",
                      owner="root",
                      permissions=0o755)
         }
 
     def symlinks(self) -> dict[str, Symlink]:
         return {
-            f"/home/{Globals.username}/.config/quickshell/sS":
-                Symlink(target=f"{Globals.dotfiles_directory}/home/.config/quickshell/sS",
+            f"/home/{Globals.username}/.config/quickshell/ss":
+                Symlink(target=f"{Globals.dotfiles_directory}/home/.config/quickshell/ss",
                         owner=Globals.username)
         }
