@@ -11,6 +11,8 @@ home/.config/foot/colors.ini
 home/.config/fuzzel/colors.ini
 home/.config/hypr/land/colors.conf
 home/.config/hypr/hyprlock/**
-home/.config/quickshell/sS/Colors.qml
+home/.config/quickshell/ss/Colors.qml
+
+home/.config/quickshell/ss/.qmlls.ini
 
 !home/.zsh/znap/
