@@ -45,5 +45,5 @@ quickshell = { template = 'quickshell.qml', target = '~/.config/quickshell/ss/Co
 spicetify = { template = 'spicetify.ini', target = '~/.config/spicetify/Themes/text/color.ini' }
 
 [hooks]
-spicetify = 'spicetify apply --no-restart'
-wallpaper = 'waypaper'
+spicetify = 'spicetify apply --no-restart &>/dev/null'
+wallpaper = 'waypaper &>/dev/null'
