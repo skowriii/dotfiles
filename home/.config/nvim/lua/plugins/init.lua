@@ -1,6 +1,5 @@
 local modules = {
 	"mini-nvim",
-	-- "moonfly",
 	"oil",
 	"nvim-treesitter",
 	"render-markdown",
@@ -19,7 +18,6 @@ local modules = {
     "nvim-cmp",
     "luasnip",
     "friendly-snippets",
-    -- "gruvbox"
     "neopywal"
 }
 
