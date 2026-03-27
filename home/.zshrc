@@ -80,6 +80,7 @@ alias restartftp="sudo systemctl restart vsftpd"
 alias statusftp="systemctl status vsftpd"
 alias change-resolution="nvim ${HOME}/.config/hypr/land/monitors.conf && exit"
 alias resmem="tail /dev/zero"
+alias ping="ping -c 4"
 
 # Prompt
 __zc_username=$'%F{red}%n%f'
