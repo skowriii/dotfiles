@@ -13,6 +13,6 @@ home/.config/hypr/land/colors.conf
 home/.config/hypr/hyprlock/**
 home/.config/quickshell/ss/Common/Colors.qml
 
-home/.config/quickshell/ss/.qmlls.ini
+home/.config/quickshell/**/.qmlls.ini
 
 !home/.zsh/znap/
