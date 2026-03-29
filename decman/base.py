@@ -201,3 +201,7 @@ class Base(Module):
             pass_environment=True,
             mimic_login=True,
             check=True)
+
+        prg(["journalctl", "--vacuum-time=2days"],
+            user="root",
+            check=True)
