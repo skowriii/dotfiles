@@ -177,6 +177,10 @@ class Base(Module):
             user="root",
             check=False)
 
+        prg(["systemctl", "disable", "NetworkManager-wait-online.service"],
+            user="root",
+            check=True)
+
     def before_update(self, store):
         prg(["reflector",
              "--sort", "rate",
