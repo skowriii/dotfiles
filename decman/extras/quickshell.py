@@ -9,7 +9,10 @@ class Quickshell(Module):
 
     @pacman.packages
     def packages(self) -> set[str]:
-        return { "quickshell" }
+        return {
+            "quickshell",
+            "unixodbc" # qmlls
+        }
 
     def files(self) -> dict[str, File]:
         return {
