@@ -11,7 +11,7 @@ local modules = {
 	"indentscope",
 	"notify",
 	"pick",
-	"statusline",
+	-- "statusline",
 }
 
 require("user.utils").bulk_require("plugins.mini-nvim", modules)
