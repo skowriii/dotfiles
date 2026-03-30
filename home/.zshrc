@@ -53,6 +53,12 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
 setopt HIST_FIND_NO_DUPS
 setopt HIST_SAVE_NO_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt SHARE_HISTORY
+setopt CORRECT
+setopt COMPLETE_IN_WORD
+setopt MENU_COMPLETE
+setopt EXTENDED_GLOB
 setopt globdots
 
 # History
