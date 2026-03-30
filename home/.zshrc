@@ -64,6 +64,7 @@ HISTCONTROL=ignoredups:erasedups
 # Exports
 export EDITOR=nvim
 export PATH="$PATH:/home/smoolldev/.local/bin:/home/smooll/.spicetify"
+export WORDCHARS="${WORDCHARS//\/}"
 
 # Aliases
 alias cd="z"
