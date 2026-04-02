@@ -182,13 +182,20 @@ class Base(Module):
             check=True)
 
     def before_update(self, store):
-        prg(["reflector",
-             "--sort", "rate",
-             "--latest", "10",
-             "--country", "pl,de",
-             "--save", "/etc/pacman.d/mirrorlist"],
-            user="root",
-            check=True)
+        kernel_outdated = prg(["check-kernel-version"],
+                              user=Globals.username,
+                              pass_environment=True,
+                              mimic_login=True,
+                              check=True).strip()
+
+        if kernel_outdated != "":
+            prg(["reflector",
+                 "--sort", "rate",
+                 "--latest", "10",
+                 "--country", "pl,de",
+                 "--save", "/etc/pacman.d/mirrorlist"],
+                user="root",
+                check=True)
 
     def after_update(self, store):
         directories = [entry.path for entry in os.scandir("/var/cache/pacman/pkg") if entry.is_dir()]
