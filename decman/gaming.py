@@ -15,7 +15,6 @@ class Gaming(Module):
     @aur.packages
     def aur_packages(self) -> set[str]:
         return {
-            "osu-lazer-bin",
             "xpadneo-dkms"
         }
 
