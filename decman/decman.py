@@ -20,17 +20,18 @@ from development import Development
 from gaming import Gaming
 
 from extras.neovim import Neovim
-from extras.vlc import VLC
+# from extras.vlc import VLC
 from extras.obs import OBS
-from extras.docker import Docker
-from extras.plymouth import Plymouth
+# from extras.docker import Docker
+# from extras.plymouth import Plymouth
 from extras.wine import Wine
 from extras.virtualization import Virtualization
 from extras.password_manager import PasswordManager
 from extras.python import Python
 from extras.vsftpd import VSFTPD
-from extras.opentabletdriver import OpenTabletDriver
+# from extras.opentabletdriver import OpenTabletDriver
 from extras.quickshell import Quickshell
+# from extras.osu_lazer import OSULazer
 
 from pacman_hooks import PacmanHooks
 from systemd import Systemd
@@ -72,17 +73,18 @@ decman.modules += [
     Gaming(),
 
     Neovim(),
-    VLC(),
+    # VLC(),
     OBS(),
-    Docker(),
-    Plymouth(),
+    # Docker(),
+    # Plymouth(),
     Wine(),
     Virtualization(),
     PasswordManager(),
     Python(),
     VSFTPD(),
-    OpenTabletDriver(),
+    # OpenTabletDriver(),
     Quickshell(),
+    # OSULazer(),
 
     PacmanHooks(),
     Systemd(),
