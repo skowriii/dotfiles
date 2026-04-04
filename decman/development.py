@@ -13,6 +13,6 @@ class Development(Module):
             "npm"
         }
 
-    @aur.packages
-    def aur_packages(self) -> set[str]:
-        return { "visual-studio-code-bin" }
+    # @aur.packages
+    # def aur_packages(self) -> set[str]:
+    #     return { "visual-studio-code-bin" }
