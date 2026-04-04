@@ -1,6 +1,6 @@
 MiniDeps.add({
 	source = "neovim/nvim-lspconfig",
-    depends = { "WhoIsSeth/mason-tool-installer.nvim" }
+    depends = { "WhoIsSethDaniel/mason-tool-installer.nvim" }
 })
 
 require("mason-tool-installer").setup({
