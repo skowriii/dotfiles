@@ -1,5 +1,5 @@
 from decman import Module, Symlink, sh, prg
-from decman.plugins import pacman
+from decman.plugins import pacman, aur
 
 from common.globals import Globals
 
@@ -40,6 +40,10 @@ class Shell(Module):
             "socat",
             "tealdeer"
         }
+
+    @aur.packages
+    def aur_packages(self) -> set[str]:
+        return { "smug-bin" }
 
     def symlinks(self) -> dict[str, Symlink]:
         return {
