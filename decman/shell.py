@@ -20,9 +20,6 @@ class Shell(Module):
             "zoxide", # cd
             "nawk", # awk
 
-            # Multiplexer
-            "tmux",
-
             # Man pages
             "man-db",
             "man-pages",
@@ -41,10 +38,6 @@ class Shell(Module):
             "tealdeer"
         }
 
-    @aur.packages
-    def aur_packages(self) -> set[str]:
-        return { "smug-bin" }
-
     def symlinks(self) -> dict[str, Symlink]:
         return {
             f"/home/{Globals.username}/.zsh":
@@ -52,9 +45,6 @@ class Shell(Module):
                         owner=Globals.username),
             f"/home/{Globals.username}/.zshrc":
                 Symlink(target=f"{Globals.dotfiles_directory}/home/.zshrc",
-                        owner=Globals.username),
-            f"/home/{Globals.username}/.tmux.conf":
-                Symlink(target=f"{Globals.dotfiles_directory}/home/.tmux.conf",
                         owner=Globals.username)
         }
 

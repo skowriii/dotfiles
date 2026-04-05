@@ -32,6 +32,7 @@ from extras.vsftpd import VSFTPD
 # from extras.opentabletdriver import OpenTabletDriver
 from extras.quickshell import Quickshell
 # from extras.osu_lazer import OSULazer
+from extras.tmux import Tmux
 
 from pacman_hooks import PacmanHooks
 from systemd import Systemd
@@ -85,6 +86,7 @@ decman.modules += [
     # OpenTabletDriver(),
     Quickshell(),
     # OSULazer(),
+    Tmux(),
 
     PacmanHooks(),
     Systemd(),
