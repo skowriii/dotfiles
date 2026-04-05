@@ -80,7 +80,7 @@ class Desktop(Module):
 
             # Wallpaper
             "awww-bin",
-            "waypaper-git",
+            "waypaper",
 
             # Themes
             "bibata-cursor-theme-bin",
