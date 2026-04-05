@@ -1,0 +1,31 @@
+session: quickshell
+
+root: ~/dotfiles/home/.config/quickshell/newss
+
+before_start:
+  - git checkout ss-rewrite
+  - git stash pop
+
+stop:
+  - git stash
+  - git checkout master
+
+windows:
+  - name: editor
+    selected: true
+    layout: main-vertical
+    commands:
+      - $EDITOR .
+
+  - name: shell
+    layout: main-vertical
+
+  - name: qs
+    layout: main-vertical
+    commands:
+      - qs -c newss
+
+  - name: webui
+    layout: main-vertical
+    commands:
+      - git webui
