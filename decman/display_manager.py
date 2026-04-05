@@ -35,5 +35,4 @@ class DisplayManager(Module):
 
         if is_enabled:
             prg(["systemctl", "disable", "getty@tty2.service"],
-                user="root",
-                check=True)
+                user="root")

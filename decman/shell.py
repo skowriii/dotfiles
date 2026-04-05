@@ -61,9 +61,7 @@ class Shell(Module):
     def on_enable(self, store):
         sh("curl -fsSL https://install.ohmyz.sh | CHSH=no sh -s -- --unattended --keep-zshrc",
            user=Globals.username,
-           mimic_login=True,
-           check=True)
+           mimic_login=True)
 
         sh(f"chsh -s $(which zsh) {Globals.username}",
-            user="root",
-            check=True)
+            user="root")

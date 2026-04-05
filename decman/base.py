@@ -118,32 +118,26 @@ class Base(Module):
   /[[:space:]]debug[[:space:]]/ s/\\bdebug\\b/!debug/g
   /[[:space:]]!debug[[:space:]]/! s/^\\(OPTIONS=(.*\\))/\\1 !debug)/
 }" /etc/makepkg.conf""",
-           user="root",
-           check=True)
+           user="root")
 
         # Generate grub config
         prg(["grub-mkconfig", "-o", "/boot/grub/grub.cfg"],
-            user="root",
-            check=True)
+            user="root")
 
         # Setup tmpfs on /tmp directory
         sh("echo 'tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0' | tee -a /etc/fstab",
-           user="root",
-           check=True)
+           user="root")
 
         # Change mount options for /
         sh("""sed -i -E "s@^(UUID=[^[:space:]]+[[:space:]]+/[[:space:]]+ext4[[:space:]]+)[^[:space:]]+@\\1rw,relatime,lazytime,commit=60,journal_async_commit@" /etc/fstab""",
-           user="root",
-           check=True)
+           user="root")
 
         # Generate UKI
         prg(["mkdir", "-p", "/boot/EFI/Linux"],
-            user="root",
-            check=True)
+            user="root")
 
         prg(["mkinitcpio", "-p", "linux"],
-            user="root",
-            check=True)
+            user="root")
 
         prg(["efibootmgr",
              "--create",
@@ -152,19 +146,16 @@ class Base(Module):
              "--label", """'Arch Linux'""",
              "--loader", """'\\EFI\\Linux\\arch-linux.efi'""",
              "--unicode"],
-            user="root",
-            check=True)
+            user="root")
 
         # Setup git-webui
         sh("wget -O - https://raw.githubusercontent.com/alberthier/git-webui/master/install/installer.sh | bash",
            user=Globals.username,
-           mimic_login=True,
-           check=True)
+           mimic_login=True)
 
         # Update nbfc configurations
         prg(["nbfc", "update"],
-            user="root",
-            check=True)
+            user="root")
 
         # If the service is not running, nbfc will produce an error whether or not it applies the config
         # That's why check is set to False here, we don't want decman to crash for no reason.
@@ -177,15 +168,13 @@ class Base(Module):
             check=False)
 
         prg(["systemctl", "disable", "NetworkManager-wait-online.service"],
-            user="root",
-            check=True)
+            user="root")
 
     def before_update(self, store):
         kernel_outdated = prg(["check-kernel-version"],
                               user=Globals.username,
                               pass_environment=True,
-                              mimic_login=True,
-                              check=True).strip()
+                              mimic_login=True).strip()
 
         if kernel_outdated != "":
             prg(["reflector",
@@ -193,8 +182,7 @@ class Base(Module):
                  "--latest", "10",
                  "--country", "pl,de",
                  "--save", "/etc/pacman.d/mirrorlist"],
-                user="root",
-                check=True)
+                user="root")
 
     def after_update(self, store):
         directories = [entry.path for entry in os.scandir("/var/cache/pacman/pkg") if entry.is_dir()]
@@ -205,9 +193,7 @@ class Base(Module):
         prg(["yay", "-Scc"],
             user=Globals.username,
             pass_environment=True,
-            mimic_login=True,
-            check=True)
+            mimic_login=True)
 
         prg(["journalctl", "--vacuum-time=2days"],
-            user="root",
-            check=True)
+            user="root")

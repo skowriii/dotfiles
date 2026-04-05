@@ -19,5 +19,4 @@ class Flatpak(Module):
         prg(["flatpak", "uninstall", "--unused"],
             user=Globals.username,
             pass_environment=True,
-            mimic_login=True,
-            check=True)
+            mimic_login=True)
