@@ -18,5 +18,4 @@ class Plymouth(Module):
 
     def on_change(self, store):
         prg(["mkinitcpio", "-p", "linux"],
-            user="root",
-            check=True)
+            user="root")

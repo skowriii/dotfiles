@@ -125,5 +125,4 @@ class Desktop(Module):
         prg(["xdg-user-dirs-gtk-update"],
             user=Globals.username,
             pass_environment=True,
-            mimic_login=True,
-            check=True)
+            mimic_login=True)
