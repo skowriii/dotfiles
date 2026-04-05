@@ -110,7 +110,6 @@ class Base(Module):
             "cpupower.service",
             "nbfc_service.service",
             "nohang-desktop.service",
-            "reflector.timer"
         }
 
     def on_enable(self, store):
