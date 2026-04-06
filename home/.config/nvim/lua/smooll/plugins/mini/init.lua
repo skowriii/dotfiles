@@ -5,6 +5,7 @@ local modules = {
     "clue",
     "cursorword",
     "hipatterns",
+    "icons",
     "indentscope",
     "misc",
     "trailspace"
