@@ -10,7 +10,6 @@ class Virtualization(Module):
         return {
             "dnsmasq",
             "iproute2",
-            "iptables-nft",
             "libguestfs",
             "libvirt",
             "virt-manager"
