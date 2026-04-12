@@ -25,6 +25,9 @@ MiniMisc.safely("now",
             preview_win = {
                 update_on_cursor_moved = true,
                 preview_method = "fast_scratch"
+            },
+            win_options = {
+                signcolumn = "yes:2"
             }
         })
     end
