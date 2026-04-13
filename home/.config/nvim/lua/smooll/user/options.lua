@@ -21,6 +21,7 @@ option.swapfile = false								  -- Disable creation of backup files
 option.synmaxcol = 100								  -- Maximum column to find syntax items
 option.timeoutlen = 1000							  -- Time to wait for mapped sequence to complete (in ms)
 option.updatetime = 250								  -- Number of ms to wait for before triggering an event
+option.modeline = false                               -- Make sure modelines are turned off
 
 -- UI
 option.background = "dark"	 -- Set highlight colors
