@@ -4,8 +4,11 @@ decman/install.log
 # home
 home/.zsh/**
 
+!home/.zsh/znap/
+
 home/wallpapers/**
 
+# Wallust generated files
 home/.config/dunst/dunstrc
 home/.config/foot/colors.ini
 home/.config/fuzzel/colors.ini
@@ -13,6 +16,8 @@ home/.config/hypr/land/colors.conf
 home/.config/hypr/hyprlock/**
 home/.config/quickshell/ss/Common/Colors.qml
 
+# Quickshell
 home/.config/quickshell/**/.qmlls.ini
 
-!home/.zsh/znap/
+# smug
+home/.config/smug/smug.log
