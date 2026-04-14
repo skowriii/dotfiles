@@ -4,7 +4,7 @@ root: ~/dotfiles/home/.config/quickshell/newss
 
 before_start:
   - git checkout ss-rewrite
-  - git stash pop
+  - ~/.config/smug/stash
 
 stop:
   - git stash

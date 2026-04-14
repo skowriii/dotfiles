@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+if ! $(git stash pop 2>/dev/null); then
+    echo "no stash"
+    exit 0
+fi
