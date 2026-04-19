@@ -16,3 +16,5 @@
 	webui = !/home/smooll/.git-webui/release/libexec/git-core/git-webui
 [credential]
 	helper = cache
+[rerere]
+	enabled = true
