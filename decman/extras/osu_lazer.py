@@ -1,5 +1,5 @@
 from decman import Module
-from decman import aur
+from decman.plugins import aur
 
 class OSULazer(Module):
     def __init__(self):
