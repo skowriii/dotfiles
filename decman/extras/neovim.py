@@ -25,5 +25,4 @@ class Neovim(Module):
     def after_update(self, store):
         sh("""nvim --headless "+lua vim.pack.update()" +w +qall""",
            user=Globals.username,
-           mimic_login=True,
-           check=False)
+           mimic_login=True)
