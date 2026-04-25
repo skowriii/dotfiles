@@ -1,5 +1,5 @@
 from decman import Module, Symlink, sh
-from decman.plugins import pacman, aur
+from decman.plugins import pacman
 
 from common.globals import Globals
 
