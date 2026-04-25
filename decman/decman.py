@@ -29,9 +29,9 @@ from extras.virtualization import Virtualization
 from extras.password_manager import PasswordManager
 from extras.python import Python
 from extras.vsftpd import VSFTPD
-from extras.opentabletdriver import OpenTabletDriver
+# from extras.opentabletdriver import OpenTabletDriver
 from extras.quickshell import Quickshell
-from extras.osu_lazer import OSULazer
+# from extras.osu_lazer import OSULazer
 from extras.tmux import Tmux
 
 from pacman_hooks import PacmanHooks
@@ -83,9 +83,9 @@ decman.modules += [
     PasswordManager(),
     Python(),
     VSFTPD(),
-    OpenTabletDriver(),
+    # OpenTabletDriver(),
     Quickshell(),
-    OSULazer(),
+    # OSULazer(),
     Tmux(),
 
     PacmanHooks(),
