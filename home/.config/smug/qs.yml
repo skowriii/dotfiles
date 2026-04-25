@@ -12,10 +12,10 @@ windows:
   - name: shell
     layout: main-vertical
 
-  - name: qs
+  - name: log
     layout: main-vertical
     commands:
-      - qs -c newss
+      - qs -c ss
 
   - name: webui
     layout: main-vertical
