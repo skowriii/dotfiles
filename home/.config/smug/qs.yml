@@ -1,6 +1,6 @@
 session: qs
 
-root: ~/dotfiles/home/.config/quickshell/newss
+root: ~/dotfiles/home/.config/quickshell/ss
 
 windows:
   - name: editor
