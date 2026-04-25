@@ -1,14 +1,6 @@
-session: quickshell
+session: qs
 
 root: ~/dotfiles/home/.config/quickshell/newss
-
-before_start:
-  - git checkout ss-rewrite
-  - ~/.config/smug/stash
-
-stop:
-  - git stash
-  - git checkout master
 
 windows:
   - name: editor
