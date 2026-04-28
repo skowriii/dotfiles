@@ -1,6 +1,6 @@
 session: qs
 
-root: ~/dotfiles/home/.config/quickshell/ss
+root: /personal/Projects/Applications/QML/ss
 
 windows:
   - name: editor
