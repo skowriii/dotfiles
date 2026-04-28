@@ -108,7 +108,9 @@ bindkey "^[[Z" autosuggest-accept
 bindkey "^[[1;3D" backward-word
 bindkey "^[[1;3C" forward-word
 bindkey "^[[H" beginning-of-line
+bindkey "^[[1~" beginning-of-line
 bindkey "^[[F" end-of-line
+bindkey "^[[4~" end-of-line
 
 # Functions
 znap function _python_argcomplete pipx 'eval "$(register-python-argcomplete pipx)"'
