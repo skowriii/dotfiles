@@ -12,5 +12,9 @@ class Fonts(Module):
             "noto-fonts-cjk",
             "noto-fonts-emoji",
             "noto-fonts-extra",
-            "ttf-jetbrains-mono-nerd"
+            "ttf-montserrat" # Primary GUI font
         }
+
+    @aur.packages
+    def aur_packages(self) -> set[str]:
+        return { "cozette-otb" } # Terminal font
