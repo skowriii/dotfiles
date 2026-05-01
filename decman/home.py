@@ -14,9 +14,6 @@ class Home(Module):
             f"/home/{Globals.username}/.ssh":
                 Symlink(target=f"{Globals.root_directory}/.ssh",
                         owner=Globals.username),
-            f"/home/{Globals.username}/docker":
-                Symlink(target=f"{Globals.root_directory}/docker",
-                        owner=Globals.username),
             f"/home/{Globals.username}/dotfiles":
                 Symlink(target=f"{Globals.dotfiles_directory}",
                         owner=Globals.username),
