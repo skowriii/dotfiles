@@ -41,7 +41,6 @@ hyprland = { template = 'hyprland.conf', target = '~/.config/hypr/land/colors.co
 hyprlock = { template = 'hyprlock.conf', target = '~/.config/hypr/hyprlock/colors.conf' }
 neopywal = { template = 'neovim.vim', target = '~/.cache/wallust/colors_neopywal.vim' }
 qt = { template = 'hyprqt6engine.colors', target = '~/.local/share/color-schemes/wallust.colors' }
-quickshell = { template = 'quickshell.qml', target = '~/.config/quickshell/ss/Common/Colors.qml' }
 spicetify = { template = 'spicetify.ini', target = '~/.config/spicetify/Themes/text/color.ini' }
 
 [hooks]
