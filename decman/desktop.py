@@ -77,6 +77,7 @@ class Desktop(Module):
         return {
             # QT6 theming engine
             "hyprqt6engine",
+            "hyprshutdown",
 
             # Wallpaper
             "awww-bin",
