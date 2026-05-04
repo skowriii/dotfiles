@@ -18,4 +18,8 @@ class Fonts(Module):
 
     @aur.packages
     def aur_packages(self) -> set[str]:
-        return { "cozette-otb" } # Terminal font
+        return {
+            # Terminal font
+            "cozette-otb",
+            "cozette-ttf"
+        }
