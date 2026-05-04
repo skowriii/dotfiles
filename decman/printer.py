@@ -18,6 +18,6 @@ class Printer(Module):
             # "simple-scan"
         }
 
-    # @aur.packages
-    # def aur_packages(self) -> set[str]:
-    #     return { "canon-pixma-mg2500-complete" }
+    @aur.packages
+    def aur_packages(self) -> set[str]:
+        return { "canon-pixma-mg2500-complete" }
