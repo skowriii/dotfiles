@@ -9,7 +9,7 @@ class Fonts(Module):
     def packages(self) -> set[str]:
         return {
             "ttf-montserrat", # Primary GUI font
-            "ttf-jetbrains-mono-nerd" # Fallback for nerd font icons
+            "ttf-jetbrains-mono-nerd", # Fallback for nerd font icons
             "noto-fonts",
             "noto-fonts-cjk",
             "noto-fonts-emoji",
