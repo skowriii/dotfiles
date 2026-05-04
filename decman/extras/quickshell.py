@@ -17,7 +17,7 @@ class Quickshell(Module):
     def files(self) -> dict[str, File]:
         return {
             "/usr/local/bin/sscli":
-                File(source_file=f"{Globals.dotfiles_directory}/home/.config/quickshell/ss/sscli",
+                File(source_file=f"{Globals.dotfiles_directory}/home/.config/quickshell/ss/Scripts/sscli/sscli",
                      owner="root",
                      permissions=0o755)
         }
