@@ -1,5 +1,5 @@
-from decman import Module, Symlink, sh, prg
-from decman.plugins import pacman, aur
+from decman import Module, Symlink, sh
+from decman.plugins import pacman
 
 from common.globals import Globals
 
@@ -35,6 +35,7 @@ class Shell(Module):
             "fzf",
             "rsync",
             "socat",
+            "task",
             "tealdeer"
         }
 
