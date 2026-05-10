@@ -1,5 +1,5 @@
 from decman import Module
-from decman.plugins import pacman, aur
+from decman.plugins import pacman
 
 class Wine(Module):
     def __init__(self):
@@ -8,11 +8,8 @@ class Wine(Module):
     @pacman.packages
     def packages(self) -> set[str]:
         return {
+            "lutris",
             "wine",
             "wine-mono",
             "winetricks"
         }
-
-    @aur.packages
-    def aur_packages(self) -> set[str]:
-        return { "bottles" }
