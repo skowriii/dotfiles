@@ -1,12 +1,12 @@
 #!/usr/bin/env sh
 
-HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR == 1 { print $2 }')
+HYPRGAMEMODE=$(hyprctl getoption general:border_size | awk 'NR == 1 { print $2 }')
 HYPRPWALLPID=$(pgrep -f -l "pwall" | grep bash | awk '{ print $1 }' 2>/dev/null)
 HYPRTMPFILE="/tmp/hyprgamemode.tmp"
 HYPRPWALLUSED=$(cat $HYPRTMPFILE 2>/dev/null) || 0
 HYPRPWALLUSED=$(($HYPRPWALLUSED))
 
-if [[ "$HYPRGAMEMODE" = 1 ]]; then
+if [[ "$HYPRGAMEMODE" = 3 ]]; then
     while kill -TERM $HYPRPWALLPID; do
         awww kill
 
