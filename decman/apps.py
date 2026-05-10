@@ -14,7 +14,7 @@ class Apps(Module):
             "fuzzel",
             "gimp",
             "inkscape",
-            "kdenlive",
+            # "kdenlive",
             "mpv",
             "ncdu"
         }
