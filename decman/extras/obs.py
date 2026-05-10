@@ -1,4 +1,4 @@
-from decman import Module
+from decman import Module, sh
 from decman.plugins import pacman, aur
 
 class OBS(Module):
@@ -11,4 +11,8 @@ class OBS(Module):
 
     @aur.packages
     def aur_packages(self) -> set[str]:
-        return { "wlrobs-hg" }
+        return { "obs-kmscap-git" }
+
+    def on_enable(self, store):
+        sh("setcap cap_sys_admin+ep $(which obs-kmscap-helper)",
+           user="root")
