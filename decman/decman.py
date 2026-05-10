@@ -13,7 +13,7 @@ from display_manager import DisplayManager
 from desktop import Desktop
 from audio import Audio
 from bluetooth import Bluetooth
-from printer import Printer
+# from printer import Printer
 from apps import Apps
 from terminal import Terminal
 from development import Development
@@ -67,7 +67,7 @@ decman.modules += [
     Desktop(),
     Audio(),
     Bluetooth(),
-    Printer(),
+    # Printer(),
     Apps(),
     Terminal(),
     Development(),
