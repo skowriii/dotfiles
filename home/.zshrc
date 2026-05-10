@@ -25,8 +25,9 @@ znap source zsh-users/zsh-autosuggestions
 # zsh-ssh-agent
 znap source twfksh/zsh-ssh-agent
 
-# ohmyzsh sudo plugin
+# ohmyzsh plugins
 znap source ohmyzsh/ohmyzsh plugins/sudo
+znap source ohmyzsh/ohmyzsh plugins/history-substring-search
 
 # zsh-completions
 znap source zsh-users/zsh-completions
@@ -111,6 +112,8 @@ bindkey "^[[H" beginning-of-line
 bindkey "^[[1~" beginning-of-line
 bindkey "^[[F" end-of-line
 bindkey "^[[4~" end-of-line
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down
 
 # Functions
 znap function _python_argcomplete pipx 'eval "$(register-python-argcomplete pipx)"'
