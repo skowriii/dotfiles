@@ -37,7 +37,7 @@ from extras.tmux import Tmux
 from pacman_hooks import PacmanHooks
 from systemd import Systemd
 
-from flatpak import Flatpak
+# from flatpak import Flatpak
 
 from extras.bleachbit import Bleachbit
 
@@ -50,7 +50,7 @@ decman.aur.makepkg_user = "builduser"
 decman.execution_order = [
     "pacman",
     "aur",
-    "flatpak",
+    # "flatpak",
     "files",
     "systemd"
 ]
@@ -91,7 +91,7 @@ decman.modules += [
     PacmanHooks(),
     Systemd(),
 
-    Flatpak(),
+    # Flatpak(),
 
     Bleachbit()
 ]
