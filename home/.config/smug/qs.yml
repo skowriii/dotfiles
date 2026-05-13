@@ -17,6 +17,8 @@ windows:
 
   - name: shell
     layout: main-vertical
+    commands:
+      - task project:ss list
 
   - name: log
     layout: main-vertical
