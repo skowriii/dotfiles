@@ -75,6 +75,9 @@ class Base(Module):
             "/etc/kernel/cmdline":
                 File(source_file=f"{Globals.dotfiles_directory}/etc/kernel/cmdline",
                      owner="root"),
+            "/etc/sysctl.d/80-swappiness.conf":
+                File(content="vm.swappiness = 10",
+                     owner="root"),
             "/etc/NetworkManager/system-connections/freeethernet.nmconnection":
                 File(source_file=f"{Globals.root_directory}/freeethernet.nmconnection",
                      owner="root",
