@@ -22,5 +22,8 @@ class Gaming(Module):
         return {
             "/etc/modprobe.d/xpadneo.conf":
                 File(content="options hid_xpadneo disable_shift_mode=Y",
+                     owner="root"),
+            "/etc/sysctl.d/80-gamecompatibility.conf":
+                File(content="vm.max_map_count = 2147483642",
                      owner="root")
         }
