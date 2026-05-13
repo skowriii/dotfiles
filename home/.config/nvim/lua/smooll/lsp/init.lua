@@ -5,7 +5,7 @@ local modules = {
 	"lua_ls",
     "qmlls",
     "ts_ls",
-    -- "zls",
+    "zls",
     "pylsp",
     "html",
     "cssls",
