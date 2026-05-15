@@ -61,18 +61,60 @@ hl.bind("SUPER + mouse:272", hl.dsp.window.drag())
 hl.bind("SUPER + mouse:273", hl.dsp.window.resize())
 
 -- Laptop multimedia keys for volume and LCD brightness
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"))
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"))
-hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"))
-hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"))
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"))
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"))
+hl.bind(
+    "XF86AudioRaiseVolume",
+    hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"),
+    {
+        repeating = true,
+        locked = true
+    }
+)
+hl.bind(
+    "XF86AudioLowerVolume",
+    hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),
+    {
+        repeating = true,
+        locked = true
+    }
+)
+hl.bind(
+    "XF86AudioMute",
+	hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),
+	{
+        repeating = true,
+        locked = true
+    }
+)
+hl.bind(
+    "XF86AudioMicMute",
+	hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),
+	{
+        repeating = true,
+        locked = true
+    }
+)
+hl.bind(
+    "XF86MonBrightnessUp",
+	hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"),
+	{
+        repeating = true,
+        locked = true
+    }
+)
+hl.bind(
+    "XF86MonBrightnessDown",
+	hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"),
+	{
+        repeating = true,
+        locked = true
+    }
+)
 
 -- Requires playerctl
-hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl --player=kew,spotify next"))
-hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl --player=kew,spotify play-pause"))
-hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl --player=kew,spotify play-pause"))
-hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl --player=kew,spotify previous"))
+hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl --player=kew,spotify next", { locked = true }))
+hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl --player=kew,spotify play-pause", { locked = true }))
+hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl --player=kew,spotify play-pause", { locked = true }))
+hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl --player=kew,spotify previous", { locked = true }))
 
 -- Requires hyprshot
 hl.bind("SUPER + PRINT", hl.dsp.exec_cmd("hyprshot -m window"))
