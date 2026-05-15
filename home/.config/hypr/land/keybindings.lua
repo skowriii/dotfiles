@@ -13,16 +13,16 @@ hl.bind("SUPER + W", hl.dsp.global("ss:showIDs"))
 hl.bind("SUPER + W", hl.dsp.global("ss:showIDs"), { release = true })
 
 -- Move focus with mainMod + arrow keys
-hl.bind("SUPER + h", hl.dsp.focus({ direction = "l" }))
-hl.bind("SUPER + l", hl.dsp.focus({ direction = "r" }))
-hl.bind("SUPER + k", hl.dsp.focus({ direction = "u" }))
-hl.bind("SUPER + j", hl.dsp.focus({ direction = "d" }))
+hl.bind("SUPER + H", hl.dsp.focus({ direction = "l" }))
+hl.bind("SUPER + L", hl.dsp.focus({ direction = "r" }))
+hl.bind("SUPER + K", hl.dsp.focus({ direction = "u" }))
+hl.bind("SUPER + J", hl.dsp.focus({ direction = "d" }))
 
 -- Move windows with mainMod + Shift + arrow keys
-hl.bind("SUPER + SHIFT + h", hl.dsp.window.swap({ direction = "l" }))
-hl.bind("SUPER + SHIFT + l", hl.dsp.window.swap({ direction = "r" }))
-hl.bind("SUPER + SHIFT + k", hl.dsp.window.swap({ direction = "u" }))
-hl.bind("SUPER + SHIFT + j", hl.dsp.window.swap({ direction = "d" }))
+hl.bind("SUPER + SHIFT + H", hl.dsp.window.swap({ direction = "l" }))
+hl.bind("SUPER + SHIFT + L", hl.dsp.window.swap({ direction = "r" }))
+hl.bind("SUPER + SHIFT + K", hl.dsp.window.swap({ direction = "u" }))
+hl.bind("SUPER + SHIFT + J", hl.dsp.window.swap({ direction = "d" }))
 
 -- Switch workspaces with mainMod + [0-9]
 hl.bind("SUPER + 1", hl.dsp.focus({ workspace = 1 }))
