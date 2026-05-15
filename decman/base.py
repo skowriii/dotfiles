@@ -74,6 +74,9 @@ class Base(Module):
             "/etc/pacman.conf":
                 File(source_file=f"{Globals.dotfiles_directory}/etc/pacman.conf",
                      owner="root"),
+            "/etc/makepkg.conf":
+                File(source_file=f"{Globals.dotfiles_directory}/etc/makepkg.conf",
+                     owner="root"),
             "/etc/kernel/cmdline":
                 File(source_file=f"{Globals.dotfiles_directory}/etc/kernel/cmdline",
                      owner="root"),
