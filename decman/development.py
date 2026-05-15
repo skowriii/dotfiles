@@ -1,5 +1,5 @@
 from decman import Module
-from decman.plugins import pacman, aur
+from decman.plugins import pacman
 
 class Development(Module):
     def __init__(self):
@@ -10,7 +10,8 @@ class Development(Module):
         return {
             "cmake",
             "gdb",
-            "npm"
+            "npm",
+            "zig"
         }
 
     # @aur.packages
