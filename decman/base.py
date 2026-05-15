@@ -30,6 +30,7 @@ class Base(Module):
             "linux-headers",
             "linux-zen",
             "linux-zen-headers",
+            "mold",
             "networkmanager",
             "pacman-contrib",
             "pacutils",
