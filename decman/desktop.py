@@ -51,6 +51,9 @@ class Desktop(Module):
             # Notepad
             "pluma",
 
+            # Notes
+            "obsidian",
+
             # Applets
             "network-manager-applet",
 
