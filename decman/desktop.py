@@ -19,6 +19,7 @@ class Desktop(Module):
             "hyprpaper",
             "hyprpolkitagent",
             "hyprshot",
+            "hyprshutdown",
             "hyprsunset",
             "xdg-desktop-portal-gtk",
             "xdg-desktop-portal-hyprland",
@@ -77,7 +78,6 @@ class Desktop(Module):
         return {
             # QT6 theming engine
             "hyprqt6engine",
-            "hyprshutdown",
 
             # Wallpaper
             "awww-bin",
