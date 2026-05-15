@@ -37,7 +37,7 @@ fuzzel = { template = 'fuzzel.ini', target = '~/.config/fuzzel/colors.ini' }
 gtk-30 = { template = 'gtk-3.0.css', target = '~/.local/share/themes/wallust/gtk-3.0/gtk.css' }
 gtk-320 = { template = 'gtk-3.20.css', target = '~/.local/share/themes/wallust/gtk-3.20/gtk.css' }
 gtk-40 = { template = 'gtk-4.0.css', target = '~/.local/share/themes/wallust/gtk-4.0/gtk.css' }
-hyprland = { template = 'hyprland.conf', target = '~/.config/hypr/land/colors.conf' }
+hyprland = { template = 'hyprland.lua', target = '~/.config/hypr/land/colors.lua' }
 hyprlock = { template = 'hyprlock.conf', target = '~/.config/hypr/hyprlock/colors.conf' }
 neopywal = { template = 'neovim.vim', target = '~/.cache/wallust/colors_neopywal.vim' }
 qt = { template = 'hyprqt6engine.colors', target = '~/.local/share/color-schemes/wallust.colors' }
