@@ -9,6 +9,7 @@ class Gaming(Module):
     def packages(self) -> set[str]:
         return {
             "gamemode",
+            "gamescope",
             "steam"
         }
 
