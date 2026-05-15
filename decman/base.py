@@ -28,6 +28,8 @@ class Base(Module):
             "linux",
             "linux-firmware",
             "linux-headers",
+            "linux-zen",
+            "linux-zen-headers",
             "networkmanager",
             "pacman-contrib",
             "pacutils",
