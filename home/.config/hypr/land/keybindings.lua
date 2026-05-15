@@ -1,5 +1,5 @@
 hl.bind("SUPER + SHIFT + RETURN", hl.dsp.exec_cmd(terminal))
-hl.bind("SUPER + SHIFT + C", hl.dsp.window.kill())
+hl.bind("SUPER + SHIFT + C", hl.dsp.window.close())
 hl.bind("SUPER + CTRL + SHIFT + M", hl.dsp.exit())
 hl.bind("SUPER + E", hl.dsp.exec_cmd(fileManager))
 hl.bind("SUPER + V", hl.dsp.window.float())
