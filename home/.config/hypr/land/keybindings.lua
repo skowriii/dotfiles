@@ -10,6 +10,7 @@ hl.bind("SUPER + F1", hl.dsp.exec_cmd("~/.config/hypr/gamemode.sh"))
 -- ss
 hl.bind("SUPER +  CTRL + SHIFT + S", hl.dsp.global("ss:openSettings"))
 hl.bind("SUPER + W", hl.dsp.global("ss:showIDs"))
+hl.bind("SUPER + W", hl.dsp.global("ss:showIDs"), { release = true })
 
 -- Move focus with mainMod + arrow keys
 hl.bind("SUPER + h", hl.dsp.focus({ direction = "l" }))
