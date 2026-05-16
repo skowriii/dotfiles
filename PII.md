@@ -14,6 +14,13 @@ This document outlines manual intervention required after running decman for the
 > To see the list of apps for which themes are generated,
 > look in [`/home/.config/wallust/templates`](home/.config/wallust/templates).
 
+## Username
+In case of a username change, be sure to update relevant configuration files:
+- ~/.config/yay/config.json
+- ~/.config/foot/foot.ini
+- ~/.config/fuzzel/fuzzel.ini
+- ~/.config/spotdl/config.json
+
 ## Wallust
 ```bash
 wallust run </path/to/wallpaper> --no-hooks
