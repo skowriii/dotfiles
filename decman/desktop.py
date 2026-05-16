@@ -89,7 +89,7 @@ class Desktop(Module):
             # Themes
             "bibata-cursor-theme-bin",
             "kora-icon-theme",
-            "wallust-git",
+            "wallust",
 
             # Browser
             "zen-browser-bin"
