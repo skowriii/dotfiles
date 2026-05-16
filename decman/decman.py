@@ -25,7 +25,7 @@ from extras.obs import OBS
 # from extras.docker import Docker
 # from extras.plymouth import Plymouth
 from extras.wine import Wine
-from extras.virtualization import Virtualization
+# from extras.virtualization import Virtualization
 from extras.password_manager import PasswordManager
 from extras.python import Python
 from extras.vsftpd import VSFTPD
@@ -79,7 +79,7 @@ decman.modules += [
     # Docker(),
     # Plymouth(),
     Wine(),
-    Virtualization(),
+    # Virtualization(),
     PasswordManager(),
     Python(),
     VSFTPD(),
