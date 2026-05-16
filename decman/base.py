@@ -185,7 +185,7 @@ class Base(Module):
             user="root")
 
     def before_update(self, store):
-        kernel_outdated = prg(["check-kernel-version"],
+        kernel_outdated = prg([f"{Globals.dotfiles_directory}/usr/local/bin/check-kernel-version"],
                               user=Globals.username,
                               pass_environment=True,
                               mimic_login=True).strip()
