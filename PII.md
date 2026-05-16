@@ -20,6 +20,7 @@ In case of a username change, be sure to update relevant configuration files:
 - ~/.config/foot/foot.ini
 - ~/.config/fuzzel/fuzzel.ini
 - ~/.config/spotdl/config.json
+- ~/.config/waypaper/config.ini
 
 ## Wallust
 ```bash
