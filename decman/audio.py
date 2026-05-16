@@ -27,7 +27,6 @@ class Audio(Module):
     @aur.packages
     def aur_packages(self) -> set[str]:
         return {
-            "spotdl",
             "spotify",
             "spotify-adblock"
         }
