@@ -4,7 +4,7 @@
     "auth_token": null,
     "user_auth": true,
     "headless": false,
-    "cache_path": "/home/smooll/.config/spotdl/.spotipy",
+    "cache_path": "/home/skowriii/.config/spotdl/.spotipy",
     "no_cache": false,
     "max_retries": 3,
     "use_cache_file": false,
