@@ -13,7 +13,7 @@
 [webui]
 	autoupdate = true
 [alias]
-	webui = !/home/smooll/.git-webui/release/libexec/git-core/git-webui
+	webui = !/home/skowriii/.git-webui/release/libexec/git-core/git-webui
 [credential]
 	helper = cache
 [rerere]
