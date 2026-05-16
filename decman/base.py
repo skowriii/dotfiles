@@ -122,13 +122,6 @@ class Base(Module):
         }
 
     def on_enable(self, store):
-        # Add !debug to makepkg.conf OPTIONS
-        sh("""sed -i "/^OPTIONS=/ {
-  /[[:space:]]debug[[:space:]]/ s/\\bdebug\\b/!debug/g
-  /[[:space:]]!debug[[:space:]]/! s/^\\(OPTIONS=(.*\\))/\\1 !debug)/
-}" /etc/makepkg.conf""",
-           user="root")
-
         # Generate grub config
         prg(["grub-mkconfig", "-o", "/boot/grub/grub.cfg"],
             user="root")
