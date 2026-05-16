@@ -72,6 +72,9 @@ class Base(Module):
             "/etc/mkinitcpio.d/linux.preset":
                 File(source_file=f"{Globals.dotfiles_directory}/etc/mkinitcpio.d/linux.preset",
                      owner="root"),
+            "/etc/mkinitcpio.d/linux-zen.preset":
+                File(source_file=f"{Globals.dotfiles_directory}/etc/mkinitcpio.d/linux-zen.preset",
+                     owner="root"),
             "/etc/pacman.conf":
                 File(source_file=f"{Globals.dotfiles_directory}/etc/pacman.conf",
                      owner="root"),
@@ -138,7 +141,7 @@ class Base(Module):
         prg(["mkdir", "-p", "/boot/EFI/Linux"],
             user="root")
 
-        prg(["mkinitcpio", "-p", "linux"],
+        prg(["mkinitcpio", "-P"],
             user="root")
 
         prg(["efibootmgr",
@@ -147,6 +150,15 @@ class Base(Module):
              "--part", "1",
              "--label", """'Arch Linux'""",
              "--loader", """'\\EFI\\Linux\\arch-linux.efi'""",
+             "--unicode"],
+            user="root")
+
+        prg(["efibootmgr",
+             "--create",
+             "--disk", "/dev/nvme0n1",
+             "--part", "1",
+             "--label", """'Arch Linux Zen'""",
+             "--loader", """'\\EFI\\Linux\\arch-linux-zen.efi'""",
              "--unicode"],
             user="root")
 
