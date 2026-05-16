@@ -2,7 +2,7 @@ from decman.extras.users import UserManager
 from decman.extras.gpg import GPGReceiver
 
 class Globals():
-    username = "smooll"
+    username = "skowriii"
     terminal = "foot"
     user_manager = UserManager()
     gpg_receiver = GPGReceiver()
