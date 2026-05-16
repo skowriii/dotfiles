@@ -1,5 +1,7 @@
-from decman import Module
+from decman import Module, prg
 from decman.plugins import pacman
+
+from common.globals import Globals
 
 class Python(Module):
     def __init__(self):
@@ -12,3 +14,14 @@ class Python(Module):
             "python-pip",
             "python-pipx"
         }
+
+    def on_enable(self, store):
+        prg(["pipx", "ensurepath"],
+            user=Globals.username,
+            mimic_login=True,
+            pass_environment=True)
+
+        prg(["pipx", "install", "spotdl"],
+            user=Globals.username,
+            mimic_login=True,
+            pass_environment=True)
