@@ -21,6 +21,7 @@ In case of a username change, be sure to update relevant configuration files:
 - ~/.config/fuzzel/fuzzel.ini
 - ~/.config/spotdl/config.json
 - ~/.config/waypaper/config.ini
+- ~/.config/hypr/hyprqt6engine.conf
 
 ## Wallust
 ```bash
