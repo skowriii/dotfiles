@@ -83,8 +83,6 @@ function setup_base()
         --loader "\EFI\Linux\arch-linux-zen.efi" \
         --unicode
 
-    wget -O - https://raw.githubusercontent.com/alberthier/git-webui/master/install/installer.sh | bash
-
     sudo systemctl enable nbfc_service --now
     sudo nbfc update
     sudo nbfc config -a "$S_NBFC_MODEL"
