@@ -49,6 +49,7 @@ class Base(Module):
     def aur_packages(self) -> set[str]:
         return {
             "decman",
+            "downgrade",
             "informant",
             "nbfc-linux",
             "nohang-git",
