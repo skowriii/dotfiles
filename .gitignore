@@ -12,7 +12,7 @@ home/wallpapers/**
 home/.config/dunst/dunstrc
 home/.config/foot/colors.ini
 home/.config/fuzzel/colors.ini
-home/.config/hypr/land/colors.conf
+home/.config/hypr/land/colors.lua
 home/.config/hypr/hyprlock/**
 home/.config/quickshell/ss/Common/Colors.qml
 
