@@ -25,14 +25,3 @@ class DisplayManager(Module):
         return {
             "ly@tty2.service"
         }
-
-    def on_enable(self, store):
-        is_enabled_output = prg(["systemctl", "is-enabled", "getty@tty2.service"],
-                                user=Globals.username,
-                                check=False).strip()
-
-        is_enabled = True if is_enabled_output == "enabled" else False
-
-        if is_enabled:
-            prg(["systemctl", "disable", "getty@tty2.service"],
-                user="root")

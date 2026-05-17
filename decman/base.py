@@ -125,66 +125,6 @@ class Base(Module):
             "nohang-desktop.service",
         }
 
-    def on_enable(self, store):
-        # Generate grub config
-        prg(["grub-mkconfig", "-o", "/boot/grub/grub.cfg"],
-            user="root")
-
-        # Setup tmpfs on /tmp directory
-        sh("echo 'tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0' | tee -a /etc/fstab",
-           user="root")
-
-        # Change mount options for /
-        sh("""sed -i -E "s@^(UUID=[^[:space:]]+[[:space:]]+/[[:space:]]+ext4[[:space:]]+)[^[:space:]]+@\\1rw,relatime,lazytime,commit=60,journal_async_commit@" /etc/fstab""",
-           user="root")
-
-        # Generate UKI
-        prg(["mkdir", "-p", "/boot/EFI/Linux"],
-            user="root")
-
-        prg(["mkinitcpio", "-P"],
-            user="root")
-
-        prg(["efibootmgr",
-             "--create",
-             "--disk", "/dev/nvme0n1",
-             "--part", "1",
-             "--label", """'Arch Linux'""",
-             "--loader", """'\\EFI\\Linux\\arch-linux.efi'""",
-             "--unicode"],
-            user="root")
-
-        prg(["efibootmgr",
-             "--create",
-             "--disk", "/dev/nvme0n1",
-             "--part", "1",
-             "--label", """'Arch Linux Zen'""",
-             "--loader", """'\\EFI\\Linux\\arch-linux-zen.efi'""",
-             "--unicode"],
-            user="root")
-
-        # Setup git-webui
-        sh("wget -O - https://raw.githubusercontent.com/alberthier/git-webui/master/install/installer.sh | bash",
-           user=Globals.username,
-           mimic_login=True)
-
-        # Update nbfc configurations
-        prg(["nbfc", "update"],
-            user="root")
-
-        # If the service is not running, nbfc will produce an error whether or not it applies the config
-        # That's why check is set to False here, we don't want decman to crash for no reason.
-        prg(["nbfc", "config", "-a", f"'{Globals.nbfc_model}'"],
-            user="root",
-            check=False)
-
-        prg(["nbfc", "set", "-a"],
-            user="root",
-            check=False)
-
-        prg(["systemctl", "disable", "NetworkManager-wait-online.service"],
-            user="root")
-
     def before_update(self, store):
         kernel_outdated = prg([f"{Globals.dotfiles_directory}/usr/local/bin/check-kernel-version"],
                               user=Globals.username,
@@ -209,6 +149,3 @@ class Base(Module):
             user=Globals.username,
             pass_environment=True,
             mimic_login=True)
-
-        prg(["journalctl", "--vacuum-time=2days"],
-            user="root")

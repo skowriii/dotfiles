@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+S_USERNAME="skowriii"
+S_NBFC_MODEL="HP ProBook 650 G2"
+
+function S_CLONE()
+{
+    git clone --depth=1 "$@"
+}

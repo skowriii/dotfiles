@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+source "$(dirname "$0")/variables"
+
+function setup_shell()
+{
+    chsh -s $(which zsh) $S_USERNAME
+}
+
+function main()
+{
+    setup_shell
+
+    $(dirname "$0")/display_manager
+}
+
+main

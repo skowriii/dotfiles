@@ -51,11 +51,3 @@ class Shell(Module):
                 Symlink(target=f"{Globals.root_directory}/.task",
                         owner=Globals.username)
         }
-
-    def on_enable(self, store):
-        sh("curl -fsSL https://install.ohmyz.sh | CHSH=no sh -s -- --unattended --keep-zshrc",
-           user=Globals.username,
-           mimic_login=True)
-
-        sh(f"chsh -s $(which zsh) {Globals.username}",
-           user="root")

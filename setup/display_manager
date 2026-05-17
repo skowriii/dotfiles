@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+source "$(dirname "$0")/variables"
+
+function setup_display_manager()
+{
+    if systemctl is-enabled getty@tty2.service; then
+        sudo systemctl disable getty@tty2.service
+    fi
+}
+
+function main()
+{
+    setup_display_manager
+
+    $(dirname "$0")/desktop
+}
+
+main
