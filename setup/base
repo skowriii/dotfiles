@@ -1,0 +1,126 @@
+#!/usr/bin/env bash
+
+source "$(dirname "$0")/variables"
+
+function install_yay()
+{
+    if ! command -v yay &>/dev/null; then
+        echo "yay not found! Installing..."
+
+        S_CLONE https://aur.archlinux.org/yay-bin.git
+        cd yay-bin
+        makepkg -si
+        cd ../
+        rm -rf yay-bin
+
+        echo "yay installed!"
+    fi
+}
+
+function install_decman()
+{
+    if ! command decman &>/dev/null; then
+        echo "decman not found! Installing..."
+
+        yay -S decman
+
+        echo "decman installed!"
+    fi
+}
+
+function check_preinstalled_packages()
+{
+    local packages=( \
+        python3 \
+        reflector \
+        python-requests \
+        python-py-notifier \
+    )
+
+    local missing_packages=""
+
+    echo "Checking for missing packages..."
+
+    for package in "${packages[@]}"; do
+        missing_packages+="$package "
+    done
+
+    if [[ -n "$missing_packages" ]]; then
+        echo "Installing missing packages..."
+
+        yay -S $missing_packages
+    fi
+}
+
+function setup_base()
+{
+
+    sudo grub-mkconfig -o "/boot/grub/grub.cfg"
+
+    echo "tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0" | sudo tee -a /etc/fstab
+
+    sudo sed -i -E \
+        "s@^(UUID=[^[:space:]]+[[:space:]]+/[[:space:]]+ext4[[:space:]]+)[^[:space:]]+@\\1rw,relatime,lazytime,commit=60,journal_async_commit@" \
+        /etc/fstab
+
+    sudo mkdir -p /boot/EFI/Linux
+
+    sudo mkinitcpio -P
+
+    sudo efibootmgr \
+        --create \
+        --disk /dev/nvme0n1 \
+        --part 1 \
+        --label "Arch Linux" \
+        --loader "\EFI\Linux\arch-linux.efi" \
+        --unicode
+
+    sudo efibootmgr \
+        --create \
+        --disk /dev/nvme0n1 \
+        --part 1 \
+        --label "Arch Linux Zen" \
+        --loader "\EFI\Linux\arch-linux-zen.efi" \
+        --unicode
+
+    wget -O - https://raw.githubusercontent.com/alberthier/git-webui/master/install/installer.sh | bash
+
+    sudo systemctl enable nbfc_service --now
+    sudo nbfc update
+    sudo nbfc config -a "$S_NBFC_MODEL"
+    sudo nbfc set -a
+
+    sudo systemctl disable NetworkManager-wait-online.service
+}
+
+main()
+{
+    # echo "$S_USERNAME" | sudo -E -- tee -a /etc/sudoers >/dev/null
+    # trap 'sudo -E -- sed -i "/^${S_USERNAME}/d" /etc/sudoers' EXIT
+
+    install_yay
+
+    check_preinstalled_packages
+
+    install_decman
+
+    echo "Dry running decman to check for errors..."
+
+    if ! sudo decman --source /personal/dotfiles/decman/decman.py --dry-run; then
+        exit 1
+    fi
+
+    echo "No errors found, running for real this time..."
+
+    rm -rf ${HOME}/.config/yay
+
+    sudo decman --source /personal/dotfiles/decman/decman.py
+
+    setup_base
+
+    $(dirname "$0")/shell
+
+    echo "Setup done! Enjoy!"
+}
+
+main

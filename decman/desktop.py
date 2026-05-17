@@ -121,12 +121,3 @@ class Desktop(Module):
                 Symlink(target=f"{Globals.root_directory}/.zen",
                         owner=Globals.username)
         }
-
-    def on_enable(self, store):
-        # Generate XDG user directories
-        # We use the GTK version here because of Thunar, it depends on GTK for bookmarks
-        # and xdg-user-dirs-update does not handle updating GTK bookmarks.
-        prg(["xdg-user-dirs-gtk-update"],
-            user=Globals.username,
-            pass_environment=True,
-            mimic_login=True)

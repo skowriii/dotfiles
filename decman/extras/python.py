@@ -20,8 +20,3 @@ class Python(Module):
             user=Globals.username,
             mimic_login=True,
             pass_environment=True)
-
-        prg(["pipx", "install", "spotdl"],
-            user=Globals.username,
-            mimic_login=True,
-            pass_environment=True)

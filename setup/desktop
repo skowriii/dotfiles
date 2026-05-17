@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+source "$(dirname "$0")/variables"
+
+function setup_desktop()
+{
+    xdg-user-dirs-update
+
+    xdg-user-dirs-gtk-update
+}
+
+function main()
+{
+    setup_desktop
+}
+
+main
