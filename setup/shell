@@ -5,6 +5,8 @@ source "$(dirname "$0")/variables"
 function setup_shell()
 {
     chsh -s $(which zsh) $S_USERNAME
+
+    wget -O - https://raw.githubusercontent.com/alberthier/git-webui/master/install/installer.sh | bash
 }
 
 function main()
