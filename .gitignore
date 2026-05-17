@@ -14,7 +14,6 @@ home/.config/foot/colors.ini
 home/.config/fuzzel/colors.ini
 home/.config/hypr/land/colors.lua
 home/.config/hypr/hyprlock/**
-home/.config/quickshell/ss/Common/Colors.qml
 
 # Quickshell
 home/.config/quickshell/**/.qmlls.ini
