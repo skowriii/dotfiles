@@ -46,6 +46,9 @@ class Shell(Module):
                         owner=Globals.username),
             f"/home/{Globals.username}/.zshrc":
                 Symlink(target=f"{Globals.dotfiles_directory}/home/.zshrc",
+                        owner=Globals.username),
+            f"/home/{Globals.username}/.task":
+                Symlink(target=f"{Globals.root_directory}/.task",
                         owner=Globals.username)
         }
 
@@ -55,4 +58,4 @@ class Shell(Module):
            mimic_login=True)
 
         sh(f"chsh -s $(which zsh) {Globals.username}",
-            user="root")
+           user="root")
