@@ -35,6 +35,9 @@ znap source zsh-users/zsh-completions
 # zsh-syntax-highlighting
 znap source zdharma-continuum/fast-syntax-highlighting
 
+# mend
+znap source Rakosn1cek/mend
+
 # Completion
 # https://superuser.com/a/815317
 # 0 -- vanilla completion (abc => abc)
