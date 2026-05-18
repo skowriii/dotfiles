@@ -8,7 +8,8 @@ local modules = {
     "icons",
     "indentscope",
     "misc",
-    "trailspace"
+    "trailspace",
+    "base16"
 }
 
 require("smooll.user.utils").bulk_require("smooll.plugins.mini", modules)
