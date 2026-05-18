@@ -41,9 +41,9 @@ class Desktop(Module):
             "eog",
 
             # Themes
-            "breeze",
-            "breeze-gtk",
-            "breeze5",
+            "adw-gtk-theme",
+            "frameworkintegration", # for darkly
+            "matugen",
 
             # Notifications
             "dunst",
@@ -89,7 +89,7 @@ class Desktop(Module):
             # Themes
             "bibata-cursor-theme-bin",
             "kora-icon-theme",
-            "wallust",
+            "darkly-bin",
 
             # Browser
             "zen-browser-bin"
