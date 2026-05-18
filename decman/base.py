@@ -138,14 +138,3 @@ class Base(Module):
                  "--country", "pl,de",
                  "--save", "/etc/pacman.d/mirrorlist"],
                 user="root")
-
-    def after_update(self, store):
-        directories = [entry.path for entry in os.scandir("/var/cache/pacman/pkg") if entry.is_dir()]
-        if directories:
-            print("Removing directories in pacman cache...")
-            [ os.rmdir(directory) for directory in directories ]
-
-        prg(["yay", "-Scc"],
-            user=Globals.username,
-            pass_environment=True,
-            mimic_login=True)

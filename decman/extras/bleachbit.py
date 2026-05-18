@@ -17,9 +17,3 @@ class Bleachbit(Module):
                 Symlink(target=f"{Globals.dotfiles_directory}/home/.config/bleachbit",
                         owner=Globals.username)
         }
-
-    def after_update(self, store):
-        prg(["bleachbit", "--preset", "--clean"],
-            user=Globals.username,
-            pass_environment=True,
-            mimic_login=True)
