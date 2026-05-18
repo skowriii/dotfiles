@@ -3,10 +3,10 @@ session: qs
 root: /personal/Projects/Applications/QML/ss
 
 before_start:
-  - sscli -k
+  - sscli kill
 
 stop:
-  - sscli -s ndd
+  - sscli start -a
 
 windows:
   - name: editor
