@@ -3,7 +3,7 @@ local modules = {
     "mini",
     "autocomplete",
     "autopairs",
-    "colorschemes",
+    -- "colorschemes",
     "file_explorers",
     "miscellaneous",
     "treesitter",
