@@ -1,4 +1,4 @@
-hl.on("hyprland.start", function ()
+hl.on("hyprland.start", function()
     -- Systemd stuff
     hl.exec_cmd("dbus-update-activation-environment --systemd --all")
     hl.exec_cmd("systemctl --user import-environment QT_QPA_PLATFORMTHEME")
@@ -27,7 +27,7 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("copyq")
 
     -- Misc
-    hl.exec_cmd("spotify")
+    -- hl.exec_cmd("spotify")
     -- hl.exec_cmd("flatpak run com.discordapp.Discord")
     -- hl.exec_cmd("steam")
 end)
