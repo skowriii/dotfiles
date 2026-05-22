@@ -1,12 +1,12 @@
 #!/usr/bin/env sh
 
-HYPRGAMEMODE=$(hyprctl getoption general:border_size | awk 'NR == 1 { print $2 }')
+HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR == 1 { print $2 }')
 HYPRPWALLPID=$(pgrep -f -l "pwall" | grep bash | awk '{ print $1 }' 2>/dev/null)
 HYPRTMPFILE="/tmp/hyprgamemode.tmp"
 HYPRPWALLUSED=$(cat $HYPRTMPFILE 2>/dev/null) || 0
 HYPRPWALLUSED=$(($HYPRPWALLUSED))
 
-if [[ "$HYPRGAMEMODE" = 3 ]]; then
+if [[ "$HYPRGAMEMODE" = "true" ]]; then
     while kill -TERM $HYPRPWALLPID; do
         awww kill
 
@@ -14,15 +14,14 @@ if [[ "$HYPRGAMEMODE" = 3 ]]; then
     done
 
     hyprctl --batch "\
-        keyword animations:enabled 0;\
-        keyword animation borderangle,0; \
-        keyword decoration:shadow:enabled 0;\
-        keyword decoration:blur:enabled 0;\
-        keyword decoration:fullscreen_opacity 1;\
-        keyword general:gaps_in 0;\
-        keyword general:gaps_out 0;\
-        keyword general:border_size 1;\
-        keyword decoration:rounding 0"
+        eval hl.config({ animations = { enabled = false } });\
+        eval hl.config({ decoration = { shadow = { enabled = false } } });\
+        eval hl.config({ decoration = { blur = { enabled = false } } });\
+        eval hl.config({ decoration = { fullscreen_opacity = 1 } });\
+        eval hl.config({ general = { gaps_in = 0 } });\
+        eval hl.config({ general = { gaps_out = 0 } });\
+        eval hl.config({ general = { border_size = 1 } });\
+        eval hl.config({ decoration = { rounding = 0 } })"
     hyprctl notify 1 5000 "rgb(40a02b)" "Gamemode [ON]"
 
     exit 0
