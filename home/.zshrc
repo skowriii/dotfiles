@@ -74,6 +74,7 @@ HISTCONTROL=ignoredups:erasedups
 # Exports
 export EDITOR=nvim
 export WORDCHARS="${WORDCHARS//\/}"
+export PATH="${PATH}:/home/skowriii/.spicetify:/home/skowriii/.local/bin"
 
 # Aliases
 alias cd="z"
@@ -121,8 +122,3 @@ bindkey "^[[B" history-substring-search-down
 znap function _python_argcomplete pipx 'eval "$(register-python-argcomplete pipx)"'
 complete -o nospace -o default -o bashdefault \
     -F _python_argcomplete pipx
-
-export PATH=$PATH:/home/skowriii/.spicetify
-
-# Created by `pipx` on 2026-05-16 17:05:56
-export PATH="$PATH:/home/skowriii/.local/bin"
