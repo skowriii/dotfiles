@@ -12,5 +12,6 @@ class Virtualization(Module):
             "iproute2",
             "libguestfs",
             "libvirt",
+            "qemu-base",
             "virt-manager"
         }
