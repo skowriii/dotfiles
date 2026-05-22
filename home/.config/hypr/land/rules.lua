@@ -18,7 +18,7 @@ hl.window_rule({
     workspace = 3
 })
 hl.window_rule({
-    match = { initial_title = "^FL Studio 2025$" },
+    match = { class = "fl64.exe" },
     workspace = 3
 })
 hl.window_rule({
