@@ -73,7 +73,10 @@ class Desktop(Module):
 
             # Qt wayland support
             "qt5-wayland",
-            "qt6-wayland"
+            "qt6-wayland",
+
+            # Wallpaper
+            "awww"
         }
 
     @aur.packages
@@ -83,7 +86,6 @@ class Desktop(Module):
             "hyprqt6engine",
 
             # Wallpaper
-            "awww-bin",
             "waypaper",
 
             # Themes
