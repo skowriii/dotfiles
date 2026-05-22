@@ -1,5 +1,5 @@
-from decman import Module, Symlink, prg, sh
-from decman.plugins import pacman, aur
+from decman import Module, Symlink
+from decman.plugins import pacman
 
 from common.globals import Globals
 
@@ -22,13 +22,6 @@ class Audio(Module):
             "pipewire-pulse",
             "playerctl",
             "wireplumber"
-        }
-
-    @aur.packages
-    def aur_packages(self) -> set[str]:
-        return {
-            "spotify",
-            "spotify-adblock"
         }
 
     def symlinks(self) -> dict[str, Symlink]:
