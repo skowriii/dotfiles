@@ -75,6 +75,9 @@ class Desktop(Module):
             "qt5-wayland",
             "qt6-wayland",
 
+            # org.freedesktop.secrets provider
+            "oo7",
+
             # Wallpaper
             "awww"
         }
