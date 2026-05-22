@@ -1,6 +1,6 @@
 import os
 
-from decman import Module, File, Symlink, prg
+from decman import Module, File, Symlink
 from decman.plugins import pacman, aur
 
 from common.globals import Globals
@@ -119,8 +119,8 @@ class Desktop(Module):
             f"/home/{Globals.username}/wallpapers":
                 Symlink(target=f"{Globals.dotfiles_directory}/home/wallpapers",
                         owner=Globals.username),
-            f"/home/{Globals.username}/.config/wallust":
-                Symlink(target=f"{Globals.dotfiles_directory}/home/.config/wallust",
+            f"/home/{Globals.username}/.config/matugen":
+                Symlink(target=f"{Globals.dotfiles_directory}/home/.config/matugen",
                         owner=Globals.username),
             f"/home/{Globals.username}/.zen":
                 Symlink(target=f"{Globals.root_directory}/.zen",
