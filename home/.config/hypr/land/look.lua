@@ -29,7 +29,7 @@ hl.config({
 
 hl.config({
     animations = {
-        enabled = false,
+        enabled = true,
 
         hl.curve(
             "easeOutQuint",
