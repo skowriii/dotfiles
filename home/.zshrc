@@ -89,7 +89,7 @@ alias startftp="sudo systemctl start vsftpd"
 alias stopftp="sudo systemctl stop vsftpd"
 alias restartftp="sudo systemctl restart vsftpd"
 alias statusftp="systemctl status vsftpd"
-alias change-resolution="nvim ${HOME}/.config/hypr/land/monitors.conf && exit"
+alias change-resolution="nvim ${HOME}/.config/hypr/land/monitors.lua && exit"
 alias resmem="tail /dev/zero"
 alias ping="ping -c 4"
 
