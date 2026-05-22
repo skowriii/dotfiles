@@ -2,7 +2,7 @@
     "client_id": null,
     "client_secret": null,
     "auth_token": null,
-    "user_auth": true,
+    "user_auth": false,
     "headless": false,
     "cache_path": "/home/skowriii/.config/spotdl/.spotipy",
     "no_cache": false,
