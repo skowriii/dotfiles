@@ -4,10 +4,13 @@ source "$(dirname "$0")/variables"
 
 function setup_shell()
 {
+    S_LOG "Changing ${S_USERNAME}'s shell to zsh..."
     chsh -s $(which zsh) $S_USERNAME
 
+    S_LOG "Installing git-webui..."
     wget -O - https://raw.githubusercontent.com/alberthier/git-webui/master/install/installer.sh | bash
 
+    S_LOG "Installing spotdl..."
     pipx install spotdl
 }
 

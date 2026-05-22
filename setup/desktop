@@ -4,6 +4,7 @@ source "$(dirname "$0")/variables"
 
 function setup_desktop()
 {
+    S_LOG "Updating XDG User Directories..."
     xdg-user-dirs-update
 
     xdg-user-dirs-gtk-update

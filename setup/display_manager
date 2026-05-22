@@ -4,7 +4,9 @@ source "$(dirname "$0")/variables"
 
 function setup_display_manager()
 {
+    S_LOG "Checking if getty@tty2.service is enabled..."
     if systemctl is-enabled getty@tty2.service; then
+        S_LOG "Disabling getty@tty2.service"
         sudo systemctl disable getty@tty2.service
     fi
 }

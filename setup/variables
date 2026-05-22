@@ -7,3 +7,13 @@ function S_CLONE()
 {
     git clone --depth=1 "$@"
 }
+
+function S_LOG()
+{
+    echo -e "\e[36m$@\e[0m"
+}
+
+function S_DRY()
+{
+    echo -e "\e[90m$@\e[0m"
+}
