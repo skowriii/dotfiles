@@ -22,6 +22,7 @@ In case of a username change, be sure to update relevant configuration files:
 - ~/.config/spotdl/config.json
 - ~/.config/waypaper/config.ini
 - ~/.config/hypr/hyprqt6engine.conf
+- /etc/vsftpd.userlist
 
 ## Wallust
 ```bash
