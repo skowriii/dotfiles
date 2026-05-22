@@ -5,26 +5,24 @@ source "$(dirname "$0")/variables"
 function install_yay()
 {
     if ! command -v yay &>/dev/null; then
-        echo "yay not found! Installing..."
-
+        S_LOG "yay not found! Installing..."
         S_CLONE https://aur.archlinux.org/yay-bin.git
         cd yay-bin
         makepkg -si
         cd ../
         rm -rf yay-bin
 
-        echo "yay installed!"
+        S_LOG "yay installed!"
     fi
 }
 
 function install_decman()
 {
     if ! command decman &>/dev/null; then
-        echo "decman not found! Installing..."
+        S_LOG "decman not found! Installing..."
+        yay -S --needed decman
 
-        yay -S decman
-
-        echo "decman installed!"
+        S_LOG "decman installed!"
     fi
 }
 
@@ -39,34 +37,36 @@ function check_preinstalled_packages()
 
     local missing_packages=""
 
-    echo "Checking for missing packages..."
-
+    S_LOG "Checking for missing packages..."
     for package in "${packages[@]}"; do
         missing_packages+="$package "
     done
 
     if [[ -n "$missing_packages" ]]; then
-        echo "Installing missing packages..."
-
-        yay -S $missing_packages
+        S_LOG "Installing missing packages..."
+        yay -S --needed $missing_packages
     fi
 }
 
 function setup_base()
 {
-
+    S_LOG "Creating grub config..."
     sudo grub-mkconfig -o "/boot/grub/grub.cfg"
 
+    S_LOG "Adding /tmp tmpfs entry to /etc/fstab..."
     echo "tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0" | sudo tee -a /etc/fstab
 
+    S_LOG "Modifying / entry in /etc/fstab..."
     sudo sed -i -E \
         "s@^(UUID=[^[:space:]]+[[:space:]]+/[[:space:]]+ext4[[:space:]]+)[^[:space:]]+@\\1rw,relatime,lazytime,commit=60,journal_async_commit@" \
         /etc/fstab
 
+    S_LOG "Setting up UKIs..."
     sudo mkdir -p /boot/EFI/Linux
 
     sudo mkinitcpio -P
 
+    S_LOG "Creating efibootmgr entry for linux kernel UKI..."
     sudo efibootmgr \
         --create \
         --disk /dev/nvme0n1 \
@@ -75,6 +75,7 @@ function setup_base()
         --loader "\EFI\Linux\arch-linux.efi" \
         --unicode
 
+    S_LOG "Creating efibootmgr entry for linux-zen kernel UKI..."
     sudo efibootmgr \
         --create \
         --disk /dev/nvme0n1 \
@@ -83,17 +84,19 @@ function setup_base()
         --loader "\EFI\Linux\arch-linux-zen.efi" \
         --unicode
 
-    sudo systemctl enable nbfc_service --now
-    sudo nbfc update
-    sudo nbfc config -a "$S_NBFC_MODEL"
-    sudo nbfc set -a
+    S_LOG "Setting up nbfc..."
+    S_DRY sudo systemctl enable nbfc_service --now
+    S_DRY sudo nbfc update
+    S_DRY sudo nbfc config -a "$S_NBFC_MODEL"
+    S_DRY sudo nbfc set -a
 
+    S_LOG "Disabling NetworkManager-wait-online.service"
     sudo systemctl disable NetworkManager-wait-online.service
 }
 
 main()
 {
-    # echo "$S_USERNAME" | sudo -E -- tee -a /etc/sudoers >/dev/null
+    # S_LOG "$S_USERNAME" | sudo -E -- tee -a /etc/sudoers >/dev/null
     # trap 'sudo -E -- sed -i "/^${S_USERNAME}/d" /etc/sudoers' EXIT
 
     install_yay
@@ -102,13 +105,13 @@ main()
 
     install_decman
 
-    echo "Dry running decman to check for errors..."
+    S_LOG "Dry running decman to check for errors..."
 
     if ! sudo decman --source /personal/dotfiles/decman/decman.py --dry-run; then
         exit 1
     fi
 
-    echo "No errors found, running for real this time..."
+    S_LOG "No errors found, running for real this time..."
 
     rm -rf ${HOME}/.config/yay
 
@@ -118,7 +121,7 @@ main()
 
     $(dirname "$0")/shell
 
-    echo "Setup done! Enjoy!"
+    S_LOG "Setup done! Enjoy!"
 }
 
 main
