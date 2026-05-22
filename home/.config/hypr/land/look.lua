@@ -3,11 +3,7 @@ hl.config({
         border_size = 3,
 
         gaps_in = 5,
-        gaps_out = 15,
-
-        -- https://wiki.hypr.land/Configuring/Variables/#variable-types for info about colors
-        -- col.active_border = rgb(ff5d5d),
-        -- col.inactive_border = rgba(ff5d5d55),
+        gaps_out = 10,
 
         layout = "scrolling",
 
