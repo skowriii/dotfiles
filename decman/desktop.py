@@ -37,6 +37,9 @@ class Desktop(Module):
             "xdg-utils",
             "xdg-user-dirs-gtk",
 
+            # Disk utility
+            "gnome-disk-utility",
+
             # Image viewer
             "eog",
 
