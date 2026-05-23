@@ -33,6 +33,7 @@ from extras.vsftpd import VSFTPD
 from extras.quickshell import Quickshell
 # from extras.osu_lazer import OSULazer
 from extras.tmux import Tmux
+from extras.rivalcfg import Rivalcfg
 
 from pacman_hooks import PacmanHooks
 from systemd import Systemd
@@ -87,6 +88,7 @@ decman.modules += [
     Quickshell(),
     # OSULazer(),
     Tmux(),
+    Rivalcfg(),
 
     PacmanHooks(),
     Systemd(),
