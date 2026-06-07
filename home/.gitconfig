@@ -1,6 +1,6 @@
 [user]
-	signingkey = 48F0DEDEB5354ADD
-	email = jakubskowron676@gmail.com
+	signingkey = 64C1338ADD335277
+    email = jakubskowron766@proton.me
 	name = Jakub Skowron
 [commit]
 	gpgsign = true
