@@ -10,10 +10,6 @@
 	defaultBranch = master
 [core]
 	autocrlf = input
-[webui]
-	autoupdate = true
-[alias]
-	webui = !/home/skowriii/.git-webui/release/libexec/git-core/git-webui
 [credential]
 	helper = cache
 [rerere]
