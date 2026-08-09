@@ -31,8 +31,10 @@ class Shell(Module):
 
             # Miscellaneous
             "aria2",
+            "atac",
             "fastfetch",
             "fzf",
+            "lazygit",
             "rsync",
             "socat",
             "task",
