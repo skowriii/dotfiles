@@ -1,9 +1,9 @@
 hl.config({
     general = {
-        border_size = 3,
+        border_size = 0,
 
-        gaps_in = 5,
-        gaps_out = 10,
+        gaps_in = 0,
+        gaps_out = 0,
 
         layout = "scrolling",
 
@@ -15,7 +15,7 @@ hl.config({
 
 hl.config({
     decoration = {
-        rounding = 10,
+        rounding = 0,
 
         blur = { enabled = false },
 
