@@ -8,12 +8,13 @@ class Fonts(Module):
     @pacman.packages
     def packages(self) -> set[str]:
         return {
-            "ttf-montserrat", # Primary GUI font
-            "ttf-jetbrains-mono-nerd", # Fallback for nerd font icons
+            "inter-font",
             "noto-fonts",
             "noto-fonts-cjk",
             "noto-fonts-emoji",
             "noto-fonts-extra",
+            "ttf-montserrat", # Primary GUI font
+            "ttf-jetbrains-mono-nerd", # Fallback for nerd font icons
         }
 
     @aur.packages
