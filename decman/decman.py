@@ -22,18 +22,20 @@ from gaming import Gaming
 from extras.neovim import Neovim
 # from extras.vlc import VLC
 from extras.obs import OBS
-# from extras.docker import Docker
+from extras.docker import Docker
 # from extras.plymouth import Plymouth
 from extras.wine import Wine
 from extras.virtualization import Virtualization
 from extras.password_manager import PasswordManager
 from extras.python import Python
-from extras.vsftpd import VSFTPD
 # from extras.opentabletdriver import OpenTabletDriver
 from extras.quickshell import Quickshell
 # from extras.osu_lazer import OSULazer
 from extras.tmux import Tmux
 from extras.rivalcfg import Rivalcfg
+from extras.spotify import Spotify
+from extras.cloudflare import Cloudflare
+from extras.easyeffects import EasyEffects
 
 from pacman_hooks import PacmanHooks
 from systemd import Systemd
@@ -44,6 +46,9 @@ from extras.bleachbit import Bleachbit
 
 User()
 BuildUser()
+
+# decman.config.cache_dir = f"/home/{Globals.username}/.cache/yay"
+decman.config.cache_dir = "/tmp/decman"
 
 decman.aur.build_dir = "/var/tmp/decman"
 decman.aur.makepkg_user = "builduser"
@@ -77,18 +82,20 @@ decman.modules += [
     Neovim(),
     # VLC(),
     OBS(),
-    # Docker(),
+    Docker(),
     # Plymouth(),
     Wine(),
     Virtualization(),
     PasswordManager(),
     Python(),
-    VSFTPD(),
     # OpenTabletDriver(),
     Quickshell(),
     # OSULazer(),
     Tmux(),
     Rivalcfg(),
+    Spotify(),
+    Cloudflare(),
+    EasyEffects(),
 
     PacmanHooks(),
     Systemd(),
