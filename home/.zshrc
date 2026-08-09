@@ -74,7 +74,7 @@ HISTCONTROL=ignoredups:erasedups
 # Exports
 export EDITOR=nvim
 export WORDCHARS="${WORDCHARS//\/}"
-export PATH="${PATH}:/home/skowriii/.spicetify:/home/skowriii/.local/bin"
+export NH_FLAKE="/personal/dotfiles/nixos#nixbob"
 
 # Aliases
 alias cd="z"
@@ -92,6 +92,10 @@ alias statusftp="systemctl status vsftpd"
 alias change-resolution="nvim ${HOME}/.config/hypr/land/monitors.lua && exit"
 alias resmem="tail /dev/zero"
 alias ping="ping -c 4"
+alias vim="nvim"
+alias turn-off="hyprshutdown --post-cmd 'systemctl poweroff'"
+alias restart="hyprshutdown --post-cmd 'systemctl reboot'"
+alias taskw="/personal/Projects/Laccaria/company-ops/taskw"
 
 # Prompt
 __zc_username=$'%F{red}%n%f'
