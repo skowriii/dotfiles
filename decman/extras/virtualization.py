@@ -1,5 +1,5 @@
-from decman import Module
-from decman.plugins import pacman
+from decman import Module, prg
+from decman.plugins import pacman, systemd
 
 class Virtualization(Module):
     def __init__(self):
@@ -15,3 +15,14 @@ class Virtualization(Module):
             "qemu-base",
             "virt-manager"
         }
+
+    @systemd.units
+    def units(self) -> set[str]:
+        return { "libvirtd" }
+
+    def on_enable(self, store):
+        prg(["virsh", "net-start", "default"],
+            user="root")
+
+        prg(["virsh", "net-autostart", "default"],
+            user="root")
