@@ -7,6 +7,7 @@ hl.on("hyprland.start", function()
     -- Daemons
     -- hl.exec_cmd("playerctld daemon")
     hl.exec_cmd("udiskie -a")
+    hl.exec_cmd("easyeffects --gapplication-service")
 
     -- Hyprland
     hl.exec_cmd("hyprctl setcursor Bibata-Modern-Classic $cursor_size")
@@ -16,7 +17,7 @@ hl.on("hyprland.start", function()
 
     -- Wallpaper
     hl.exec_cmd("waypaper --restore")
-    hl.exec_cmd("pwall")
+    -- hl.exec_cmd("pwall")
 
     -- Quickshell
     hl.exec_cmd("sscli s -a")
@@ -27,7 +28,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("copyq")
 
     -- Misc
-    -- hl.exec_cmd("spotify")
+    hl.exec_cmd("spotify")
     -- hl.exec_cmd("flatpak run com.discordapp.Discord")
     -- hl.exec_cmd("steam")
 end)
