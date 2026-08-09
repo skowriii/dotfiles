@@ -1,3 +1,6 @@
+local gamemode = require("land.extras.gamemode")
+local zoom = require("land.extras.zoom")
+
 hl.bind("SUPER + SHIFT + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + SHIFT + C", hl.dsp.window.close())
 hl.bind("SUPER + CTRL + SHIFT + M", hl.dsp.exit())
@@ -5,7 +8,20 @@ hl.bind("SUPER + E", hl.dsp.exec_cmd(fileManager))
 hl.bind("SUPER + V", hl.dsp.window.float())
 hl.bind("SUPER + R", hl.dsp.exec_cmd(menu))
 hl.bind("SUPER + F", hl.dsp.window.fullscreen())
-hl.bind("SUPER + F1", hl.dsp.exec_cmd("~/.config/hypr/gamemode.sh"))
+hl.bind("SUPER + F1",
+    function()
+        if not gamemode.enabled then
+            gamemode.enable(nil, true)
+        else
+            gamemode.disable(nil, true)
+        end
+    end
+)
+hl.bind("SUPER + ESCAPE", hl.dsp.exec_cmd("hyprlock"))
+hl.bind("SUPER + B", hl.dsp.exec_cmd("zen"))
+hl.bind("SUPER + down", hl.dsp.dpms({ action = "disable" }))
+hl.bind("SUPER + up", hl.dsp.dpms({ action = "enable" }))
+hl.bind("SUPER + M", hl.dsp.exec_cmd("markov-typing"))
 
 -- ss
 hl.bind("SUPER +  CTRL + SHIFT + S", hl.dsp.global("ss:openSettings"))
@@ -51,10 +67,6 @@ hl.bind("SUPER + SHIFT + 0", hl.dsp.window.move({ workspace = 10, follow = true 
 -- Example special workspace (scratchpad)
 hl.bind("SUPER + S", hl.dsp.workspace.toggle_special("magic"))
 hl.bind("SUPER + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
-
--- Scroll through existing workspaces with mainMod + scroll
-hl.bind("SUPER + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind("SUPER + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind("SUPER + mouse:272", hl.dsp.window.drag())
@@ -111,10 +123,10 @@ hl.bind(
 )
 
 -- Requires playerctl
-hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl --player=kew,spotify next"), { locked = true })
-hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl --player=kew,spotify play-pause"), { locked = true })
-hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl --player=kew,spotify play-pause"), { locked = true })
-hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl --player=kew,spotify previous"), { locked = true })
+hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl --player=kew,spotify,jellyfin-tui next"), { locked = true })
+hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl --player=kew,spotify,jellyfin-tui play-pause"), { locked = true })
+hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl --player=kew,spotify,jellyfin-tui play-pause"), { locked = true })
+hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl --player=kew,spotify,jellyfin-tui previous"), { locked = true })
 
 -- Requires hyprshot
 hl.bind("SUPER + PRINT", hl.dsp.exec_cmd("hyprshot -m window"))
@@ -122,22 +134,6 @@ hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m output"))
 hl.bind("SUPER + SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m region"))
 
 -- Zoom
--- hl.bind("SUPER + SHIFT + mouse_down", hl.dsp.exec_cmd("hyprctl -q keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor -j | \)
--- jq '.float * 1.1'))
--- hl.bind("SUPER + SHIFT + mouse_up", hl.dsp.exec_cmd("hyprctl -q keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor -j | \)
--- jq '(.float * 0.9) | if . < 1 then 1 else . end'))
--- )
--- binde = "SUPER + SHIFT + equal", hl.dsp.exec_cmd("hyprctl -q keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor -j | \)
--- jq '.float * 1.1'))
--- binde = "SUPER + SHIFT + minus", hl.dsp.exec_cmd("hyprctl -q keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor -j | \)
--- jq '(.float * 0.9) | if . < 1 then 1 else . end'))
--- binde = "SUPER + SHIFT + KP_ADD", hl.dsp.exec_cmd("hyprctl -q keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor -j | \)
--- jq '.float * 1.1'))
--- binde = "SUPER + SHIFT + KP_SUBTRACT", hl.dsp.exec_cmd("hyprctl -q keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor -j | \)
--- jq '(.float * 0.9) | if . < 1 then 1 else . end'))
--- )
--- hl.bind("SUPER + SHIFT CTRL + mouse_up", hl.dsp.exec_cmd("hyprctl -q keyword cursor:zoom_factor 1)
--- hl.bind("SUPER + SHIFT CTRL + mouse_down", hl.dsp.exec_cmd("hyprctl -q keyword cursor:zoom_factor 1)
--- hl.bind("SUPER + SHIFT CTRL + minus", hl.dsp.exec_cmd("hyprctl -q keyword cursor:zoom_factor 1)
--- hl.bind("SUPER + SHIFT CTRL + KP_SUBTRACT", hl.dsp.exec_cmd("hyprctl -q keyword cursor:zoom_factor 1)
--- hl.bind("SUPER + SHIFT CTRL + 0", hl.dsp.exec_cmd("hyprctl -q keyword cursor:zoom_factor 1)
+hl.bind("SUPER + Z", zoom.zoom)
+hl.bind("SUPER + mouse_down", function() zoom.zoom(0.5) end)
+hl.bind("SUPER + mouse_up", function() zoom.zoom(-0.5) end)
