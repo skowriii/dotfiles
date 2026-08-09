@@ -1,0 +1,11 @@
+[Unit]
+Description=Update NextDNS related IP address
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=curl 'https://link-ip.nextdns.io/9bbfe9/b87fdc379562a879'
+
+[Install]
+WantedBy=multi-user.target
