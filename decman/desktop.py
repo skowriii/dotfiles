@@ -54,9 +54,6 @@ class Desktop(Module):
             # Notepad
             "pluma",
 
-            # Notes
-            "obsidian",
-
             # Applets
             "network-manager-applet",
 
@@ -79,7 +76,7 @@ class Desktop(Module):
             "qt6-wayland",
 
             # org.freedesktop.secrets provider
-            "oo7",
+            "gnome-keyring",
 
             # Wallpaper
             "awww"
@@ -100,7 +97,10 @@ class Desktop(Module):
             "darkly-bin",
 
             # Browser
-            "zen-browser-bin"
+            "zen-browser-bin",
+
+            # Other
+            "markov-typing-git"
         }
 
     def files(self) -> dict[str, File]:
