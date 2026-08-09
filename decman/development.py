@@ -1,5 +1,5 @@
 from decman import Module
-from decman.plugins import pacman
+from decman.plugins import pacman, aur
 
 class Development(Module):
     def __init__(self):
@@ -10,10 +10,15 @@ class Development(Module):
         return {
             "cmake",
             "gdb",
+            "gitleaks",
             "npm",
+            "osv-scanner",
             "zig"
         }
 
-    # @aur.packages
-    # def aur_packages(self) -> set[str]:
-    #     return { "visual-studio-code-bin" }
+    @aur.packages
+    def aur_packages(self) -> set[str]:
+        return {
+            "claude-code",
+            # "visual-studio-code-bin"
+        }
