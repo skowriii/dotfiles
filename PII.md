@@ -15,7 +15,11 @@ In case of a username change, be sure to update relevant configuration files:
 - ~/.config/spotdl/config.json
 - ~/.config/waypaper/config.ini
 - ~/.config/hypr/hyprqt6engine.conf
-- /etc/vsftpd.userlist
+
+## Matugen
+```bash
+matugen image /path/to/wallpaper
+```
 
 ## Spicetify
 Log in to Spotify to generate files required by Spicetify, then run:
@@ -34,4 +38,4 @@ Run `nwg-look` and select the `adw-gtk3` theme.
 `hyprqt6engine` is already preconfigured to use the matugen theme, as such, no additional configuration is required.
 
 ## NetworkManager Connection
-Change connection to `freeethernet` after logging into Hyprland for the first time and remove the default connection.
+Priority for `freeethernet` is set to 999, so it should connect automatically.
