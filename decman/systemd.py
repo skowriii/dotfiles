@@ -11,6 +11,9 @@ class Systemd(Module):
         return {
             "/etc/systemd/system/fix-usb-wakeup.service":
                 File(source_file=f"{Globals.dotfiles_directory}/etc/systemd/system/fix-usb-wakeup.service",
+                     owner="root"),
+            "/etc/systemd/system/network-reconnected.service":
+                File(source_file=f"{Globals.dotfiles_directory}/etc/systemd/system/network-reconnected.service",
                      owner="root")
         }
 
