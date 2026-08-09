@@ -144,6 +144,6 @@ class Base(Module):
             prg(["reflector",
                  "--sort", "rate",
                  "--latest", "10",
-                 "--country", "pl,de",
+                 # "--country", "pl,de",
                  "--save", "/etc/pacman.d/mirrorlist"],
                 user="root")
