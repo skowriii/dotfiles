@@ -93,6 +93,15 @@ class Base(Module):
                      owner="root",
                      group="root",
                      permissions=0o600),
+            "/etc/NetworkManager/system-connections/freeethernet-cloudflare.nmconnection":
+                File(source_file=f"{Globals.root_directory}/freeethernet-cloudflare.nmconnection",
+                     owner="root",
+                     group="root",
+                     permissions=0o600),
+            "/etc/NetworkManager/dispatcher.d/90-network-reconnected":
+                File(source_file=f"{Globals.root_directory}/Scripts/90-network-reconnected",
+                     owner="root",
+                     permissions=0o755),
             "/usr/local/bin/change-brightness":
                 File(source_file=f"{Globals.dotfiles_directory}/usr/local/bin/change-brightness",
                      owner="root",
