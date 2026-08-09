@@ -3,6 +3,7 @@ hl.config({
         force_default_wallpaper = false,
         disable_hyprland_logo = true,
         vrr = true,
-        render_unfocused_fps = 0
+        render_unfocused_fps = 0,
+        initial_workspace_tracking = 0
     }
 })
