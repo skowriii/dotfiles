@@ -6,7 +6,8 @@ version_check = false
 # The color which should be used as the source_color if no good color was found from an image.
 # Can be defined in any css format.
 # The cli flag will override this if used.
-fallback_color = "#ffbf9b"
+# fallback_color = "#ffbf9b"
+fallback_color = "#000000"
 
 # Which color to choose if multiple good colors were found from an image.
 # choices: [darkness, lightness, saturation, less-saturation, value, closest-to-fallback]
@@ -96,13 +97,17 @@ output_path = "~/.config/hypr/hyprlock/colors.conf"
 
 [templates.neovim]
 input_path = "~/.config/matugen/templates/neovim.lua"
-output_path = "~/.config/nvim/lua/smooll/plugins/mini/base16.lua"
+output_path = "~/.config/nvim/lua/skowriii/01-plugins/02-mini/11-base16.lua"
 
 [templates.qt]
 input_path = "~/.config/matugen/templates/Qt.colors"
 output_path = "~/.local/share/color-schemes/Matugen.colors"
 
-[templates.spicetify]
-input_path = "~/.config/matugen/templates/spicetify.ini"
-output_path = "~/.config/spicetify/Themes/Sleek/color.ini"
-post_hook = "spicetify apply"
+# [templates.spicetify]
+# input_path = "~/.config/matugen/templates/spicetify.ini"
+# output_path = "~/.config/spicetify/Themes/Sleek/color.ini"
+# post_hook = "spicetify apply"
+
+[templates.tmux]
+input_path = "~/.config/matugen/templates/tmux-colors.conf"
+output_path = "~/.config/tmux/colors.conf"
