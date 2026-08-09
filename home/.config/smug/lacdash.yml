@@ -1,0 +1,20 @@
+session: lacdash
+
+root: /personal/Projects/Laccaria/dashboard
+
+windows:
+  - name: editor
+    selected: true
+    layout: main-vertical
+    commands:
+      - $EDITOR .
+
+  - name: shell
+    layout: main-vertical
+    commands:
+      - task project:laccaria
+
+  - name: server
+    layout: main-vertical
+    commands:
+      - npm run dev

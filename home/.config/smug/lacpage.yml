@@ -1,0 +1,48 @@
+session: lacpage
+
+root: /personal/Projects/Laccaria/laccaria-page
+
+before_start:
+  - sudo systemctl start docker
+  - npm run db:up
+
+stop:
+  - npm run db:down
+  - sudo systemctl stop docker
+
+windows:
+  - name: editor
+    selected: true
+    layout: main-vertical
+    commands:
+      - $EDITOR
+
+  - name: shell
+    layout: main-vertical
+    commands:
+      - task project:laccaria
+
+  - name: atac
+    layout: main-vertical
+    commands:
+      - atac
+
+  - name: server
+    layout: tiled
+    commands:
+      - npm run dev
+    panes:
+      - type: horizontal
+        commands:
+          - npm run api:dev
+
+  - name: claude
+    layout: main-vertical
+    commands:
+      - cd server/
+      - claude --resume
+
+  - name: lazygit
+    layout: main-vertical
+    commands:
+      - lazygit
