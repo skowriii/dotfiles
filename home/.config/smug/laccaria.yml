@@ -1,0 +1,11 @@
+session: Laccaria
+
+root: /personal/Projects/Laccaria/company-ops
+
+windows:
+  - name: shell
+    layout: main-vertical
+  - name: tasks
+    layout: main-vertical
+    commands:
+      - ./taskw skowriii +$(LC_ALL=C date '+%A' | tr '[:upper:]' '[:lower:]')
