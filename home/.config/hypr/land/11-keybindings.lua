@@ -1,5 +1,5 @@
-local gamemode = require("land.extras.gamemode")
-local zoom = require("land.extras.zoom")
+local gamemode = require("land.02-extras.gamemode")
+local zoom = require("land.02-extras.S-zoom")
 
 hl.bind("SUPER + SHIFT + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + SHIFT + C", hl.dsp.window.close())
