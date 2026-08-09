@@ -23,5 +23,6 @@ class DisplayManager(Module):
     @systemd.units
     def units(self) -> set[str]:
         return {
+            # NOTE: Possible replacement with ly-kmsconvt@tty2.service
             "ly@tty2.service"
         }
