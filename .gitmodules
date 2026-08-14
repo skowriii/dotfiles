@@ -1,3 +1,6 @@
 [submodule "home/.zsh/znap"]
 	path = home/.zsh/znap
 	url = https://github.com/marlonrichert/zsh-snap
+[submodule "home/.config/tmux/plugins/tmux-dotbar"]
+	path = home/.config/tmux/plugins/tmux-dotbar
+	url = https://github.com/vaaleyard/tmux-dotbar.git
