@@ -17,6 +17,16 @@ hl.window_rule({
 	max_size = { "1280", "720" }
 })
 
+-- Force windows to size 1280x720
+local forced_classes = {
+	"thunar"
+}
+
+hl.window_rule({
+	match = { class = table.concat(forced_classes, '|') },
+	size = { "1280", "720" }
+})
+
 -- Center the currently focused window
 hl.window_rule({
 	match = { focus = true },
