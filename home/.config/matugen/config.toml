@@ -45,7 +45,7 @@ contrast = 0.0
 
 [config.wallpaper]
 # Whether to set the wallpaper or not
-set = false
+set = true
 
 # The base command to run for applying the wallpaper.
 # Keywords like {{ image }} or anything that works inside of hooks works here.
@@ -100,7 +100,7 @@ input_path = "~/.config/matugen/templates/neovim.lua"
 output_path = "~/.config/nvim/lua/skowriii/01-plugins/02-mini/11-base16.lua"
 
 [templates.qt]
-input_path = "~/.config/matugen/templates/Qt.colors"
+input_path = "~/.config/matugen/templates/qtct.conf"
 output_path = "~/.local/share/color-schemes/Matugen.colors"
 
 # [templates.spicetify]
