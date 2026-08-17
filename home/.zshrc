@@ -110,7 +110,6 @@ znap prompt
 
 # Evals
 znap eval zoxide 'zoxide init zsh'
-znap eval direnv 'direnv hook zsh'
 
 # Keybindings
 bindkey "^[[Z" autosuggest-accept
