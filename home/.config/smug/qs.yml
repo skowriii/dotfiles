@@ -25,7 +25,7 @@ windows:
     commands:
       - qs -c ss
 
-  - name: webui
+  - name: lazygit
     layout: main-vertical
     commands:
-      - git webui
+      - lazygit
