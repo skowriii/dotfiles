@@ -89,7 +89,7 @@ alias startftp="sudo systemctl start vsftpd"
 alias stopftp="sudo systemctl stop vsftpd"
 alias restartftp="sudo systemctl restart vsftpd"
 alias statusftp="systemctl status vsftpd"
-alias change-resolution="nvim ${HOME}/.config/hypr/land/monitors.lua && exit"
+alias change-resolution="nvim ${HOME}/.config/hypr/land/05-monitors.lua && exit"
 alias resmem="tail /dev/zero"
 alias ping="ping -c 4"
 alias vim="nvim"
@@ -110,6 +110,7 @@ znap prompt
 
 # Evals
 znap eval zoxide 'zoxide init zsh'
+znap eval direnv '${commands[direnv]:A} hook zsh'
 
 # Keybindings
 bindkey "^[[Z" autosuggest-accept
