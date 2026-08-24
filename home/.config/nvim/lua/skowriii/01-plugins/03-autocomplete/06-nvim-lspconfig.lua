@@ -13,7 +13,6 @@ require("mason-tool-installer").setup({
         "hyprls",
         "lua-language-server",
         "python-lsp-server",
-        "qmlls",
         "typescript-language-server",
         "zls"
     },
