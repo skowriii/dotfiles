@@ -15,7 +15,7 @@ windows:
     selected: true
     layout: main-vertical
     commands:
-      - $EDITOR
+      - $EDITOR .
 
   - name: shell
     layout: main-vertical
