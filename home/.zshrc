@@ -110,7 +110,9 @@ znap prompt
 
 # Evals
 znap eval zoxide 'zoxide init zsh'
-znap eval direnv '${commands[direnv]:A} hook zsh'
+if (( $+commands[direnv] )); then
+	eval "$(direnv hook zsh)"
+fi
 
 # Keybindings
 bindkey "^[[Z" autosuggest-accept
