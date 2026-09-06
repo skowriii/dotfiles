@@ -36,12 +36,6 @@ windows:
         commands:
           - npm run api:dev
 
-  - name: claude
-    layout: main-vertical
-    commands:
-      - cd server/
-      - claude --resume
-
   - name: lazygit
     layout: main-vertical
     commands:
