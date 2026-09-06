@@ -27,6 +27,9 @@ hl.bind("SUPER + M", hl.dsp.exec_cmd("markov-typing"))
 hl.bind("SUPER +  CTRL + SHIFT + S", hl.dsp.global("ss:openSettings"))
 hl.bind("SUPER + W", hl.dsp.global("ss:showIDs"))
 hl.bind("SUPER + W", hl.dsp.global("ss:showIDs"), { release = true })
+hl.bind("SUPER + P", hl.dsp.global("ss:peekStatusBar"))
+hl.bind("SUPER + P", hl.dsp.global("ss:peekStatusBar"), { release = true })
+hl.bind("SUPER + F4", hl.dsp.global("ss:openPowerMenu"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind("SUPER + H", hl.dsp.focus({ direction = "l" }))
