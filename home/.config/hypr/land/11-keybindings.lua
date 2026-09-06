@@ -1,5 +1,6 @@
 local gamemode = require("land.02-extras.gamemode")
 local zoom = require("land.02-extras.S-zoom")
+local hyprshot_output_directory = "~/Obrazy"
 
 hl.bind("SUPER + SHIFT + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + SHIFT + C", hl.dsp.window.close())
@@ -132,9 +133,9 @@ hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl --player=kew,spotify,jellyfi
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl --player=kew,spotify,jellyfin-tui previous"), { locked = true })
 
 -- Requires hyprshot
-hl.bind("SUPER + PRINT", hl.dsp.exec_cmd("hyprshot -m window"))
-hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m output"))
-hl.bind("SUPER + SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m region"))
+hl.bind("SUPER + PRINT", hl.dsp.exec_cmd("hyprshot -m window -o " .. hyprshot_output_directory))
+hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m output -o " .. hyprshot_output_directory))
+hl.bind("SUPER + SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m region -o " .. hyprshot_output_directory))
 
 -- Zoom
 hl.bind("SUPER + Z", zoom.zoom)
