@@ -12,7 +12,8 @@ M.classes = {
     "gamescope",
     "Wine",
     "wine",
-    ".*%.exe"
+    ".*%.exe",
+		'*'
 }
 
 function M.save()
@@ -180,17 +181,17 @@ hl.on("config.reloaded",
         M.disable()
     end
 )
-
-hl.on("window.open_early",
-    function(window)
-        M.enable(window)
-    end
-)
-
-hl.on("window.destroy",
-    function(window)
-        M.disable(window)
-    end
-)
+--
+-- hl.on("window.open_early",
+--     function(window)
+--         M.enable(window)
+--     end
+-- )
+--
+-- hl.on("window.destroy",
+--     function(window)
+--         M.disable(window)
+--     end
+-- )
 
 return M
