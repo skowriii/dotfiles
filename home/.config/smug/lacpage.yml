@@ -30,11 +30,11 @@ windows:
   - name: server
     layout: tiled
     commands:
-      - npm run dev
+      - steam-run npm run dev
     panes:
       - type: horizontal
         commands:
-          - npm run api:dev
+          - steam-run npm run api:dev
 
   - name: lazygit
     layout: main-vertical
