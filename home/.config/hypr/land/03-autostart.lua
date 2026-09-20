@@ -19,9 +19,6 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("waypaper --restore")
     -- hl.exec_cmd("pwall")
 
-    -- Quickshell
-    hl.exec_cmd("sscli s -a")
-
     -- Tray applets
     hl.exec_cmd("nm-applet")
     hl.exec_cmd("blueman-applet")
