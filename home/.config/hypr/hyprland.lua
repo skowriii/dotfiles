@@ -1,5 +1,8 @@
 hl.config({
-    debug = { disable_logs = false }
+		debug = {
+			disable_logs = true,
+			enable_stdout_logs = false
+		}
 })
 
 hl.on("hyprland.start", function()
