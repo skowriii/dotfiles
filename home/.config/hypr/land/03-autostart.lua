@@ -10,7 +10,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("easyeffects --gapplication-service")
 
     -- Hyprland
-    hl.exec_cmd("hyprctl setcursor Bibata-Modern-Classic $cursor_size")
+    -- hl.exec_cmd("hyprctl setcursor Bibata-Modern-Classic $cursor_size")
     hl.exec_cmd("hypridle")
     -- hl.exec_cmd("hyprpaper")
     hl.exec_cmd("hyprsunset")
