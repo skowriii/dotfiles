@@ -19,7 +19,7 @@ hl.bind("SUPER + F1",
     end
 )
 hl.bind("SUPER + ESCAPE", hl.dsp.exec_cmd("hyprlock"))
-hl.bind("SUPER + B", hl.dsp.exec_cmd("zen"))
+hl.bind("SUPER + B", hl.dsp.exec_cmd("zen-beta --name zen-beta"))
 hl.bind("SUPER + down", hl.dsp.dpms({ action = "disable" }))
 hl.bind("SUPER + up", hl.dsp.dpms({ action = "enable" }))
 hl.bind("SUPER + M", hl.dsp.exec_cmd("markov-typing"))
