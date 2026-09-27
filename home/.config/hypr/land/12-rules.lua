@@ -58,7 +58,7 @@ end
 
 -- Ignore maximize requests from apps. You'll probably like this.
 hl.window_rule({
-	match = { class = "^$" },
+	match = { class = ".*" },
 	suppress_event = "maximize"
 })
 
