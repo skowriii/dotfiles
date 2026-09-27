@@ -1,9 +1,9 @@
 [StreamInputs]
-inputDevice=alsa_input.pci-0000_00_09.2.analog-stereo
+inputDevice=bluez_input.A4:40:3E:0D:6A:81
 visiblePage=pluginsPage
 
 [StreamOutputs]
-outputDevice=alsa_output.pci-0000_00_09.2.analog-stereo
+outputDevice=bluez_output.A4_40_3E_0D_6A_81.1
 plugins=autogain#0
 visiblePage=pluginsPage
 visiblePlugin=autogain#0
