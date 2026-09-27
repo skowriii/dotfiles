@@ -34,7 +34,7 @@ hl.window_rule({
 
 -- Center the currently focused window
 hl.window_rule({
-	match = { focus = true },
+	match = { float = true },
 	center = true
 })
 
