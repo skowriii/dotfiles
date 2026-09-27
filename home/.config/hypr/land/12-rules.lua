@@ -6,8 +6,7 @@ local floating_classes = {
 	"blueman-manager",
 	"xdg-desktop-portal-gtk",
 	"thunar",
-	"org.kde.ark",
-	-- "thorium-browser"
+	"org.kde.ark"
 }
 
 hl.window_rule({
@@ -19,7 +18,13 @@ hl.window_rule({
 
 -- Force windows to size 1280x720
 local forced_classes = {
-	"thunar"
+	"org.gnome.eog",
+	"com.github.hluk.copyq",
+	"nm-connection-editor",
+	"blueman-manager",
+	"xdg-desktop-portal-gtk",
+	"thunar",
+	"org.kde.ark"
 }
 
 hl.window_rule({
