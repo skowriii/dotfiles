@@ -40,7 +40,7 @@ hl.window_rule({
 
 -- Open window on specified workspace
 local workspace_apps = {
-	[2] = { "zen" },
+	[2] = { "zen-beta" },
 	[3] = { "(S|s)potify", "fl64.exe" },
 	[4] = { "gimp", "org.inkscape.Inkscape", "Aseprite" },
 	[6] = { "steam", "net.lutris.Lutris" },
@@ -100,7 +100,7 @@ hl.window_rule({
 -- Float Zen Browser Library and resize to 1280x720
 hl.window_rule({
 	match = {
-		class = "zen",
+		class = "zen-beta",
 		initial_title = "^Biblioteka|Library$"
 	},
 	float = true,
