@@ -34,7 +34,10 @@ hl.window_rule({
 
 -- Center the currently focused window
 hl.window_rule({
-	match = { float = true },
+	match = {
+		float = true,
+		initial_class = "negative:fl64.exe"
+	},
 	center = true
 })
 
