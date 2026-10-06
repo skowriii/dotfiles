@@ -4,10 +4,10 @@ root: /personal/Projects/Laccaria/laccaria-page
 
 before_start:
   - sudo systemctl start docker
-  - npm run db:up
+  - npm run db:up -w server
 
 stop:
-  - npm run db:down
+  - npm run db:down -w server
   - sudo systemctl stop docker
 
 windows:
@@ -30,11 +30,11 @@ windows:
   - name: server
     layout: tiled
     commands:
-      - steam-run npm run dev
+      - steam-run npm run dev -w server
     panes:
       - type: horizontal
         commands:
-          - steam-run npm run api:dev
+          - steam-run npm run api:dev -w server
 
   - name: lazygit
     layout: main-vertical
