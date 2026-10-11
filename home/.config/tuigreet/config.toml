@@ -1,0 +1,11 @@
+[display]
+show_time = true
+show_title = false
+battery = true
+
+[remember]
+user = true
+
+[secret]
+mode = "characters"
+characters = "*"
