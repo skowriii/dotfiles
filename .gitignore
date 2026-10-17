@@ -20,3 +20,6 @@ home/.config/quickshell/**/.qmlls.ini
 
 # smug
 home/.config/smug/smug.log
+
+# NixOS
+**/.direnv/
