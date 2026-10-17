@@ -4,7 +4,7 @@
     {
       "Tablet": "XP-Pen Deco mini4",
       "OutputMode": {
-        "Path": "OpenTabletDriver.Desktop.Output.LinuxArtistMode",
+        "Path": "OpenTabletDriver.Desktop.Output.LinuxAbsoluteMode",
         "Settings": [],
         "Enable": true
       },
