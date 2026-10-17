@@ -32,7 +32,12 @@ vim.keymap.set("n", "<LEADER>tt", "<CMD>TodoTrouble toggle<CR>", { desc = "Open 
 
 -- Oil.nvim
 -- vim.keymap.set("n", "<LEADER>fb", "<CMD>Oil --float --preview %:p:h<CR>", { desc = "Open file browser" })
-vim.keymap.set("n", "<LEADER>fb", function() MiniFiles.open() end)
+vim.keymap.set("n", "<LEADER>fb",
+	function()
+		MiniFiles.open(vim.api.nvim_buf_get_name(0), false)
+		MiniFiles.reveal_cwd()
+	end
+)
 
 -- telescope.nvim
 vim.keymap.set("n", "<LEADER>lg", require("telescope.builtin").live_grep, { desc = "Open Telescope live_grep" })
