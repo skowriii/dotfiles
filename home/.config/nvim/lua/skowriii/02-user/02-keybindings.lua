@@ -11,11 +11,14 @@ vim.keymap.set("n", "<ESC>", "<CMD>noh<CR>", { desc = "Clear search highlights" 
 -- Code Action
 vim.keymap.set("n", "<LEADER>ca", function() vim.lsp.buf.code_action() end)
 
-vim.keymap.set("n", "<Leader>cl", function()
-	local filepath = vim.fn.expand("%:.") -- Relative path
-	local linenr = vim.fn.line(".")
-	vim.fn.setreg("+", filepath .. ":" .. linenr)
-end, { desc = "Copy file:line to clipboard" })
+-- Copy file:line
+vim.keymap.set("n", "<LEADER>cl",
+	function()
+		local filepath = vim.fn.expand("%:.") -- Relative path
+		local linenr = vim.fn.line(".")
+		vim.fn.setreg("+", filepath .. ":" .. linenr)
+	end, { desc = "Copy file:line to clipboard" }
+)
 
 -- Plugins
 --------------
