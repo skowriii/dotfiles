@@ -30,18 +30,18 @@ vim.keymap.set("n", "<LEADER>tq", "<CMD>Trouble qflist toggle<CR>", { desc = "Qu
 -- todo-comments.nvim
 vim.keymap.set("n", "<LEADER>tt", "<CMD>TodoTrouble toggle<CR>", { desc = "Open TODOs" })
 
--- Oil.nvim
--- vim.keymap.set("n", "<LEADER>fb", "<CMD>Oil --float --preview %:p:h<CR>", { desc = "Open file browser" })
+-- mini.trailspace
+vim.keymap.set("n", "<LEADER>wt", function() MiniTrailspace.trim() end, { desc = "Trim trailing whitespace" })
+vim.keymap.set("n", "<LEADER>elt", function() MiniTrailspace.trim_last_lines() end,
+	{ desc = "Trim trailing empty lines" })
+
+-- mini.files
 vim.keymap.set("n", "<LEADER>fb",
 	function()
 		MiniFiles.open(vim.api.nvim_buf_get_name(0), false)
 		MiniFiles.reveal_cwd()
 	end
 )
-
--- mini.trailspace
-vim.keymap.set("n", "<LEADER>wt", function() MiniTrailspace.trim() end, { desc = "Trim trailing whitespace" })
-vim.keymap.set("n", "<LEADER>elt", function() MiniTrailspace.trim_last_lines() end, { desc = "Trim trailing empty lines" })
 
 -- mini.sessions
 vim.keymap.set("n", "<LEADER>ss", function() MiniSessions.select() end, { desc = "Select session" })
