@@ -39,9 +39,6 @@ vim.keymap.set("n", "<LEADER>fb",
 	end
 )
 
--- telescope.nvim
-vim.keymap.set("n", "<LEADER>lg", require("telescope.builtin").live_grep, { desc = "Open Telescope live_grep" })
-
 -- mini.trailspace
 vim.keymap.set("n", "<LEADER>wt", function() MiniTrailspace.trim() end, { desc = "Trim trailing whitespace" })
 vim.keymap.set("n", "<LEADER>elt", function() MiniTrailspace.trim_last_lines() end, { desc = "Trim trailing empty lines" })
