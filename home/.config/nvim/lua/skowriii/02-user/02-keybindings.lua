@@ -43,6 +43,9 @@ vim.keymap.set("n", "<LEADER>fb",
 	end
 )
 
+-- mini.pick
+vim.keymap.set("n", "<LEADER>lg", function() MiniPick.builtin.grep_live() end, { desc = "Open mini.pick grep_live" })
+vim.keymap.set("n", "<LEADER>b", function() MiniPick.builtin.buffers() end, { desc = "Open mini.pick buffer" })
 
 ----------------------------
 -- NORMAL/VISUAL MODE				|
