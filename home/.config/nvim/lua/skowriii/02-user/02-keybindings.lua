@@ -20,6 +20,18 @@ vim.keymap.set("n", "<LEADER>cl",
 	end, { desc = "Copy file:line to clipboard" }
 )
 
+-- vim.pack
+vim.keymap.set("n", "<LEADER>vpd",
+	function()
+		local unused_plugins = vim.iter(vim.pack.get())
+			:filter(function(x) return not x.active end)
+			:map(function(x) return x.spec.name end)
+			:totable()
+
+		vim.pack.del(unused_plugins)
+	end
+)
+
 -- Plugins
 --------------
 
