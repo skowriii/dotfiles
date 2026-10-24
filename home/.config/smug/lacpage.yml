@@ -15,7 +15,7 @@ windows:
     selected: true
     layout: main-vertical
     commands:
-      - $EDITOR .
+      - $EDITOR
 
   - name: shell
     layout: main-vertical
@@ -40,3 +40,8 @@ windows:
     layout: main-vertical
     commands:
       - lazygit
+
+  - name: dbeaver
+    layout: main-vertical
+    commands:
+      - dbeaver
