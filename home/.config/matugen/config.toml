@@ -65,9 +65,9 @@ input_path = "~/.config/matugen/templates/dunst"
 output_path = "~/.config/dunst/dunstrc"
 post_hook = "dunstctl reload"
 
-[templates.foot]
-input_path = "~/.config/matugen/templates/foot.ini"
-output_path = "~/.config/foot/colors.ini"
+# [templates.foot]
+# input_path = "~/.config/matugen/templates/foot.ini"
+# output_path = "~/.config/foot/colors.ini"
 
 [templates.fuzzel]
 input_path = "~/.config/matugen/templates/fuzzel.ini"
@@ -95,9 +95,9 @@ output_path = "~/.config/hypr/land/colors.lua"
 input_path = "~/.config/matugen/templates/hyprlock.conf"
 output_path = "~/.config/hypr/hyprlock/colors.conf"
 
-[templates.neovim]
-input_path = "~/.config/matugen/templates/neovim.lua"
-output_path = "~/.config/nvim/lua/skowriii/01-plugins/02-mini/11-base16.lua"
+# [templates.neovim]
+# input_path = "~/.config/matugen/templates/neovim.lua"
+# output_path = "~/.config/nvim/lua/skowriii/01-plugins/02-mini/11-base16.lua"
 
 [templates.qt]
 input_path = "~/.config/matugen/templates/qtct.conf"
@@ -108,6 +108,6 @@ output_path = "~/.local/share/color-schemes/Matugen.colors"
 # output_path = "~/.config/spicetify/Themes/Sleek/color.ini"
 # post_hook = "spicetify apply"
 
-[templates.tmux]
-input_path = "~/.config/matugen/templates/tmux-colors.conf"
-output_path = "~/.config/tmux/colors.conf"
+# [templates.tmux]
+# input_path = "~/.config/matugen/templates/tmux-colors.conf"
+# output_path = "~/.config/tmux/colors.conf"
