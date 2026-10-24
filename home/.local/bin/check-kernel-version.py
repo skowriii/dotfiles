@@ -51,12 +51,17 @@ command = ["nix", "path-info", "--json", "--json-format", '1', f"{nixpkgs_url}#{
 output = s.run(command, capture_output=True).stdout.decode("utf-8")
 latest_version = version_regex.search(output)[0]
 
-# Get installed version
-installed_version = s.run(["uname", "-r"], capture_output=True).stdout.decode("utf-8")
-installed_version = version_regex.search(installed_version)[0]
+# Get running installed version
+running_installed_version = s.run(["uname", "-r"], capture_output=True).stdout.decode("utf-8")
+running_installed_version = version_regex.search(running_installed_version)[0]
+
+# Get latest installed version
+latest_installed_version = s.run(["nh", "os", "info", "--fields", "kernel"], capture_output=True).stdout.decode("utf-8")
+latest_installed_version = latest_installed_version.split('\n')[2]
+latest_installed_version = version_regex.search(latest_installed_version)[0]
 
 # Check if update is required
-if installed_version != latest_version:
+if running_installed_version != latest_version or latest_installed_version != latest_version:
     # Check if kernel is in cache
     narhash_regex = re.compile(r"[a-z0-9]{32}")
 
@@ -66,7 +71,7 @@ if installed_version != latest_version:
     if response.status_code == 200:
         if sys.stdin and sys.stdin.isatty():
             print("Kernel is outdated!")
-            print(f"Installed: \033[1;31m{installed_version}\033[0;0m")
+            print(f"Installed: \033[1;31m{running_installed_version}\033[0;0m")
             print(f"Latest: \033[1;32m{latest_version}\033[0;0m")
         else:
             s.run(["nix",
@@ -74,5 +79,5 @@ if installed_version != latest_version:
                    "nixpkgs#libnotify",
                    "--",
                    "Kernel is outdated!",
-                   f"Installed: {installed_version}\nLatest: {latest_version}"
+                   f"Installed: {running_installed_version}\nLatest: {latest_version}"
                  ])
