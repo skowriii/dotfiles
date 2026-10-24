@@ -43,8 +43,6 @@ vim.keymap.set("n", "<LEADER>fb",
 	end
 )
 
--- mini.sessions
-vim.keymap.set("n", "<LEADER>ss", function() MiniSessions.select() end, { desc = "Select session" })
 
 ----------------------------
 -- NORMAL/VISUAL MODE				|
