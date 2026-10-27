@@ -1,2 +1,1 @@
-require("skowriii.02-user.S-utils").setup_capabilities("zls")
-vim.lsp.enable("zls")
+require("skowriii.02-user.S-utils").setup_server("zls")

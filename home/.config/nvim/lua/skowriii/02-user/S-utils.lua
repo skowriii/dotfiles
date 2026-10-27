@@ -83,12 +83,15 @@ function M.bulk_require(base, modules, skips)
 	end
 end
 
-function M.setup_capabilities(server)
+function M.setup_server(server)
 	local capabilities = require("cmp_nvim_lsp").default_capabilities()
+	capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 	vim.lsp.config(server, {
 		capabilities = capabilities
 	})
+
+	vim.lsp.enable(server)
 end
 
 return M
