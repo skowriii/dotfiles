@@ -1,7 +1,8 @@
 local flake = "/personal/dotfiles/nixos"
 local getFlake = ("(builtins.getFlake \"%s\")"):format(flake)
 
-require("skowriii.02-user.S-utils").setup_capabilities("nixd")
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 vim.lsp.config("nixd", {
 	settings = {
@@ -14,6 +15,8 @@ vim.lsp.config("nixd", {
 				}
 			}
 		}
-	}
+	},
+	capabilities = capabilities
 })
+
 vim.lsp.enable("nixd")
