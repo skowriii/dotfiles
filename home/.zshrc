@@ -75,6 +75,7 @@ HISTCONTROL=ignoredups:erasedups
 export EDITOR=nvim
 export WORDCHARS="${WORDCHARS//\/}"
 export NH_FLAKE="/personal/nixos#nixbob"
+export _ZO_RESOLVE_SYMLINKS=1
 
 # Aliases
 alias cd="z"
