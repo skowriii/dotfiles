@@ -1,9 +1,5 @@
 {
   "plugins": {
-    "LuaSnip": {
-      "rev": "642b0c595e11608b4c18219e93b88d7637af27bc",
-      "src": "https://github.com/L3MON4D3/LuaSnip"
-    },
     "cmp-buffer": {
       "rev": "b74fab3656eea9de20a9b8116afa3cfc4ec09657",
       "src": "https://github.com/hrsh7th/cmp-buffer"
@@ -23,10 +19,6 @@
     "cmp-path": {
       "rev": "c642487086dbd9a93160e1679a1327be111cbc25",
       "src": "https://github.com/hrsh7th/cmp-path"
-    },
-    "cmp_luasnip": {
-      "rev": "98d9cb5c2c38532bd9bdb481067b20fea8f32e90",
-      "src": "https://github.com/saadparwaiz1/cmp_luasnip"
     },
     "hardtime.nvim": {
       "rev": "721a75b9a0c2eb1fb811d34507708ee315cb04eb",
