@@ -6,7 +6,7 @@ before_start:
   - sscli kill
 
 stop:
-  - sscli start -a
+  - systemctl --user start ss
 
 windows:
   - name: editor
