@@ -23,3 +23,5 @@ home/.config/smug/smug.log
 
 # NixOS
 **/.direnv/
+
+home/.config/nvim/lua/skowriii/02-user/03-laccaria-conf.lua
