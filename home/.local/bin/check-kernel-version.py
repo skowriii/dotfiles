@@ -1,5 +1,5 @@
 #!/usr/bin/env nix-shell
-#!nix-shell /personal/dotfiles/home/.local/bin/shell.nix -i python3
+#!nix-shell /personal/dotfiles/shell.nix -i python3
 
 import subprocess as s
 import re
