@@ -32,6 +32,11 @@ vim.keymap.set("n", "<LEADER>vpd",
 	end
 )
 
+-- Buffers
+vim.keymap.set("n", "<LEADER>bd", "<CMD>bd<CR>", { desc = "Delete current buffer" })
+vim.keymap.set("n", "<LEADER>bD", "<CMD>%bd|e#<CR>", { desc = "Delete all buffers except current" })
+vim.keymap.set("n", "<LEADER>bda", "<CMD>%bd<CR>", { desc = "Delete all buffers" })
+
 -- Plugins
 --------------
 
@@ -61,7 +66,7 @@ vim.keymap.set("n", "<LEADER>fb",
 
 -- mini.pick
 vim.keymap.set("n", "<LEADER>lg", function() MiniPick.builtin.grep_live() end, { desc = "Open mini.pick grep_live" })
-vim.keymap.set("n", "<LEADER>b", function() MiniPick.builtin.buffers() end, { desc = "Open mini.pick buffer" })
+vim.keymap.set("n", "<LEADER>bp", function() MiniPick.builtin.buffers() end, { desc = "Open mini.pick buffer" })
 
 ----------------------------
 -- NORMAL/VISUAL MODE				|
