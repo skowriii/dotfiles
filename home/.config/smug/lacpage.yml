@@ -22,11 +22,6 @@ windows:
     commands:
       - task project:laccaria
 
-  - name: atac
-    layout: main-vertical
-    commands:
-      - atac
-
   - name: server
     layout: tiled
     commands:
@@ -40,8 +35,3 @@ windows:
     layout: main-vertical
     commands:
       - lazygit
-
-  - name: dbeaver
-    layout: main-vertical
-    commands:
-      - dbeaver
