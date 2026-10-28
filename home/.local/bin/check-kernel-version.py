@@ -51,17 +51,13 @@ command = ["nix", "path-info", "--json", "--json-format", '1', f"{nixpkgs_url}#{
 output = s.run(command, capture_output=True).stdout.decode("utf-8")
 latest_version = version_regex.search(output)[0]
 
-# Get running installed version
-running_installed_version = s.run(["uname", "-r"], capture_output=True).stdout.decode("utf-8")
-running_installed_version = version_regex.search(running_installed_version)[0]
-
 # Get latest installed version
-latest_installed_version = s.run(["nh", "os", "info", "--fields", "kernel"], capture_output=True).stdout.decode("utf-8")
-latest_installed_version = latest_installed_version.split('\n')[2]
-latest_installed_version = version_regex.search(latest_installed_version)[0]
+installed_version = s.run(["nh", "os", "info", "--fields", "kernel"], capture_output=True).stdout.decode("utf-8")
+installed_version = installed_version.split('\n')[2]
+installed_version = version_regex.search(installed_version)[0]
 
 # Check if update is required
-if running_installed_version != latest_version or latest_installed_version != latest_version:
+if installed_version != latest_version:
     # Check if kernel is in cache
     narhash_regex = re.compile(r"[a-z0-9]{32}")
 
