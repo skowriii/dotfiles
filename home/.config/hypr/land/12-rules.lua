@@ -90,8 +90,7 @@ hl.window_rule({
 -- Render border on floating windows
 hl.window_rule({
 	match = { float = true },
-	border_size = 3,
-	rounding = 10
+	border_size = 3
 })
 
 -- ss Rules
