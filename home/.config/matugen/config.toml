@@ -55,11 +55,6 @@ command = "awww img --transition-type center {{ image }}"
 # For example, killing the wallpaper daemon. Usage is like a normal hook.
 # pre_hook = ""
 
-[templates.btop]
-input_path = "~/.config/matugen/templates/btop.theme"
-output_path = "~/.config/btop/themes/matugen.theme"
-post_hook = "pkill -USR2 btop || true"
-
 [templates.dunst]
 input_path = "~/.config/matugen/templates/dunst"
 output_path = "~/.config/dunst/dunstrc"
