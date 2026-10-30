@@ -1,0 +1,31 @@
+{
+    "background": {
+        "dark": "{{colors.on_secondary.dark.hex}}",
+        "light": "{{colors.secondary_container.dark.hex}}",
+        "normal": "{{colors.background.dark.hex}}"
+    },
+    "border": {
+        "active": "{{colors.outline.dark.hex}}"
+    },
+    "button": {
+        "background": "{{colors.secondary_container.dark.hex}}"
+    },
+    "dropdown": {
+        "background": "{{colors.on_secondary.dark.hex}}"
+    },
+    "general": {
+        "foreground": "{{colors.primary.dark.hex}}",
+        "hovered": "{{colors.secondary.light.hex}}",
+        "inactive": "{{colors.on_secondary.dark.hex}}"
+    },
+    "horizontalRule": {
+        "background": "{{colors.outline_variant.dark.hex}}"
+    },
+    "text": {
+        "dark": "{{colors.on_background.light.hex}}",
+        "light": "{{colors.on_background.dark.hex}}"
+    },
+    "workspaces": {
+        "urgent": "{{colors.inverse_primary.dark.hex}}"
+    }
+}

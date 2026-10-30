@@ -86,3 +86,6 @@ output_path = "~/.config/hypr/hyprlock/colors.conf"
 input_path = "~/.config/matugen/templates/qtct.conf"
 output_path = "~/.local/share/color-schemes/Matugen.colors"
 
+[templates.ss]
+input_path = "~/.config/matugen/templates/ss.json"
+output_path = "~/.config/ss/Colors.json"
