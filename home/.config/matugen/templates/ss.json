@@ -8,14 +8,14 @@
         "active": "{{colors.outline.dark.hex}}"
     },
     "button": {
-        "background": "{{colors.secondary_container.dark.hex}}"
+        "background": "{{colors.secondary.light.hex}}"
     },
     "dropdown": {
         "background": "{{colors.on_secondary.dark.hex}}"
     },
     "general": {
         "foreground": "{{colors.primary.dark.hex}}",
-        "hovered": "{{colors.secondary.light.hex}}",
+        "hovered": "{{colors.secondary_container.dark.hex}}",
         "inactive": "{{colors.on_secondary.dark.hex}}"
     },
     "horizontalRule": {
