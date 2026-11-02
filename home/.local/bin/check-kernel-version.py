@@ -67,7 +67,7 @@ if installed_version != latest_version:
     if response.status_code == 200:
         if sys.stdin and sys.stdin.isatty():
             print("Kernel is outdated!")
-            print(f"Installed: \033[1;31m{running_installed_version}\033[0;0m")
+            print(f"Installed: \033[1;31m{installed_version}\033[0;0m")
             print(f"Latest: \033[1;32m{latest_version}\033[0;0m")
         else:
             s.run(["nix",
@@ -75,5 +75,5 @@ if installed_version != latest_version:
                    "nixpkgs#libnotify",
                    "--",
                    "Kernel is outdated!",
-                   f"Installed: {running_installed_version}\nLatest: {latest_version}"
+                   f"Installed: {installed_version}\nLatest: {latest_version}"
                  ])
