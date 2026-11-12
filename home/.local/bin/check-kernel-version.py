@@ -70,10 +70,7 @@ if installed_version != latest_version:
             print(f"Installed: \033[1;31m{installed_version}\033[0;0m")
             print(f"Latest: \033[1;32m{latest_version}\033[0;0m")
         else:
-            s.run(["nix",
-                   "run",
-                   "nixpkgs#libnotify",
-                   "--",
+            s.run(["notify-send",
                    "Kernel is outdated!",
                    f"Installed: {installed_version}\nLatest: {latest_version}"
                  ])
