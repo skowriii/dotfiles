@@ -2,16 +2,16 @@
 
 change_to_highres()
 {
-	mv ~/.config/hypr/land/05-monitors/01-1280x720.lua ~/.config/hypr/land/05-monitors/S-1280x720.lua
-	mv ~/.config/hypr/land/05-monitors/S-1920x1080.lua ~/.config/hypr/land/05-monitors/01-1920x1080.lua
+	mv ~/.config/hypr/land/05-monitors/01-eDP-1/01-1280x720.lua ~/.config/hypr/land/05-monitors/01-eDP-1/S-1280x720.lua
+	mv ~/.config/hypr/land/05-monitors/01-eDP-1/S-1920x1080.lua ~/.config/hypr/land/05-monitors/01-eDP-1/01-1920x1080.lua
 
 	hyprctl reload
 }
 
 change_to_lowres()
 {
-	mv ~/.config/hypr/land/05-monitors/01-1920x1080.lua ~/.config/hypr/land/05-monitors/S-1920x1080.lua
-	mv ~/.config/hypr/land/05-monitors/S-1280x720.lua ~/.config/hypr/land/05-monitors/01-1280x720.lua
+	mv ~/.config/hypr/land/05-monitors/01-eDP-1/01-1920x1080.lua ~/.config/hypr/land/05-monitors/01-eDP-1/S-1920x1080.lua
+	mv ~/.config/hypr/land/05-monitors/01-eDP-1/S-1280x720.lua ~/.config/hypr/land/05-monitors/01-eDP-1/01-1280x720.lua
 
 	hyprctl reload
 }
