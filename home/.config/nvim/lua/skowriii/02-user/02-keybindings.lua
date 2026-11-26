@@ -35,7 +35,9 @@ vim.keymap.set("n", "<LEADER>vpd",
 -- Buffers
 vim.keymap.set("n", "<LEADER>bd", "<CMD>bd<CR>", { desc = "Delete current buffer" })
 vim.keymap.set("n", "<LEADER>bD", "<CMD>%bd|e#<CR>", { desc = "Delete all buffers except current" })
-vim.keymap.set("n", "<LEADER>bda", "<CMD>%bd<CR>", { desc = "Delete all buffers" })
+vim.keymap.set("n", "<LEADER>dab", "<CMD>%bd<CR>", { desc = "Delete all buffers" })
+vim.keymap.set("n", "<LEADER>rcb", "<CMD>bufdo e<CR>", { desc = "Reload current buffer" })
+vim.keymap.set("n", "<LEADER>frcb", "<CMD>bufdo e!<CR>", { desc = "Force reload current buffer" })
 
 -- Plugins
 --------------
