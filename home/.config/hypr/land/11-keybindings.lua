@@ -97,6 +97,9 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl --player=" .. players .. " p
 hl.bind("SUPER + PRINT", hl.dsp.exec_cmd("hyprshot -m window -o " .. hyprshot_output_directory))
 hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m output -o " .. hyprshot_output_directory))
 hl.bind("SUPER + SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m region -o " .. hyprshot_output_directory))
+hl.bind("CTRL + SUPER + PRINT", hl.dsp.exec_cmd("hyprshot -m window -o /tmp"))
+hl.bind("CTRL + PRINT", hl.dsp.exec_cmd("hyprshot -m output -o /tmp"))
+hl.bind("CTRL + SUPER + SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m region -o /tmp"))
 
 -- Zoom
 hl.bind("SUPER + Z", zoom.zoom)
