@@ -7,7 +7,6 @@ hl.on("hyprland.start", function()
 
 	-- Daemons
 	hl.exec_cmd("udiskie -a")
-	hl.exec_cmd("sway-audio-idle-inhibit")
 
 	-- Hyprland
 	hl.exec_cmd("hypridle")
