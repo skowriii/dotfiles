@@ -20,7 +20,6 @@ hl.bind("SUPER + F1",
 )
 hl.bind("SUPER + ESCAPE", hl.dsp.exec_cmd("hyprlock"))
 hl.bind("SUPER + B", hl.dsp.exec_cmd("zen-beta --name zen-beta"))
-hl.bind("SUPER + M", hl.dsp.exec_cmd("markov-typing"))
 
 -- ss
 hl.bind("SUPER +  CTRL + SHIFT + S", hl.dsp.global("ss:openSettings"))
