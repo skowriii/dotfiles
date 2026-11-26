@@ -24,9 +24,7 @@ hl.bind("SUPER + B", hl.dsp.exec_cmd("zen-beta --name zen-beta"))
 -- ss
 hl.bind("SUPER +  CTRL + SHIFT + S", hl.dsp.global("ss:openSettings"))
 hl.bind("SUPER + W", hl.dsp.global("ss:showIDs"))
-hl.bind("SUPER + W", hl.dsp.global("ss:showIDs"), { release = true })
 hl.bind("SUPER + P", hl.dsp.global("ss:peekStatusBar"))
-hl.bind("SUPER + P", hl.dsp.global("ss:peekStatusBar"), { release = true })
 hl.bind("SUPER + F4", hl.dsp.global("ss:openPowerMenu"))
 
 local directions = {
