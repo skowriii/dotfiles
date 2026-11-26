@@ -5,10 +5,17 @@ root: /personal/Projects/Laccaria/laccaria-page
 before_start:
   - sudo systemctl start docker
   - npm run db:up -w server
+  - sudo systemctl start cloudflared-lacgit
+  - docker compose --project-directory=/personal/Projects/Laccaria/docker up forgejo runner -d
 
 stop:
   - npm run db:down -w server
+  - cd /personal/Projects/Laccaria/docker
+  - docker compose --project-directory=/personal/Projects/Laccaria/docker down
+  - sudo docker system prune -a
+  - sudo docker volume prune
   - sudo systemctl stop docker
+  - sudo systemctl stop cloudflared-lacgit
 
 windows:
   - name: editor
@@ -30,6 +37,11 @@ windows:
       - type: horizontal
         commands:
           - steam-run npm run dev -w server
+
+  - name: forgejo
+    layout: main-vertical
+    commands:
+      - cd /personal/Projects/Laccaria/docker
 
   - name: lazygit
     layout: main-vertical
