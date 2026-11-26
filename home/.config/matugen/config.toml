@@ -76,7 +76,7 @@ post_hook = "~/.config/matugen/post-hook-scripts/gtk-themes-reload.sh"
 
 [templates.hyprland]
 input_path = "~/.config/matugen/templates/hyprland.lua"
-output_path = "~/.config/hypr/land/colors.lua"
+output_path = "~/.config/hypr/land/09-colors.lua"
 
 [templates.hyprlock]
 input_path = "~/.config/matugen/templates/hyprlock.conf"
